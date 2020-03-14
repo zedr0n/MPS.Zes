@@ -9,6 +9,7 @@
   </imports>
   <registry>
     <language id="abe666e1-1ee1-43fe-93c4-703403beeec8" name="ZES">
+      <concept id="8687645761423652139" name="ZES.structure.ActCommandHandler" flags="ng" index="0xgbx" />
       <concept id="8687645761423652140" name="ZES.structure.CreateCommandHandler" flags="ng" index="0xgbA" />
       <concept id="8687645761423650854" name="ZES.structure.CommandHandler" flags="ng" index="0xgvG">
         <reference id="8687645761423650855" name="command" index="0xgvH" />
@@ -56,6 +57,7 @@
         <child id="6843536562190767680" name="nonArrayType" index="3UfBpY" />
       </concept>
       <concept id="6843536562190694846" name="CsBaseLanguage.structure.DoubleType" flags="ng" index="3UfLA0" />
+      <concept id="6843536562190680506" name="CsBaseLanguage.structure.LongType" flags="ng" index="3UfM64" />
       <concept id="6843536562190687977" name="CsBaseLanguage.structure.StringType" flags="ng" index="3UfNVn" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -104,8 +106,8 @@
     <property role="2hLNu9" value="ZES.Tests" />
     <property role="3GE5qa" value="Commands" />
     <property role="TrG5h" value="AddRecord" />
-    <property role="0zd7I" value="Update" />
-    <ref role="0xEmz" node="7ygHWDS5O7J" resolve="Root" />
+    <property role="0zd7I" value="Root" />
+    <ref role="0xEmz" node="7ygHWDSrPm1" resolve="Record" />
     <node concept="fp7cb" id="7ygHWDSbYOQ" role="0JheC">
       <property role="TrG5h" value="target" />
     </node>
@@ -115,6 +117,68 @@
         <node concept="3UfLA0" id="7ygHWDSdwYk" role="3UfBpY" />
       </node>
     </node>
+  </node>
+  <node concept="0xgbx" id="7ygHWDSqWp5">
+    <property role="3GE5qa" value="Handlers" />
+    <ref role="0xgvH" node="7ygHWDSbYOP" resolve="AddRecord" />
+  </node>
+  <node concept="0xEmi" id="7ygHWDSrPm1">
+    <property role="TrG5h" value="Record" />
+    <node concept="1ux1I" id="7ygHWDSrPm2" role="0xEmh">
+      <node concept="31KZC3" id="7ygHWDSGvlW" role="1ux1J">
+        <property role="TrG5h" value="target" />
+        <node concept="3UfwP1" id="7ygHWDSGvlX" role="2UegB9">
+          <node concept="3UfNVn" id="7ygHWDSGvm2" role="3UfBpY" />
+        </node>
+      </node>
+    </node>
+    <node concept="31KRCM" id="7ygHWDStp_g" role="0xEmn">
+      <property role="TrG5h" value="Root" />
+      <node concept="1ux1M" id="7ygHWDStp_h" role="31KRCR" />
+      <node concept="1ux1I" id="7ygHWDStp_j" role="1fIg$P">
+        <node concept="31KZC3" id="7ygHWDStp_t" role="1ux1J">
+          <property role="TrG5h" value="recordValue" />
+          <node concept="3UfwP1" id="7ygHWDStp_u" role="2UegB9">
+            <node concept="3UfLA0" id="7ygHWDStp_z" role="3UfBpY" />
+          </node>
+        </node>
+        <node concept="31KZC3" id="7ygHWDStp_A" role="1ux1J">
+          <property role="TrG5h" value="timestamp" />
+          <node concept="3UfwP1" id="7ygHWDStp_B" role="2UegB9">
+            <node concept="3UfM64" id="7ygHWDStp_J" role="3UfBpY" />
+          </node>
+        </node>
+      </node>
+      <node concept="1pH0Yj" id="7ygHWDStp_q" role="3Sw9wT" />
+    </node>
+  </node>
+  <node concept="fqd6J" id="7ygHWDSK_1w">
+    <property role="2hLNu9" value="ZES.Tests" />
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="UpdateRoot" />
+    <property role="0zd7I" value="Update" />
+    <ref role="0xEmz" node="7ygHWDS5O7J" resolve="Root" />
+    <node concept="fp7cb" id="7ygHWDSK_1x" role="0JheC">
+      <property role="TrG5h" value="target" />
+    </node>
+  </node>
+  <node concept="0xgbx" id="7ygHWDSKNbv">
+    <property role="3GE5qa" value="Handlers" />
+    <ref role="0xgvH" node="7ygHWDSK_1w" resolve="UpdateRoot" />
+  </node>
+  <node concept="0yj_U" id="7ygHWDSKOfp">
+    <property role="2hLNu9" value="ZES.Tests" />
+    <property role="2hLNu2" value="true" />
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="CreateRecord" />
+    <ref role="0xEmz" node="7ygHWDSrPm1" resolve="Record" />
+    <node concept="fp7cb" id="7ygHWDSKOfr" role="0JheC">
+      <property role="TrG5h" value="target" />
+    </node>
+  </node>
+  <node concept="0xgbA" id="7ygHWDSKOR8">
+    <property role="3GE5qa" value="Handlers" />
+    <ref role="0xgvH" node="7ygHWDSKOfp" resolve="CreateRecord" />
   </node>
 </model>
 

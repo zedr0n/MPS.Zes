@@ -9,9 +9,6 @@ namespace ZES.Tests.Domain.Commands
     public CreateRoot() 
     {
     }  
-    public CreateRoot(string target) 
-    {
-    }  
     public CreateRoot(string target) : base(target) 
     {
     }

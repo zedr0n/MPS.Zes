@@ -1,0 +1,19 @@
+/// <filename>
+///     CreateRecordHandler.cs
+/// </filename>
+
+namespace ZES.Tests.Domain.Commands
+{
+  public class CreateRecordHandler : CommandHandlerBase<CreateRecord, Record>
+  {
+    public CreateRecordHandler(IEsRepository<IAggregate> repository) : base(repository) 
+    {
+      
+    }  
+    protected override Record Create (CreateRecord command)
+    {
+      return new Record(command.Target);
+    }
+  }
+}
+

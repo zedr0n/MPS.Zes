@@ -6,7 +6,7 @@ namespace ZES.Tests.Domain.Commands
 {
   public class AddRecord : Command
   {
-    public double recordValue
+    public double RecordValue
     {
        get; 
        set;
@@ -16,9 +16,7 @@ namespace ZES.Tests.Domain.Commands
     }  
     public AddRecord(string target, double recordValue) : base(target) 
     {
-    }  
-    public AddRecord(string target, double recordValue) : base(target) 
-    {
+      RecordValue = recordValue;
     }
   }
 }

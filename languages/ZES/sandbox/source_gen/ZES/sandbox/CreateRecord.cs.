@@ -1,0 +1,17 @@
+/// <filename>
+///     CreateRecord.cs
+/// </filename>
+
+namespace ZES.Tests.Domain.Commands
+{
+  public class CreateRecord : Command, ICreateCommand
+  {
+    public CreateRecord() 
+    {
+    }  
+    public CreateRecord(string target) : base(target) 
+    {
+    }
+  }
+}
+

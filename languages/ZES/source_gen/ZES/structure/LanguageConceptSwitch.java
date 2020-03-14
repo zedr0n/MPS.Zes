@@ -16,9 +16,8 @@ public final class LanguageConceptSwitch {
   public static final int CreateCommand = 4;
   public static final int CreateCommandHandler = 5;
   public static final int DomainClass = 6;
-  public static final int ParameterList = 7;
-  public static final int Target = 8;
-  public static final int TargetCommand = 9;
+  public static final int Target = 7;
+  public static final int TargetCommand = 8;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xabe666e11ee143feL, 0x93c4703403beeec8L);
@@ -29,7 +28,6 @@ public final class LanguageConceptSwitch {
     builder.put(0x7890b7ca78198eb0L, CreateCommand);
     builder.put(0x7890b7ca7815b52cL, CreateCommandHandler);
     builder.put(0x45a819bfd46f2e1fL, DomainClass);
-    builder.put(0x7890b7ca77f80b95L, ParameterList);
     builder.put(0x7890b7ca77f4c4c1L, Target);
     builder.put(0x7890b7ca77f86665L, TargetCommand);
     myIndex = builder.seal();

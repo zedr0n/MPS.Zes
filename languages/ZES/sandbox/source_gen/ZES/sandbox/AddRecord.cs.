@@ -6,13 +6,18 @@ namespace ZES.Tests.Domain.Commands
 {
   public class AddRecord : Command
   {
+    public double recordValue
+    {
+       get; 
+       set;
+    }  
     public AddRecord() 
     {
     }  
     public AddRecord(string target, double recordValue) : base(target) 
     {
     }  
-    public AddRecord(double recordValue, string target) : base(target) 
+    public AddRecord(string target, double recordValue) : base(target) 
     {
     }
   }

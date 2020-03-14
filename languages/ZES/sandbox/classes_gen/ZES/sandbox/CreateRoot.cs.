@@ -1,0 +1,20 @@
+/// <filename>
+///     CreateRoot.cs
+/// </filename>
+
+namespace ZES.Tests.Domain.Commands
+{
+  public class CreateRoot : Command, ICreateCommand
+  {
+    public CreateRoot() 
+    {
+    }  
+    public CreateRoot(string target) 
+    {
+    }  
+    public CreateRoot(string target) : base(target) 
+    {
+    }
+  }
+}
+

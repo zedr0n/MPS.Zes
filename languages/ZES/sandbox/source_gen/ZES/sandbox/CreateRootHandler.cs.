@@ -1,0 +1,19 @@
+/// <filename>
+///     CreateRootHandler.cs
+/// </filename>
+
+namespace ZES.Tests.Domain.Commands
+{
+  public class CreateRootHandler : CommandHandlerBase<CreateRoot, Root>
+  {
+    public CreateRootHandler(IEsRepository<IAggregate> repository) : base(repository) 
+    {
+      
+    }  
+    protected override Root Create (CreateRoot command)
+    {
+      return new Root(command.Target);
+    }
+  }
+}
+

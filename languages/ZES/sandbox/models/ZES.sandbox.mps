@@ -314,6 +314,7 @@
   <node concept="0npV6" id="7ygHWDSNLGW">
     <property role="2hLNu9" value="ZES.Tests" />
     <property role="TrG5h" value="RootInfoQuery" />
+    <property role="3GE5qa" value="Queries" />
     <ref role="0j$2o" node="7ygHWDSRgt1" resolve="RootInfo" />
     <ref role="0s_vh" node="7ygHWDSSE57" resolve="RootInfoProjection.Results" />
     <node concept="31KZC3" id="7ygHWDSO0r4" role="fr08y">
@@ -330,6 +331,7 @@
   <node concept="0iR2k" id="7ygHWDSRgt1">
     <property role="2hLNu9" value="ZES.Tests" />
     <property role="TrG5h" value="RootInfo" />
+    <property role="3GE5qa" value="Queries" />
     <node concept="31KZC3" id="7ygHWDSRgt2" role="fr08y">
       <property role="TrG5h" value="id" />
       <node concept="3UfwP1" id="7ygHWDSRgt3" role="2UegB9">
@@ -357,6 +359,7 @@
   </node>
   <node concept="0szB3" id="7ygHWDSSE57">
     <property role="TrG5h" value="RootInfoProjection.Results" />
+    <property role="3GE5qa" value="Queries" />
   </node>
 </model>
 

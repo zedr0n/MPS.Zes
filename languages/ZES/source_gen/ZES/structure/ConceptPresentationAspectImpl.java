@@ -16,6 +16,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_CreateCommand;
   private ConceptPresentation props_CreateCommandHandler;
   private ConceptPresentation props_DomainClass;
+  private ConceptPresentation props_ParameterList;
   private ConceptPresentation props_Projection;
   private ConceptPresentation props_Query;
   private ConceptPresentation props_QueryHandler;
@@ -77,6 +78,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DomainClass = cpb.create();
         }
         return props_DomainClass;
+      case LanguageConceptSwitch.ParameterList:
+        if (props_ParameterList == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("ParameterList");
+          props_ParameterList = cpb.create();
+        }
+        return props_ParameterList;
       case LanguageConceptSwitch.Projection:
         if (props_Projection == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

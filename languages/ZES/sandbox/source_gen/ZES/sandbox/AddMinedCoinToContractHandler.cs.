@@ -11,7 +11,7 @@ namespace ZES.Tests.Domain.Commands
     }  
     protected override void Act (Contract contract, AddMinedCoinToContract command)
     {
-      contract.AddAmountMined(command.Quantity);
+      contract.AddAmountMined(<!TextGen not found for 'ZES.structure.ParameterList'!>);
     }
   }
 }

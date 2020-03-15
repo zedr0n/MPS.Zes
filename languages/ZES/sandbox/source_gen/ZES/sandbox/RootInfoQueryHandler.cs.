@@ -6,11 +6,12 @@ namespace ZES.Tests.Domain.Queries
 {
   public class RootInfoQueryHandler : QueryHandlerBaseEx<RootInfoQuery,RootInfo,RootInfoProjection.Results>
   {
-    public RootInfoQueryHandler(IProjection<RootInfo> projection) : base(projection) 
+    public RootInfoQueryHandler(IProjection<RootInfoProjection.Results> projection) : base(projection) 
     {
     }  
-    protected override RootInfo Handle (IProjection<RootInfo> projection, RootInfoQuery query)
+    protected override RootInfo Handle (IProjection<RootInfoProjection.Results> projection, RootInfoQuery query)
     {
+      return new RootInfo(command.Id, command.CreatedAt, command.UpdatedAt, command.NumberOfUpdates);
     }
   }
 }

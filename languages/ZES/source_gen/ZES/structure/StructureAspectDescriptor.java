@@ -21,6 +21,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptCreateCommand = createDescriptorForCreateCommand();
   /*package*/ final ConceptDescriptor myConceptCreateCommandHandler = createDescriptorForCreateCommandHandler();
   /*package*/ final ConceptDescriptor myConceptDomainClass = createDescriptorForDomainClass();
+  /*package*/ final ConceptDescriptor myConceptParameterList = createDescriptorForParameterList();
   /*package*/ final ConceptDescriptor myConceptProjection = createDescriptorForProjection();
   /*package*/ final ConceptDescriptor myConceptQuery = createDescriptorForQuery();
   /*package*/ final ConceptDescriptor myConceptQueryHandler = createDescriptorForQueryHandler();
@@ -42,7 +43,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptActCommandHandler, myConceptAggregateRoot, myConceptCommand, myConceptCommandHandler, myConceptCreateCommand, myConceptCreateCommandHandler, myConceptDomainClass, myConceptProjection, myConceptQuery, myConceptQueryHandler, myConceptQueryResult, myConceptTarget, myConceptTargetCommand);
+    return Arrays.asList(myConceptActCommandHandler, myConceptAggregateRoot, myConceptCommand, myConceptCommandHandler, myConceptCreateCommand, myConceptCreateCommandHandler, myConceptDomainClass, myConceptParameterList, myConceptProjection, myConceptQuery, myConceptQueryHandler, myConceptQueryResult, myConceptTarget, myConceptTargetCommand);
   }
 
   @Override
@@ -63,6 +64,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptCreateCommandHandler;
       case LanguageConceptSwitch.DomainClass:
         return myConceptDomainClass;
+      case LanguageConceptSwitch.ParameterList:
+        return myConceptParameterList;
       case LanguageConceptSwitch.Projection:
         return myConceptProjection;
       case LanguageConceptSwitch.Query:
@@ -151,6 +154,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.property("project", 0x45a819bfd46f2e36L).type(PrimitiveTypeId.STRING).origin("5019290096397921846").done();
     b.aggregate("params", 0x7890b7ca77fcb5e8L).target(0xd74e25c94d9143b6L, 0xbad7d18af7bf6674L, 0x645f1920a59ce323L).optional(true).ordered(true).multiple(true).origin("8687645761422013928").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForParameterList() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ZES", "ParameterList", 0xabe666e11ee143feL, 0x93c4703403beeec8L, 0x7890b7ca78f27e7cL);
+    b.class_(false, false, false);
+    b.origin("r:b07a6d87-e898-4b0c-a232-0370a8492c9b(ZES.structure)/8687645761438121596");
+    b.version(2);
+    b.property("target", 0x7890b7ca78f27e7fL).type(PrimitiveTypeId.STRING).origin("8687645761438121599").done();
+    b.aggregate("list", 0x7890b7ca78f27e7dL).target(0xd74e25c94d9143b6L, 0xbad7d18af7bf6674L, 0x67e6d2c0669cc2aeL).optional(false).ordered(true).multiple(false).origin("8687645761438121597").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForProjection() {

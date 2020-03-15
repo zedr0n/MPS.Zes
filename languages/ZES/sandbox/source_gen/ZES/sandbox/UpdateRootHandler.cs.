@@ -11,7 +11,7 @@ namespace ZES.Tests.Domain.Commands
     }  
     protected override void Act (Root root, UpdateRoot command)
     {
-      root.Update();
+      root.Update(<!TextGen not found for 'ZES.structure.ParameterList'!>);
     }
   }
 }

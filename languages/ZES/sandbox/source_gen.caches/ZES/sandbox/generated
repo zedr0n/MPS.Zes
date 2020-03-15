@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-3kmpfbkq54hu08af834l9usu7eiq8a7">
-  <files names="AddMinedCoinToContract.cs.:AddMinedCoinToContractHandler.cs.:AddRecord.cs.:AddRecordHandler.cs.:CreateContract.cs.:CreateContractHandler.cs.:CreateRecord.cs.:CreateRecordHandler.cs.:CreateRoot.cs.:CreateRootHandler.cs.:RegisterHashflare.cs.:RegisterHashflareHandler.cs.:RootInfo.cs.:RootInfoQuery.cs.:RootInfoQueryHandler.cs.:UpdateRoot.cs.:UpdateRootHandler.cs." />
-</product>
-

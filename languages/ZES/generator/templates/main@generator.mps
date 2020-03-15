@@ -2948,7 +2948,7 @@
                                 <node concept="3clFbF" id="6Zky1$MqbWC" role="3cqZAp">
                                   <node concept="37vLTI" id="6Zky1$MqcIc" role="3clFbG">
                                     <node concept="Xl_RD" id="6Zky1$MqcSc" role="37vLTx">
-                                      <property role="Xl_RC" value="projection" />
+                                      <property role="Xl_RC" value="projection.State" />
                                     </node>
                                     <node concept="2OqwBi" id="6Zky1$MqckW" role="37vLTJ">
                                       <node concept="37vLTw" id="6Zky1$MqbWA" role="2Oq$k0">

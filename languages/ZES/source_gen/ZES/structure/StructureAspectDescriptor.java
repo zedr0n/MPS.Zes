@@ -21,6 +21,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptCreateCommand = createDescriptorForCreateCommand();
   /*package*/ final ConceptDescriptor myConceptCreateCommandHandler = createDescriptorForCreateCommandHandler();
   /*package*/ final ConceptDescriptor myConceptDomainClass = createDescriptorForDomainClass();
+  /*package*/ final ConceptDescriptor myConceptProjection = createDescriptorForProjection();
+  /*package*/ final ConceptDescriptor myConceptQuery = createDescriptorForQuery();
+  /*package*/ final ConceptDescriptor myConceptQueryHandler = createDescriptorForQueryHandler();
+  /*package*/ final ConceptDescriptor myConceptQueryResult = createDescriptorForQueryResult();
   /*package*/ final ConceptDescriptor myConceptTarget = createDescriptorForTarget();
   /*package*/ final ConceptDescriptor myConceptTargetCommand = createDescriptorForTargetCommand();
   private final LanguageConceptSwitch myIndexSwitch;
@@ -38,7 +42,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptActCommandHandler, myConceptAggregateRoot, myConceptCommand, myConceptCommandHandler, myConceptCreateCommand, myConceptCreateCommandHandler, myConceptDomainClass, myConceptTarget, myConceptTargetCommand);
+    return Arrays.asList(myConceptActCommandHandler, myConceptAggregateRoot, myConceptCommand, myConceptCommandHandler, myConceptCreateCommand, myConceptCreateCommandHandler, myConceptDomainClass, myConceptProjection, myConceptQuery, myConceptQueryHandler, myConceptQueryResult, myConceptTarget, myConceptTargetCommand);
   }
 
   @Override
@@ -59,6 +63,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptCreateCommandHandler;
       case LanguageConceptSwitch.DomainClass:
         return myConceptDomainClass;
+      case LanguageConceptSwitch.Projection:
+        return myConceptProjection;
+      case LanguageConceptSwitch.Query:
+        return myConceptQuery;
+      case LanguageConceptSwitch.QueryHandler:
+        return myConceptQueryHandler;
+      case LanguageConceptSwitch.QueryResult:
+        return myConceptQueryResult;
       case LanguageConceptSwitch.Target:
         return myConceptTarget;
       case LanguageConceptSwitch.TargetCommand:
@@ -139,6 +151,40 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.property("project", 0x45a819bfd46f2e36L).type(PrimitiveTypeId.STRING).origin("5019290096397921846").done();
     b.aggregate("params", 0x7890b7ca77fcb5e8L).target(0xd74e25c94d9143b6L, 0xbad7d18af7bf6674L, 0x645f1920a59ce323L).optional(true).ordered(true).multiple(true).origin("8687645761422013928").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForProjection() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ZES", "Projection", 0xabe666e11ee143feL, 0x93c4703403beeec8L, 0x7890b7ca78e28e09L);
+    b.class_(false, false, true);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:b07a6d87-e898-4b0c-a232-0370a8492c9b(ZES.structure)/8687645761437077001");
+    b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForQuery() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ZES", "Query", 0xabe666e11ee143feL, 0x93c4703403beeec8L, 0x7890b7ca78cd290cL);
+    b.class_(false, false, true);
+    b.super_("ZES.structure.DomainClass", 0xabe666e11ee143feL, 0x93c4703403beeec8L, 0x45a819bfd46f2e1fL);
+    b.origin("r:b07a6d87-e898-4b0c-a232-0370a8492c9b(ZES.structure)/8687645761435674892");
+    b.version(2);
+    b.associate("result", 0x7890b7ca78def752L).target(0xabe666e11ee143feL, 0x93c4703403beeec8L, 0x7890b7ca78dbc75eL).optional(false).origin("8687645761436841810").done();
+    b.associate("projection", 0x7890b7ca78e2e01bL).target(0xabe666e11ee143feL, 0x93c4703403beeec8L, 0x7890b7ca78e28e09L).optional(true).origin("8687645761437098011").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForQueryHandler() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ZES", "QueryHandler", 0xabe666e11ee143feL, 0x93c4703403beeec8L, 0x7890b7ca78d75a70L);
+    b.class_(false, false, true);
+    b.origin("r:b07a6d87-e898-4b0c-a232-0370a8492c9b(ZES.structure)/8687645761436342896");
+    b.version(2);
+    b.associate("query", 0x7890b7ca78d75a74L).target(0xabe666e11ee143feL, 0x93c4703403beeec8L, 0x7890b7ca78cd290cL).optional(false).origin("8687645761436342900").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForQueryResult() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ZES", "QueryResult", 0xabe666e11ee143feL, 0x93c4703403beeec8L, 0x7890b7ca78dbc75eL);
+    b.class_(false, false, true);
+    b.super_("ZES.structure.DomainClass", 0xabe666e11ee143feL, 0x93c4703403beeec8L, 0x45a819bfd46f2e1fL);
+    b.origin("r:b07a6d87-e898-4b0c-a232-0370a8492c9b(ZES.structure)/8687645761436632926");
+    b.version(2);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTarget() {

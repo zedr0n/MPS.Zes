@@ -1,0 +1,34 @@
+/// <filename>
+///     RegisterHashflare.cs
+/// </filename>
+
+namespace ZES.Tests.Domain.Commands
+{
+  public class RegisterHashflare : Command, ICreateCommand
+  {
+    public string Target
+    {
+       get; 
+       set;
+    }  
+    public string Username
+    {
+       get; 
+       set;
+    }  
+    public RegisterHashflare() 
+    {
+    }  
+    public RegisterHashflare(string target, string username) : base(target) 
+    {
+      Target = target; 
+      Username = username;
+    }  
+    public string Target
+    {
+       get; 
+       set;
+    }
+  }
+}
+

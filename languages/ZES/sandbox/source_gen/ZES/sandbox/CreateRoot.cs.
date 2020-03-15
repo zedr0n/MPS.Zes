@@ -6,11 +6,22 @@ namespace ZES.Tests.Domain.Commands
 {
   public class CreateRoot : Command, ICreateCommand
   {
+    public string Target
+    {
+       get; 
+       set;
+    }  
     public CreateRoot() 
     {
     }  
     public CreateRoot(string target) : base(target) 
     {
+      Target = target;
+    }  
+    public string Target
+    {
+       get; 
+       set;
     }
   }
 }

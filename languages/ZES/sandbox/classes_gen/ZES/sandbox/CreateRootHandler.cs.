@@ -8,7 +8,6 @@ namespace ZES.Tests.Domain.Commands
   {
     public CreateRootHandler(IEsRepository<IAggregate> repository) : base(repository) 
     {
-      
     }  
     protected override Root Create (CreateRoot command)
     {

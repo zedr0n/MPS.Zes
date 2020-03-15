@@ -1,0 +1,29 @@
+/// <filename>
+///     AddMinedCoinToContract.cs
+/// </filename>
+
+namespace ZES.Tests.Domain.Commands
+{
+  public class AddMinedCoinToContract : Command
+  {
+    public string Type
+    {
+       get; 
+       set;
+    }  
+    public double Quantity
+    {
+       get; 
+       set;
+    }  
+    public AddMinedCoinToContract() 
+    {
+    }  
+    public AddMinedCoinToContract(string target, string type, double quantity) : base(target) 
+    {
+      Type = type; 
+      Quantity = quantity;
+    }
+  }
+}
+

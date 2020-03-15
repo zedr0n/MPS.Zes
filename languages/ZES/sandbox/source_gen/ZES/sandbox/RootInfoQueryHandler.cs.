@@ -1,0 +1,17 @@
+/// <filename>
+///     RootInfoQueryHandler.cs
+/// </filename>
+
+namespace ZES.Tests.Domain.Queries
+{
+  public class RootInfoQueryHandler : QueryHandlerBaseEx<RootInfoQuery,RootInfo,RootInfoProjection.Results>
+  {
+    public RootInfoQueryHandler(IProjection<RootInfo> projection) : base(projection) 
+    {
+    }  
+    protected override RootInfo Handle (IProjection<RootInfo> projection, RootInfoQuery query)
+    {
+    }
+  }
+}
+

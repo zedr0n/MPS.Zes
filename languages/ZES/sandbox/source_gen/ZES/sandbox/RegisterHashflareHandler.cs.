@@ -1,0 +1,18 @@
+/// <filename>
+///     RegisterHashflareHandler.cs
+/// </filename>
+
+namespace ZES.Tests.Domain.Commands
+{
+  public class RegisterHashflareHandler : CommandHandlerBase<RegisterHashflare, Hashflare>
+  {
+    public RegisterHashflareHandler(IEsRepository<IAggregate> repository) : base(repository) 
+    {
+    }  
+    protected override Hashflare Create (RegisterHashflare command)
+    {
+      return new Hashflare(command.Target, command.Username);
+    }
+  }
+}
+

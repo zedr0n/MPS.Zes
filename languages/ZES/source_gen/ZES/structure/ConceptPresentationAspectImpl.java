@@ -16,6 +16,10 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_CreateCommand;
   private ConceptPresentation props_CreateCommandHandler;
   private ConceptPresentation props_DomainClass;
+  private ConceptPresentation props_Projection;
+  private ConceptPresentation props_Query;
+  private ConceptPresentation props_QueryHandler;
+  private ConceptPresentation props_QueryResult;
   private ConceptPresentation props_Target;
   private ConceptPresentation props_TargetCommand;
 
@@ -73,6 +77,34 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DomainClass = cpb.create();
         }
         return props_DomainClass;
+      case LanguageConceptSwitch.Projection:
+        if (props_Projection == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Projection = cpb.create();
+        }
+        return props_Projection;
+      case LanguageConceptSwitch.Query:
+        if (props_Query == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Query = cpb.create();
+        }
+        return props_Query;
+      case LanguageConceptSwitch.QueryHandler:
+        if (props_QueryHandler == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xabe666e11ee143feL, 0x93c4703403beeec8L, 0x7890b7ca78d75a70L, 0x7890b7ca78d75a74L, "query", "", "");
+          props_QueryHandler = cpb.create();
+        }
+        return props_QueryHandler;
+      case LanguageConceptSwitch.QueryResult:
+        if (props_QueryResult == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_QueryResult = cpb.create();
+        }
+        return props_QueryResult;
       case LanguageConceptSwitch.Target:
         if (props_Target == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

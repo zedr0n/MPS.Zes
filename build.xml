@@ -1,0 +1,39 @@
+<project name="com.mbeddr.core build and test" default="all">
+
+  <property file="build.properties"/>
+
+  <path id="mps.ant.path">
+      <!--pathelement location="${mps.home}/lib/mps-backend.jar"/>-->
+      <pathelement location="${mps.home}/lib/ant/lib/ant-mps.jar"/>
+      <pathelement location="${mps.home}/lib/jdom.jar"/>
+      <pathelement location="${mps.home}/lib/log4j.jar"/>
+      <pathelement location="${mps.home}/lib/mps-core.jar"/>
+  </path>
+
+  <taskdef resource="jetbrains/mps/build/ant/antlib.xml"
+           classpathref="mps.ant.path"/>
+
+  <jvmargs id="myargs">
+      <arg value="-ea"/>
+      <arg value="-Xss1024k"/>
+      <arg value="-Xmx1024m"/>
+      <arg value="-XX:MaxPermSize=92m"/>
+      <arg value="-XX:+HeapDumpOnOutOfMemoryError"/>
+  </jvmargs>
+
+  <!-- here is the place where all the following example code goes -->
+    <property name="project.mpr" value="ZES/project.mpr"/>
+    <property name="project.dir" value="ZES"/>
+
+    <target name="build-languages-in-project">
+        <generate>
+            <jvmargs refid="myargs"/>
+            <plugin path="${mps.home}/plugins/mps-build" />
+            <plugin path="${mps.home}/plugins/mps-core" />
+            <chunk>
+                <module dir="${mbeddr.home}/${project.dir}/languages"/>
+            </chunk>
+        </generate>
+    </target>
+
+</project>

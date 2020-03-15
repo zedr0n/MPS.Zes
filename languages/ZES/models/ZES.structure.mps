@@ -171,5 +171,49 @@
     <property role="3GE5qa" value="Commands" />
     <ref role="1TJDcQ" node="7ygHWDRY6p_" resolve="TargetCommand" />
   </node>
+  <node concept="1TIwiD" id="7ygHWDSNi$c">
+    <property role="EcuMT" value="8687645761435674892" />
+    <property role="TrG5h" value="Query" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" node="4mC6rZkrMSv" resolve="DomainClass" />
+    <node concept="1TJgyj" id="7ygHWDSRJti" role="1TKVEi">
+      <property role="IQ2ns" value="8687645761436841810" />
+      <property role="20kJfa" value="result" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7ygHWDSQWtu" resolve="QueryResult" />
+    </node>
+    <node concept="1TJgyj" id="7ygHWDSSI0r" role="1TKVEi">
+      <property role="IQ2ns" value="8687645761437098011" />
+      <property role="20kJfa" value="projection" />
+      <ref role="20lvS9" node="7ygHWDSSCS9" resolve="Projection" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7ygHWDSPPDK">
+    <property role="EcuMT" value="8687645761436342896" />
+    <property role="TrG5h" value="QueryHandler" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="7ygHWDSPPDO" role="1TKVEi">
+      <property role="IQ2ns" value="8687645761436342900" />
+      <property role="20kJfa" value="query" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7ygHWDSNi$c" resolve="Query" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7ygHWDSQWtu">
+    <property role="EcuMT" value="8687645761436632926" />
+    <property role="TrG5h" value="QueryResult" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" node="4mC6rZkrMSv" resolve="DomainClass" />
+  </node>
+  <node concept="1TIwiD" id="7ygHWDSSCS9">
+    <property role="EcuMT" value="8687645761437077001" />
+    <property role="TrG5h" value="Projection" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="7ygHWDSSCSa" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
 </model>
 

@@ -1,0 +1,46 @@
+/// <filename>
+///     CreateContract.cs
+/// </filename>
+
+namespace ZES.Tests.Domain.Commands
+{
+  public class CreateContract : Command, ICreateCommand
+  {
+    public string Target
+    {
+       get; 
+       set;
+    }  
+    public string Type
+    {
+       get; 
+       set;
+    }  
+    public int Quantity
+    {
+       get; 
+       set;
+    }  
+    public double Total
+    {
+       get; 
+       set;
+    }  
+    public CreateContract() 
+    {
+    }  
+    public CreateContract(string target, string type, int quantity, double total) : base(target) 
+    {
+      Target = target; 
+      Type = type; 
+      Quantity = quantity; 
+      Total = total;
+    }  
+    public string Target
+    {
+       get; 
+       set;
+    }
+  }
+}
+

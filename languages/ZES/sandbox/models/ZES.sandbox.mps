@@ -9,6 +9,15 @@
   </imports>
   <registry>
     <language id="abe666e1-1ee1-43fe-93c4-703403beeec8" name="ZES">
+      <concept id="8687645761436342896" name="ZES.structure.QueryHandler" flags="ng" index="0hYQU">
+        <reference id="8687645761436342900" name="query" index="0hYQY" />
+      </concept>
+      <concept id="8687645761436632926" name="ZES.structure.QueryResult" flags="ng" index="0iR2k" />
+      <concept id="8687645761435674892" name="ZES.structure.Query" flags="ng" index="0npV6">
+        <reference id="8687645761436841810" name="result" index="0j$2o" />
+        <reference id="8687645761437098011" name="projection" index="0s_vh" />
+      </concept>
+      <concept id="8687645761437077001" name="ZES.structure.Projection" flags="ng" index="0szB3" />
       <concept id="8687645761423652139" name="ZES.structure.ActCommandHandler" flags="ng" index="0xgbx" />
       <concept id="8687645761423652140" name="ZES.structure.CreateCommandHandler" flags="ng" index="0xgbA" />
       <concept id="8687645761423650854" name="ZES.structure.CommandHandler" flags="ng" index="0xgvG">
@@ -58,6 +67,7 @@
       </concept>
       <concept id="6843536562190694846" name="CsBaseLanguage.structure.DoubleType" flags="ng" index="3UfLA0" />
       <concept id="6843536562190680506" name="CsBaseLanguage.structure.LongType" flags="ng" index="3UfM64" />
+      <concept id="6843536562190680504" name="CsBaseLanguage.structure.IntType" flags="ng" index="3UfM66" />
       <concept id="6843536562190687977" name="CsBaseLanguage.structure.StringType" flags="ng" index="3UfNVn" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -179,6 +189,174 @@
   <node concept="0xgbA" id="7ygHWDSKOR8">
     <property role="3GE5qa" value="Handlers" />
     <ref role="0xgvH" node="7ygHWDSKOfp" resolve="CreateRecord" />
+  </node>
+  <node concept="0xEmi" id="7ygHWDSLxCY">
+    <property role="TrG5h" value="Hashflare" />
+    <node concept="1ux1I" id="7ygHWDSLxCZ" role="0xEmh">
+      <node concept="31KZC3" id="7ygHWDSLxD0" role="1ux1J">
+        <property role="TrG5h" value="target" />
+        <node concept="3UfwP1" id="7ygHWDSLxD1" role="2UegB9">
+          <node concept="3UfNVn" id="7ygHWDSLxD6" role="3UfBpY" />
+        </node>
+      </node>
+      <node concept="31KZC3" id="7ygHWDSLxDb" role="1ux1J">
+        <property role="TrG5h" value="username" />
+        <node concept="3UfwP1" id="7ygHWDSLxDc" role="2UegB9">
+          <node concept="3UfNVn" id="7ygHWDSLxDk" role="3UfBpY" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="0yj_U" id="7ygHWDSLxDt">
+    <property role="2hLNu9" value="ZES.Tests" />
+    <property role="2hLNu2" value="true" />
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="RegisterHashflare" />
+    <ref role="0xEmz" node="7ygHWDSLxCY" resolve="Hashflare" />
+    <node concept="31KZC3" id="7ygHWDSLzJi" role="fr08y">
+      <property role="TrG5h" value="username" />
+      <node concept="3UfwP1" id="7ygHWDSLzJj" role="2UegB9">
+        <node concept="3UfNVn" id="7ygHWDSLzJo" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="fp7cb" id="7ygHWDSLxDv" role="0JheC">
+      <property role="TrG5h" value="target" />
+    </node>
+  </node>
+  <node concept="0xgbA" id="7ygHWDSLzOf">
+    <property role="3GE5qa" value="Handlers" />
+    <ref role="0xgvH" node="7ygHWDSLxDt" resolve="RegisterHashflare" />
+  </node>
+  <node concept="0yj_U" id="7ygHWDSLzTN">
+    <property role="2hLNu9" value="ZES.Tests" />
+    <property role="2hLNu2" value="true" />
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="CreateContract" />
+    <ref role="0xEmz" node="7ygHWDSLzTQ" resolve="Contract" />
+    <node concept="fp7cb" id="7ygHWDSLzTP" role="0JheC">
+      <property role="TrG5h" value="target" />
+    </node>
+  </node>
+  <node concept="0xEmi" id="7ygHWDSLzTQ">
+    <property role="TrG5h" value="Contract" />
+    <node concept="31KRCM" id="7ygHWDSMUWF" role="0xEmn">
+      <property role="TrG5h" value="AddAmountMined" />
+      <node concept="1ux1M" id="7ygHWDSMUWG" role="31KRCR">
+        <node concept="31KRCQ" id="7ygHWDSMUWH" role="1ux1N" />
+      </node>
+      <node concept="1ux1I" id="7ygHWDSMUWI" role="1fIg$P">
+        <node concept="31KZC3" id="7ygHWDSMUWS" role="1ux1J">
+          <property role="TrG5h" value="quantity" />
+          <node concept="3UfwP1" id="7ygHWDSMUWT" role="2UegB9">
+            <node concept="3UfLA0" id="7ygHWDSMUWY" role="3UfBpY" />
+          </node>
+        </node>
+      </node>
+      <node concept="1pH0Yj" id="7ygHWDSMUWP" role="3Sw9wT" />
+    </node>
+    <node concept="1ux1I" id="7ygHWDSLzTR" role="0xEmh">
+      <node concept="31KZC3" id="7ygHWDSLzTS" role="1ux1J">
+        <property role="TrG5h" value="target" />
+        <node concept="3UfwP1" id="7ygHWDSLzTT" role="2UegB9">
+          <node concept="3UfNVn" id="7ygHWDSLzTY" role="3UfBpY" />
+        </node>
+      </node>
+      <node concept="31KZC3" id="7ygHWDSLzU1" role="1ux1J">
+        <property role="TrG5h" value="type" />
+        <node concept="3UfwP1" id="7ygHWDSLzU2" role="2UegB9">
+          <node concept="3UfNVn" id="7ygHWDSLzUa" role="3UfBpY" />
+        </node>
+      </node>
+      <node concept="31KZC3" id="7ygHWDSLzUf" role="1ux1J">
+        <property role="TrG5h" value="quantity" />
+        <node concept="3UfwP1" id="7ygHWDSLzUg" role="2UegB9">
+          <node concept="3UfM66" id="7ygHWDSLzUr" role="3UfBpY" />
+        </node>
+      </node>
+      <node concept="31KZC3" id="7ygHWDSLzUS" role="1ux1J">
+        <property role="TrG5h" value="total" />
+        <node concept="3UfwP1" id="7ygHWDSLzUT" role="2UegB9">
+          <node concept="3UfLA0" id="7ygHWDSLzV7" role="3UfBpY" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="0xgbA" id="7ygHWDSMTCC">
+    <property role="3GE5qa" value="Handlers" />
+    <ref role="0xgvH" node="7ygHWDSLzTN" resolve="CreateContract" />
+  </node>
+  <node concept="fqd6J" id="7ygHWDSMUMb">
+    <property role="2hLNu9" value="ZES.Tests" />
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="AddMinedCoinToContract" />
+    <property role="0zd7I" value="AddAmountMined" />
+    <ref role="0xEmz" node="7ygHWDSLzTQ" resolve="Contract" />
+    <node concept="fp7cb" id="7ygHWDSMUMc" role="0JheC">
+      <property role="TrG5h" value="target" />
+    </node>
+    <node concept="31KZC3" id="7ygHWDSMUMd" role="fr08y">
+      <property role="TrG5h" value="type" />
+      <node concept="3UfwP1" id="7ygHWDSMUMe" role="2UegB9">
+        <node concept="3UfNVn" id="7ygHWDSMUMj" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="7ygHWDSNi4c" role="fr08y">
+      <property role="TrG5h" value="quantity" />
+      <node concept="3UfwP1" id="7ygHWDSNi4d" role="2UegB9">
+        <node concept="3UfLA0" id="7ygHWDSNi4l" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="0xgbx" id="7ygHWDSMUX1">
+    <property role="3GE5qa" value="Handlers" />
+    <ref role="0xgvH" node="7ygHWDSMUMb" resolve="AddMinedCoinToContract" />
+  </node>
+  <node concept="0npV6" id="7ygHWDSNLGW">
+    <property role="2hLNu9" value="ZES.Tests" />
+    <property role="TrG5h" value="RootInfoQuery" />
+    <ref role="0j$2o" node="7ygHWDSRgt1" resolve="RootInfo" />
+    <ref role="0s_vh" node="7ygHWDSSE57" resolve="RootInfoProjection.Results" />
+    <node concept="31KZC3" id="7ygHWDSO0r4" role="fr08y">
+      <property role="TrG5h" value="id" />
+      <node concept="3UfwP1" id="7ygHWDSO0r5" role="2UegB9">
+        <node concept="3UfNVn" id="7ygHWDSO0ra" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="0hYQU" id="7ygHWDSQgFO">
+    <property role="3GE5qa" value="Handlers" />
+    <ref role="0hYQY" node="7ygHWDSNLGW" resolve="RootInfoQuery" />
+  </node>
+  <node concept="0iR2k" id="7ygHWDSRgt1">
+    <property role="2hLNu9" value="ZES.Tests" />
+    <property role="TrG5h" value="RootInfo" />
+    <node concept="31KZC3" id="7ygHWDSRgt2" role="fr08y">
+      <property role="TrG5h" value="id" />
+      <node concept="3UfwP1" id="7ygHWDSRgt3" role="2UegB9">
+        <node concept="3UfNVn" id="7ygHWDSRgt8" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="7ygHWDSRgtv" role="fr08y">
+      <property role="TrG5h" value="createdAt" />
+      <node concept="3UfwP1" id="7ygHWDSRgtw" role="2UegB9">
+        <node concept="3UfM64" id="7ygHWDSRgtC" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="7ygHWDSRgtH" role="fr08y">
+      <property role="TrG5h" value="updatedAt" />
+      <node concept="3UfwP1" id="7ygHWDSRgtI" role="2UegB9">
+        <node concept="3UfM64" id="7ygHWDSRgtT" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="7ygHWDSRgtY" role="fr08y">
+      <property role="TrG5h" value="numberOfUpdates" />
+      <node concept="3UfwP1" id="7ygHWDSRgtZ" role="2UegB9">
+        <node concept="3UfM66" id="7ygHWDSRgud" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="0szB3" id="7ygHWDSSE57">
+    <property role="TrG5h" value="RootInfoProjection.Results" />
   </node>
 </model>
 

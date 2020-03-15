@@ -11,11 +11,11 @@
     <language id="abe666e1-1ee1-43fe-93c4-703403beeec8" name="ZES">
       <concept id="8687645761436342896" name="ZES.structure.QueryHandler" flags="ng" index="0hYQU">
         <reference id="8687645761436342900" name="query" index="0hYQY" />
+        <reference id="8058215275075480952" name="projection" index="1tlalx" />
       </concept>
       <concept id="8687645761436632926" name="ZES.structure.QueryResult" flags="ng" index="0iR2k" />
       <concept id="8687645761435674892" name="ZES.structure.Query" flags="ng" index="0npV6">
         <reference id="8687645761436841810" name="result" index="0j$2o" />
-        <reference id="8687645761437098011" name="projection" index="0s_vh" />
       </concept>
       <concept id="8687645761437077001" name="ZES.structure.Projection" flags="ng" index="0szB3" />
       <concept id="8687645761423652139" name="ZES.structure.ActCommandHandler" flags="ng" index="0xgbx" />
@@ -316,7 +316,6 @@
     <property role="TrG5h" value="RootInfoQuery" />
     <property role="3GE5qa" value="Queries" />
     <ref role="0j$2o" node="7ygHWDSRgt1" resolve="RootInfo" />
-    <ref role="0s_vh" node="7ygHWDSSE57" resolve="RootInfoProjection.Results" />
     <node concept="31KZC3" id="7ygHWDSO0r4" role="fr08y">
       <property role="TrG5h" value="id" />
       <node concept="3UfwP1" id="7ygHWDSO0r5" role="2UegB9">
@@ -326,7 +325,9 @@
   </node>
   <node concept="0hYQU" id="7ygHWDSQgFO">
     <property role="3GE5qa" value="Handlers" />
+    <property role="TrG5h" value="RootInfoQueryHandler" />
     <ref role="0hYQY" node="7ygHWDSNLGW" resolve="RootInfoQuery" />
+    <ref role="1tlalx" node="7ygHWDSSE57" resolve="RootInfoProjection.Results" />
   </node>
   <node concept="0iR2k" id="7ygHWDSRgt1">
     <property role="2hLNu9" value="ZES.Tests" />

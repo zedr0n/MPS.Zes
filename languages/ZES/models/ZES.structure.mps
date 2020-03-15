@@ -182,11 +182,6 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="7ygHWDSQWtu" resolve="QueryResult" />
     </node>
-    <node concept="1TJgyj" id="7ygHWDSSI0r" role="1TKVEi">
-      <property role="IQ2ns" value="8687645761437098011" />
-      <property role="20kJfa" value="projection" />
-      <ref role="20lvS9" node="7ygHWDSSCS9" resolve="Projection" />
-    </node>
   </node>
   <node concept="1TIwiD" id="7ygHWDSPPDK">
     <property role="EcuMT" value="8687645761436342896" />
@@ -198,6 +193,14 @@
       <property role="20kJfa" value="query" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="7ygHWDSNi$c" resolve="Query" />
+    </node>
+    <node concept="1TJgyj" id="6Zky1$Mw2PS" role="1TKVEi">
+      <property role="IQ2ns" value="8058215275075480952" />
+      <property role="20kJfa" value="projection" />
+      <ref role="20lvS9" node="7ygHWDSSCS9" resolve="Projection" />
+    </node>
+    <node concept="PrWs8" id="6Zky1$MwEno" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
   <node concept="1TIwiD" id="7ygHWDSQWtu">

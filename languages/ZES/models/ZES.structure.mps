@@ -217,6 +217,13 @@
     <node concept="PrWs8" id="7ygHWDSSCSa" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
+    <node concept="1TJgyj" id="7ygHWDT1xen" role="1TKVEi">
+      <property role="IQ2ns" value="8687645761439404951" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="methods" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" to="80bi:6hv6i2_B6ci" resolve="MethodDeclaration" />
+    </node>
   </node>
   <node concept="1TIwiD" id="7ygHWDSWBTW">
     <property role="EcuMT" value="8687645761438121596" />

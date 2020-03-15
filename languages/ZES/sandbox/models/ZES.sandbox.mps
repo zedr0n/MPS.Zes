@@ -17,7 +17,9 @@
       <concept id="8687645761435674892" name="ZES.structure.Query" flags="ng" index="0npV6">
         <reference id="8687645761436841810" name="result" index="0j$2o" />
       </concept>
-      <concept id="8687645761437077001" name="ZES.structure.Projection" flags="ng" index="0szB3" />
+      <concept id="8687645761437077001" name="ZES.structure.Projection" flags="ng" index="0szB3">
+        <child id="8687645761439404951" name="methods" index="1_Eht" />
+      </concept>
       <concept id="8687645761423652139" name="ZES.structure.ActCommandHandler" flags="ng" index="0xgbx" />
       <concept id="8687645761423652140" name="ZES.structure.CreateCommandHandler" flags="ng" index="0xgbA" />
       <concept id="8687645761423650854" name="ZES.structure.CommandHandler" flags="ng" index="0xgvG">
@@ -361,6 +363,44 @@
   <node concept="0szB3" id="7ygHWDSSE57">
     <property role="TrG5h" value="RootInfoProjection.Results" />
     <property role="3GE5qa" value="Queries" />
+    <node concept="31KRCM" id="7ygHWDT2zWa" role="1_Eht">
+      <property role="TrG5h" value="NumberOfUpdates" />
+      <node concept="1ux1M" id="7ygHWDT2zWb" role="31KRCR" />
+      <node concept="1ux1I" id="7ygHWDT2zWd" role="1fIg$P" />
+      <node concept="3UfwP1" id="7ygHWDT2zWk" role="3Sw9wT">
+        <node concept="3UfM66" id="7ygHWDT2zWp" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KRCM" id="7ygHWDT2Ys4" role="1_Eht">
+      <property role="TrG5h" value="CreatedAt" />
+      <node concept="1ux1M" id="7ygHWDT2Ys5" role="31KRCR" />
+      <node concept="1ux1I" id="7ygHWDT2Ys7" role="1fIg$P">
+        <node concept="31KZC3" id="7ygHWDT2Ysr" role="1ux1J">
+          <property role="TrG5h" value="id" />
+          <node concept="3UfwP1" id="7ygHWDT2Yss" role="2UegB9">
+            <node concept="3UfNVn" id="7ygHWDT2Ysx" role="3UfBpY" />
+          </node>
+        </node>
+      </node>
+      <node concept="3UfwP1" id="7ygHWDT2Ysj" role="3Sw9wT">
+        <node concept="3UfM64" id="7ygHWDT2Yso" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KRCM" id="7ygHWDT3qhQ" role="1_Eht">
+      <property role="TrG5h" value="UpdatedAt" />
+      <node concept="1ux1M" id="7ygHWDT3qhR" role="31KRCR" />
+      <node concept="1ux1I" id="7ygHWDT3qhT" role="1fIg$P">
+        <node concept="31KZC3" id="7ygHWDT3qil" role="1ux1J">
+          <property role="TrG5h" value="id" />
+          <node concept="3UfwP1" id="7ygHWDT3qim" role="2UegB9">
+            <node concept="3UfNVn" id="7ygHWDT3qir" role="3UfBpY" />
+          </node>
+        </node>
+      </node>
+      <node concept="3UfwP1" id="7ygHWDT3qid" role="3Sw9wT">
+        <node concept="3UfM64" id="7ygHWDT3qii" role="3UfBpY" />
+      </node>
+    </node>
   </node>
 </model>
 

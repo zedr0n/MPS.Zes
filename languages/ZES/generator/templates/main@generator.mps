@@ -215,7 +215,9 @@
       <concept id="4106644276571785472" name="CsBaseLanguage.structure.AcessorDeclaration" flags="ng" index="j3B8Q">
         <child id="4106644276571785475" name="body" index="j3B8P" />
       </concept>
-      <concept id="5059844704660991035" name="CsBaseLanguage.structure.SingleLineComment" flags="ng" index="pNo78" />
+      <concept id="5059844704660991035" name="CsBaseLanguage.structure.SingleLineComment" flags="ng" index="pNo78">
+        <property id="5059844704661223944" name="value" index="pKhvV" />
+      </concept>
       <concept id="3766354144460199614" name="CsBaseLanguage.structure.Public" flags="ng" index="2qAx6t" />
       <concept id="3766354144460199617" name="CsBaseLanguage.structure.Protected" flags="ng" index="2qAx7y" />
       <concept id="3766354144459872182" name="CsBaseLanguage.structure.IFunctionHeader" flags="ng" index="2qBh2l">
@@ -603,6 +605,9 @@
   <node concept="31LFg6" id="4mC6rZksb0n">
     <property role="TrG5h" value="Command.cs" />
     <property role="3GE5qa" value="Commands" />
+    <node concept="pNo78" id="7xe74T_XuDw" role="31LlDr">
+      <property role="pKhvV" value="&lt;auto-generated/&gt;" />
+    </node>
     <node concept="31LijL" id="4mC6rZksbI4" role="31LlDr">
       <property role="TrG5h" value="Namespace" />
       <node concept="17Uvod" id="4mC6rZksbIR" role="lGtFl">
@@ -628,6 +633,28 @@
       </node>
       <node concept="31LiCz" id="4mC6rZksef6" role="31LkaE">
         <property role="TrG5h" value="CommandClass" />
+        <node concept="1uUxK" id="7ygHWDS6Leg" role="31Leeq">
+          <property role="TrG5h" value="CommandClass" />
+          <node concept="1ux1M" id="7ygHWDS6Leh" role="1uUxY" />
+          <node concept="1ux1I" id="7ygHWDS6Lek" role="1uUwe" />
+          <node concept="2qAx6t" id="7ygHWDS6Lkz" role="3SE3Wx" />
+          <node concept="17Uvod" id="7ygHWDS6LkA" role="lGtFl">
+            <property role="2qtEX9" value="name" />
+            <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
+            <node concept="3zFVjK" id="7ygHWDS6LkB" role="3zH0cK">
+              <node concept="3clFbS" id="7ygHWDS6LkC" role="2VODD2">
+                <node concept="3clFbF" id="7ygHWDS6Ll2" role="3cqZAp">
+                  <node concept="2OqwBi" id="7ygHWDS6LrC" role="3clFbG">
+                    <node concept="30H73N" id="7ygHWDS6Ll1" role="2Oq$k0" />
+                    <node concept="3TrcHB" id="7ygHWDS6LsZ" role="2OqNvi">
+                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="31KLdm" id="7ygHWDSlpS3" role="31Leeq">
           <node concept="1W57fq" id="7ygHWDSMx6d" role="lGtFl">
             <node concept="3IZrLx" id="7ygHWDSMx6e" role="3IZSJc">
@@ -696,28 +723,6 @@
                       <ref role="3TtcxE" to="1o4g:7ygHWDRZbnC" resolve="params" />
                     </node>
                     <node concept="30H73N" id="7ygHWDSMvaF" role="2Oq$k0" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="1uUxK" id="7ygHWDS6Leg" role="31Leeq">
-          <property role="TrG5h" value="CommandClass" />
-          <node concept="1ux1M" id="7ygHWDS6Leh" role="1uUxY" />
-          <node concept="1ux1I" id="7ygHWDS6Lek" role="1uUwe" />
-          <node concept="2qAx6t" id="7ygHWDS6Lkz" role="3SE3Wx" />
-          <node concept="17Uvod" id="7ygHWDS6LkA" role="lGtFl">
-            <property role="2qtEX9" value="name" />
-            <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
-            <node concept="3zFVjK" id="7ygHWDS6LkB" role="3zH0cK">
-              <node concept="3clFbS" id="7ygHWDS6LkC" role="2VODD2">
-                <node concept="3clFbF" id="7ygHWDS6Ll2" role="3cqZAp">
-                  <node concept="2OqwBi" id="7ygHWDS6LrC" role="3clFbG">
-                    <node concept="30H73N" id="7ygHWDS6Ll1" role="2Oq$k0" />
-                    <node concept="3TrcHB" id="7ygHWDS6LsZ" role="2OqNvi">
-                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-                    </node>
                   </node>
                 </node>
               </node>
@@ -1050,10 +1055,10 @@
           </node>
         </node>
         <node concept="2N$mWS" id="4mC6rZksffd" role="3U7fkm">
-          <property role="2N$mWW" value="Command" />
+          <property role="2N$mWW" value="ZES.Infrastructure.Domain.Command" />
         </node>
         <node concept="2N$mWS" id="7ygHWDRV0bM" role="3U7fkm">
-          <property role="2N$mWW" value="ICreateCommand" />
+          <property role="2N$mWW" value="ZES.Interfaces.ICreateCommand" />
           <node concept="1W57fq" id="7ygHWDRV0mL" role="lGtFl">
             <node concept="3IZrLx" id="7ygHWDRV0mO" role="3IZSJc">
               <node concept="3clFbS" id="7ygHWDRV0mP" role="2VODD2">
@@ -1113,6 +1118,9 @@
   <node concept="31LFg6" id="7ygHWDS5rlz">
     <property role="TrG5h" value="CommandHandler.cs" />
     <property role="3GE5qa" value="Handlers" />
+    <node concept="pNo78" id="7xe74T_XOGo" role="31LlDr">
+      <property role="pKhvV" value="&lt;auto-generated/&gt;" />
+    </node>
     <node concept="31LijL" id="7ygHWDS5tS6" role="31LlDr">
       <property role="TrG5h" value="Domain.Commands" />
       <node concept="17Uvod" id="7ygHWDS5u16" role="lGtFl">
@@ -1161,7 +1169,7 @@
           </node>
         </node>
         <node concept="2N$mWS" id="7ygHWDS5vBP" role="3U7fkm">
-          <property role="2N$mWW" value="CommandHandlerBase" />
+          <property role="2N$mWW" value="ZES.Infrastructure.Domain.CommandHandlerBase" />
           <node concept="17Uvod" id="7ygHWDS5vKP" role="lGtFl">
             <property role="2qtEX9" value="referencedGenericTypeParameter" />
             <property role="P4ACc" value="d74e25c9-4d91-43b6-bad7-d18af7bf6674/1969317145989153978/1969317145989153982" />
@@ -1176,7 +1184,7 @@
                       <node concept="3cpWs3" id="7ygHWDS5wuj" role="3uHU7B">
                         <node concept="3cpWs3" id="7ygHWDS5vRG" role="3uHU7B">
                           <node concept="Xl_RD" id="7ygHWDS5vLg" role="3uHU7B">
-                            <property role="Xl_RC" value="CommandHandlerBase&lt;" />
+                            <property role="Xl_RC" value="ZES.Infrastructure.Domain.CommandHandlerBase&lt;" />
                           </node>
                           <node concept="2OqwBi" id="7ygHWDS5wmD" role="3uHU7w">
                             <node concept="2OqwBi" id="7ygHWDS5w8l" role="2Oq$k0">
@@ -1225,7 +1233,7 @@
               <property role="TrG5h" value="repository" />
               <node concept="3UfwP1" id="7ygHWDS6bGa" role="2UegB9">
                 <node concept="2N$mWS" id="7ygHWDS6bGf" role="3UfBpY">
-                  <property role="2N$mWW" value="IEsRepository&lt;IAggregate&gt;" />
+                  <property role="2N$mWW" value="ZES.Interfaces.Domain.IEsRepository&lt;ZES.Interfaces.Domain.IAggregate&gt;" />
                 </node>
               </node>
             </node>
@@ -2435,6 +2443,9 @@
   <node concept="31LFg6" id="7ygHWDSNka8">
     <property role="TrG5h" value="Query.cs" />
     <property role="3GE5qa" value="Queries" />
+    <node concept="pNo78" id="7xe74T_XPou" role="31LlDr">
+      <property role="pKhvV" value="&lt;auto-generated/&gt;" />
+    </node>
     <node concept="31LijL" id="7ygHWDSNl8i" role="31LlDr">
       <property role="TrG5h" value="Domain.Queries" />
       <node concept="17Uvod" id="7ygHWDSNlft" role="lGtFl">
@@ -2657,6 +2668,9 @@
   <node concept="31LFg6" id="7ygHWDSPPDQ">
     <property role="TrG5h" value="QueryHandler.cs" />
     <property role="3GE5qa" value="Queries" />
+    <node concept="pNo78" id="7xe74T_XRCv" role="31LlDr">
+      <property role="pKhvV" value="&lt;auto-generated/&gt;" />
+    </node>
     <node concept="31LijL" id="7ygHWDSPV7I" role="31LlDr">
       <property role="TrG5h" value="Domain.Queries" />
       <node concept="17Uvod" id="7ygHWDSPVgK" role="lGtFl">
@@ -3453,6 +3467,9 @@
   <node concept="31LFg6" id="7ygHWDSRgOM">
     <property role="TrG5h" value="QueryResult.cs" />
     <property role="3GE5qa" value="Queries" />
+    <node concept="pNo78" id="7xe74T_XSNL" role="31LlDr">
+      <property role="pKhvV" value="&lt;auto-generated/&gt;" />
+    </node>
     <node concept="31LijL" id="7ygHWDSRhPI" role="31LlDr">
       <property role="TrG5h" value="Domain.Queries" />
       <node concept="17Uvod" id="7ygHWDSRhQx" role="lGtFl">

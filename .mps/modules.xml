@@ -4,6 +4,7 @@
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/ZES/ZES.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/ZES/sandbox/ZES.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/ZES.build/ZES.build.msd" folder="" />
     </projectModules>
   </component>
 </project>

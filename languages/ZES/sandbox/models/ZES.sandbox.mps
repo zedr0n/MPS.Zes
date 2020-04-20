@@ -87,14 +87,7 @@
   </node>
   <node concept="0xEmi" id="7ygHWDS5O7J">
     <property role="TrG5h" value="Root" />
-    <node concept="1ux1I" id="7ygHWDS5O7K" role="0xEmh">
-      <node concept="31KZC3" id="7ygHWDS7rsL" role="1ux1J">
-        <property role="TrG5h" value="target" />
-        <node concept="3UfwP1" id="7ygHWDS7rsM" role="2UegB9">
-          <node concept="3UfNVn" id="7ygHWDS7rsR" role="3UfBpY" />
-        </node>
-      </node>
-    </node>
+    <node concept="1ux1I" id="7ygHWDS5O7K" role="0xEmh" />
     <node concept="31KRCM" id="7ygHWDS5O7L" role="0xEmn">
       <property role="TrG5h" value="Update" />
       <node concept="1ux1M" id="7ygHWDS5O7M" role="31KRCR">
@@ -136,14 +129,7 @@
   </node>
   <node concept="0xEmi" id="7ygHWDSrPm1">
     <property role="TrG5h" value="Record" />
-    <node concept="1ux1I" id="7ygHWDSrPm2" role="0xEmh">
-      <node concept="31KZC3" id="7ygHWDSGvlW" role="1ux1J">
-        <property role="TrG5h" value="target" />
-        <node concept="3UfwP1" id="7ygHWDSGvlX" role="2UegB9">
-          <node concept="3UfNVn" id="7ygHWDSGvm2" role="3UfBpY" />
-        </node>
-      </node>
-    </node>
+    <node concept="1ux1I" id="7ygHWDSrPm2" role="0xEmh" />
     <node concept="31KRCM" id="7ygHWDStp_g" role="0xEmn">
       <property role="TrG5h" value="Root" />
       <node concept="1ux1M" id="7ygHWDStp_h" role="31KRCR" />
@@ -195,12 +181,6 @@
   <node concept="0xEmi" id="7ygHWDSLxCY">
     <property role="TrG5h" value="Hashflare" />
     <node concept="1ux1I" id="7ygHWDSLxCZ" role="0xEmh">
-      <node concept="31KZC3" id="7ygHWDSLxD0" role="1ux1J">
-        <property role="TrG5h" value="target" />
-        <node concept="3UfwP1" id="7ygHWDSLxD1" role="2UegB9">
-          <node concept="3UfNVn" id="7ygHWDSLxD6" role="3UfBpY" />
-        </node>
-      </node>
       <node concept="31KZC3" id="7ygHWDSLxDb" role="1ux1J">
         <property role="TrG5h" value="username" />
         <node concept="3UfwP1" id="7ygHWDSLxDc" role="2UegB9">
@@ -215,12 +195,6 @@
     <property role="3GE5qa" value="Commands" />
     <property role="TrG5h" value="RegisterHashflare" />
     <ref role="0xEmz" node="7ygHWDSLxCY" resolve="Hashflare" />
-    <node concept="31KZC3" id="7ygHWDSLzJi" role="fr08y">
-      <property role="TrG5h" value="username" />
-      <node concept="3UfwP1" id="7ygHWDSLzJj" role="2UegB9">
-        <node concept="3UfNVn" id="7ygHWDSLzJo" role="3UfBpY" />
-      </node>
-    </node>
     <node concept="fp7cb" id="7ygHWDSLxDv" role="0JheC">
       <property role="TrG5h" value="target" />
     </node>
@@ -257,12 +231,6 @@
       <node concept="1pH0Yj" id="7ygHWDSMUWP" role="3Sw9wT" />
     </node>
     <node concept="1ux1I" id="7ygHWDSLzTR" role="0xEmh">
-      <node concept="31KZC3" id="7ygHWDSLzTS" role="1ux1J">
-        <property role="TrG5h" value="target" />
-        <node concept="3UfwP1" id="7ygHWDSLzTT" role="2UegB9">
-          <node concept="3UfNVn" id="7ygHWDSLzTY" role="3UfBpY" />
-        </node>
-      </node>
       <node concept="31KZC3" id="7ygHWDSLzU1" role="1ux1J">
         <property role="TrG5h" value="type" />
         <node concept="3UfwP1" id="7ygHWDSLzU2" role="2UegB9">

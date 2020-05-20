@@ -887,7 +887,7 @@
           <property role="2N$mWW" value="ZES.Infrastructure.Domain.Command" />
         </node>
         <node concept="2N$mWS" id="7ygHWDRV0bM" role="3U7fkm">
-          <property role="2N$mWW" value="ZES.Interfaces.ICreateCommand" />
+          <property role="2N$mWW" value="ZES.Interfaces.Domain.ICreateCommand" />
           <node concept="1W57fq" id="7ygHWDRV0mL" role="lGtFl">
             <node concept="3IZrLx" id="7ygHWDRV0mO" role="3IZSJc">
               <node concept="3clFbS" id="7ygHWDRV0mP" role="2VODD2">
@@ -1004,6 +1004,40 @@
             <property role="P4ACc" value="d74e25c9-4d91-43b6-bad7-d18af7bf6674/1969317145989153978/1969317145989153982" />
             <node concept="3zFVjK" id="7ygHWDS5vKQ" role="3zH0cK">
               <node concept="3clFbS" id="7ygHWDS5vKR" role="2VODD2">
+                <node concept="3cpWs8" id="4$v$ZOr4zlM" role="3cqZAp">
+                  <node concept="3cpWsn" id="4$v$ZOr4zlP" role="3cpWs9">
+                    <property role="TrG5h" value="base" />
+                    <node concept="17QB3L" id="4$v$ZOr4zlK" role="1tU5fm" />
+                    <node concept="Xl_RD" id="4$v$ZOr4zve" role="33vP2m">
+                      <property role="Xl_RC" value="ZES.Infrastructure.Domain.CommandHandlerBase&lt;" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbJ" id="4$v$ZOr4$2q" role="3cqZAp">
+                  <node concept="3clFbS" id="4$v$ZOr4$2s" role="3clFbx">
+                    <node concept="3clFbF" id="4$v$ZOr4_8S" role="3cqZAp">
+                      <node concept="37vLTI" id="4$v$ZOr4_jg" role="3clFbG">
+                        <node concept="37vLTw" id="4$v$ZOr4_8Q" role="37vLTJ">
+                          <ref role="3cqZAo" node="4$v$ZOr4zlP" resolve="base" />
+                        </node>
+                        <node concept="Xl_RD" id="4$v$ZOr4_lf" role="37vLTx">
+                          <property role="Xl_RC" value="ZES.Infrastructure.Domain.CreateCommandHandlerBase&lt;" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="4$v$ZOr4$G3" role="3clFbw">
+                    <node concept="2OqwBi" id="4$v$ZOr4$n1" role="2Oq$k0">
+                      <node concept="30H73N" id="4$v$ZOr4$4y" role="2Oq$k0" />
+                      <node concept="3TrEf2" id="4$v$ZOr4$vk" role="2OqNvi">
+                        <ref role="3Tt5mk" to="1o4g:7ygHWDS5r0B" resolve="command" />
+                      </node>
+                    </node>
+                    <node concept="3TrcHB" id="4$v$ZOr4$T1" role="2OqNvi">
+                      <ref role="3TsBF5" to="1o4g:4mC6rZkrMSX" resolve="isCreate" />
+                    </node>
+                  </node>
+                </node>
                 <node concept="3clFbF" id="7ygHWDS5vLh" role="3cqZAp">
                   <node concept="3cpWs3" id="7ygHWDS5yFQ" role="3clFbG">
                     <node concept="Xl_RD" id="7ygHWDS5yIL" role="3uHU7w">
@@ -1012,9 +1046,6 @@
                     <node concept="3cpWs3" id="7ygHWDS5xQG" role="3uHU7B">
                       <node concept="3cpWs3" id="7ygHWDS5wuj" role="3uHU7B">
                         <node concept="3cpWs3" id="7ygHWDS5vRG" role="3uHU7B">
-                          <node concept="Xl_RD" id="7ygHWDS5vLg" role="3uHU7B">
-                            <property role="Xl_RC" value="ZES.Infrastructure.Domain.CommandHandlerBase&lt;" />
-                          </node>
                           <node concept="2OqwBi" id="7ygHWDS5wmD" role="3uHU7w">
                             <node concept="2OqwBi" id="7ygHWDS5w8l" role="2Oq$k0">
                               <node concept="30H73N" id="7ygHWDS5vSi" role="2Oq$k0" />
@@ -1025,6 +1056,9 @@
                             <node concept="3TrcHB" id="7ygHWDS5wq6" role="2OqNvi">
                               <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
                             </node>
+                          </node>
+                          <node concept="37vLTw" id="4$v$ZOr5g_k" role="3uHU7B">
+                            <ref role="3cqZAo" node="4$v$ZOr4zlP" resolve="base" />
                           </node>
                         </node>
                         <node concept="Xl_RD" id="7ygHWDS5wwf" role="3uHU7w">
@@ -1131,27 +1165,104 @@
                   </node>
                 </node>
                 <node concept="3UdiBG" id="7ygHWDS7xwX" role="3UdfaP">
-                  <node concept="3UdiBH" id="7ygHWDS7yDj" role="3UdiBE">
-                    <node concept="3Uf2Ky" id="7ygHWDSGwjt" role="3UdiBb">
-                      <node concept="29HgVG" id="7ygHWDSGwjx" role="lGtFl">
-                        <node concept="3NFfHV" id="7ygHWDSGwjA" role="3NFExx">
-                          <node concept="3clFbS" id="7ygHWDSGwjB" role="2VODD2">
-                            <node concept="3cpWs6" id="7ygHWDSJqtO" role="3cqZAp">
-                              <node concept="2OqwBi" id="7ygHWDSGx2N" role="3cqZAk">
-                                <node concept="2OqwBi" id="7ygHWDSGwJf" role="2Oq$k0">
-                                  <node concept="2OqwBi" id="7ygHWDSGwv5" role="2Oq$k0">
-                                    <node concept="30H73N" id="7ygHWDSGwlx" role="2Oq$k0" />
-                                    <node concept="3TrEf2" id="7ygHWDSGw_o" role="2OqNvi">
-                                      <ref role="3Tt5mk" to="1o4g:7ygHWDS5r0B" resolve="command" />
-                                    </node>
-                                  </node>
-                                  <node concept="3TrEf2" id="7ygHWDSGwXx" role="2OqNvi">
-                                    <ref role="3Tt5mk" to="1o4g:7ygHWDS5x9D" resolve="aggregate" />
-                                  </node>
+                  <node concept="1pdMLZ" id="4$v$ZOr9$Gz" role="lGtFl">
+                    <node concept="3NFfHV" id="4$v$ZOr9$G_" role="31$UT">
+                      <node concept="3clFbS" id="4$v$ZOr9$GA" role="2VODD2">
+                        <node concept="3clFbF" id="4$v$ZOr9$Ix" role="3cqZAp">
+                          <node concept="2OqwBi" id="4$v$ZOr9__4" role="3clFbG">
+                            <node concept="2OqwBi" id="4$v$ZOr9_9K" role="2Oq$k0">
+                              <node concept="2OqwBi" id="4$v$ZOr9$Sl" role="2Oq$k0">
+                                <node concept="30H73N" id="4$v$ZOr9$Iw" role="2Oq$k0" />
+                                <node concept="3TrEf2" id="4$v$ZOr9$ZL" role="2OqNvi">
+                                  <ref role="3Tt5mk" to="1o4g:7ygHWDS5r0B" resolve="command" />
                                 </node>
-                                <node concept="3TrEf2" id="7ygHWDSGx8L" role="2OqNvi">
-                                  <ref role="3Tt5mk" to="1o4g:7ygHWDS5x9r" resolve="ctor" />
+                              </node>
+                              <node concept="3TrEf2" id="4$v$ZOr9_nf" role="2OqNvi">
+                                <ref role="3Tt5mk" to="1o4g:7ygHWDS5x9D" resolve="aggregate" />
+                              </node>
+                            </node>
+                            <node concept="3TrEf2" id="4$v$ZOr9_J_" role="2OqNvi">
+                              <ref role="3Tt5mk" to="1o4g:7ygHWDS5x9r" resolve="ctor" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="15lBmy" id="4$v$ZOr9HeX" role="15mYut">
+                      <node concept="3clFbS" id="4$v$ZOr9HeY" role="2VODD2">
+                        <node concept="3cpWs8" id="4$v$ZOr9HfO" role="3cqZAp">
+                          <node concept="3cpWsn" id="4$v$ZOr9HfR" role="3cpWs9">
+                            <property role="TrG5h" value="arg" />
+                            <node concept="3Tqbb2" id="4$v$ZOr9HfN" role="1tU5fm">
+                              <ref role="ehGHo" to="80bi:5VT83U$N0Bj" resolve="Argument" />
+                            </node>
+                            <node concept="2ShNRf" id="4$v$ZOr9IoD" role="33vP2m">
+                              <node concept="3zrR0B" id="4$v$ZOr9IoB" role="2ShVmc">
+                                <node concept="3Tqbb2" id="4$v$ZOr9IoC" role="3zrR0E">
+                                  <ref role="ehGHo" to="80bi:5VT83U$N0Bj" resolve="Argument" />
                                 </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbH" id="4$v$ZOr9JB2" role="3cqZAp" />
+                        <node concept="3cpWs8" id="4$v$ZOr9JBj" role="3cqZAp">
+                          <node concept="3cpWsn" id="4$v$ZOr9JBk" role="3cpWs9">
+                            <property role="TrG5h" value="str" />
+                            <node concept="3Tqbb2" id="4$v$ZOr9JBl" role="1tU5fm">
+                              <ref role="ehGHo" to="80bi:1HkqSaCLgiU" resolve="GenericTypeParameterReferenceString" />
+                            </node>
+                            <node concept="2ShNRf" id="4$v$ZOr9JBm" role="33vP2m">
+                              <node concept="3zrR0B" id="4$v$ZOr9JBn" role="2ShVmc">
+                                <node concept="3Tqbb2" id="4$v$ZOr9JBo" role="3zrR0E">
+                                  <ref role="ehGHo" to="80bi:1HkqSaCLgiU" resolve="GenericTypeParameterReferenceString" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbH" id="4$v$ZOr9JBp" role="3cqZAp" />
+                        <node concept="3clFbF" id="4$v$ZOr9JBP" role="3cqZAp">
+                          <node concept="37vLTI" id="4$v$ZOr9JBQ" role="3clFbG">
+                            <node concept="2OqwBi" id="4$v$ZOr9JBR" role="37vLTJ">
+                              <node concept="37vLTw" id="4$v$ZOr9JBS" role="2Oq$k0">
+                                <ref role="3cqZAo" node="4$v$ZOr9JBk" resolve="str" />
+                              </node>
+                              <node concept="3TrcHB" id="4$v$ZOr9JBT" role="2OqNvi">
+                                <ref role="3TsBF5" to="80bi:1HkqSaCLgiY" resolve="referencedGenericTypeParameter" />
+                              </node>
+                            </node>
+                            <node concept="Xl_RD" id="4$v$ZOr9JBV" role="37vLTx">
+                              <property role="Xl_RC" value="command.Target" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="4$v$ZOr9QJy" role="3cqZAp">
+                          <node concept="37vLTI" id="4$v$ZOr9S6B" role="3clFbG">
+                            <node concept="37vLTw" id="4$v$ZOr9S7f" role="37vLTx">
+                              <ref role="3cqZAo" node="4$v$ZOr9JBk" resolve="str" />
+                            </node>
+                            <node concept="2OqwBi" id="4$v$ZOr9RPK" role="37vLTJ">
+                              <node concept="37vLTw" id="4$v$ZOr9QJw" role="2Oq$k0">
+                                <ref role="3cqZAo" node="4$v$ZOr9HfR" resolve="arg" />
+                              </node>
+                              <node concept="3TrEf2" id="4$v$ZOr9RW$" role="2OqNvi">
+                                <ref role="3Tt5mk" to="80bi:5VT83U$N0BP" resolve="expression" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="4$v$ZOr9Ko$" role="3cqZAp">
+                          <node concept="2OqwBi" id="4$v$ZOr9M50" role="3clFbG">
+                            <node concept="2OqwBi" id="4$v$ZOr9KIJ" role="2Oq$k0">
+                              <node concept="3l3mFP" id="4$v$ZOr9Koy" role="2Oq$k0" />
+                              <node concept="3Tsc0h" id="4$v$ZOr9KJt" role="2OqNvi">
+                                <ref role="3TtcxE" to="80bi:5VT83U$N0Bk" resolve="argument" />
+                              </node>
+                            </node>
+                            <node concept="2Ke4WJ" id="4$v$ZOr9Nt1" role="2OqNvi">
+                              <node concept="37vLTw" id="4$v$ZOr9OyI" role="25WWJ7">
+                                <ref role="3cqZAo" node="4$v$ZOr9HfR" resolve="arg" />
                               </node>
                             </node>
                           </node>
@@ -1709,11 +1820,16 @@
             <node concept="3NFfHV" id="7ygHWDS7URM" role="3NFExx">
               <node concept="3clFbS" id="7ygHWDS7URN" role="2VODD2">
                 <node concept="3clFbF" id="7ygHWDS7URT" role="3cqZAp">
-                  <node concept="2OqwBi" id="7ygHWDS7URO" role="3clFbG">
-                    <node concept="3TrEf2" id="7ygHWDS7URR" role="2OqNvi">
-                      <ref role="3Tt5mk" to="80bi:7yZ_CF2xDX3" resolve="type" />
+                  <node concept="2OqwBi" id="4$v$ZOr2Ds2" role="3clFbG">
+                    <node concept="2OqwBi" id="7ygHWDS7URO" role="2Oq$k0">
+                      <node concept="3TrEf2" id="7ygHWDS7URR" role="2OqNvi">
+                        <ref role="3Tt5mk" to="80bi:7yZ_CF2xDX3" resolve="type" />
+                      </node>
+                      <node concept="30H73N" id="7ygHWDS7URS" role="2Oq$k0" />
                     </node>
-                    <node concept="30H73N" id="7ygHWDS7URS" role="2Oq$k0" />
+                    <node concept="3TrEf2" id="4$v$ZOr2DEd" role="2OqNvi">
+                      <ref role="3Tt5mk" to="80bi:5VT83U$LPp0" resolve="nonArrayType" />
+                    </node>
                   </node>
                 </node>
               </node>

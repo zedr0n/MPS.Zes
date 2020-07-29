@@ -7,6 +7,13 @@
   <imports />
   <registry>
     <language id="abe666e1-1ee1-43fe-93c4-703403beeec8" name="ZES">
+      <concept id="8687645761436632926" name="ZES.structure.QueryResult" flags="ng" index="0iR2k">
+        <reference id="5474742744634578637" name="project" index="1prmt8" />
+      </concept>
+      <concept id="8687645761435674892" name="ZES.structure.Query" flags="ng" index="0npV6">
+        <property id="4253210080288973052" name="isSingle" index="2HI_3O" />
+        <reference id="8687645761436841810" name="result" index="0j$2o" />
+      </concept>
       <concept id="8687645761423652139" name="ZES.structure.ActCommandHandler" flags="ng" index="0xgbx" />
       <concept id="8687645761423652140" name="ZES.structure.CreateCommandHandler" flags="ng" index="0xgbA" />
       <concept id="8687645761423650854" name="ZES.structure.CommandHandler" flags="ng" index="0xgvG">
@@ -116,12 +123,6 @@
     <property role="3GE5qa" value="Events" />
     <property role="TrG5h" value="ItemInfoUpdated" />
     <ref role="2ZwxhB" node="7XpM$V0QXSK" resolve="BDO.Core" />
-    <node concept="31KZC3" id="3G6s0ym_UGa" role="fr08y">
-      <property role="TrG5h" value="name" />
-      <node concept="3UfwP1" id="3G6s0ym_UGb" role="2UegB9">
-        <node concept="3UfNVn" id="3G6s0ym_UGg" role="3UfBpY" />
-      </node>
-    </node>
     <node concept="31KZC3" id="3G6s0ym_UI6" role="fr08y">
       <property role="TrG5h" value="id" />
       <node concept="3UfwP1" id="3G6s0ym_UI7" role="2UegB9">
@@ -147,6 +148,35 @@
   <node concept="0xgbx" id="3G6s0ymGnin">
     <property role="3GE5qa" value="Handlers" />
     <ref role="0xgvH" node="3G6s0ymD0Se" resolve="UpdateItemInfo" />
+  </node>
+  <node concept="0npV6" id="3G6s0ymJ16f">
+    <property role="TrG5h" value="ItemInfoQuery" />
+    <property role="3GE5qa" value="Queries" />
+    <property role="2HI_3O" value="true" />
+    <ref role="0j$2o" node="3G6s0ymJ16g" resolve="ItemInfo" />
+    <node concept="31KZC3" id="3G6s0ymJ1ee" role="fr08y">
+      <property role="TrG5h" value="name" />
+      <node concept="3UfwP1" id="3G6s0ymJ1ef" role="2UegB9">
+        <node concept="3UfNVn" id="3G6s0ymJ1ek" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="0iR2k" id="3G6s0ymJ16g">
+    <property role="TrG5h" value="ItemInfo" />
+    <property role="3GE5qa" value="Queries" />
+    <ref role="1prmt8" node="7XpM$V0QXSK" resolve="BDO.Core" />
+    <node concept="31KZC3" id="3G6s0ymJ16h" role="fr08y">
+      <property role="TrG5h" value="name" />
+      <node concept="3UfwP1" id="3G6s0ymJ16i" role="2UegB9">
+        <node concept="3UfNVn" id="3G6s0ymJ16n" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="3G6s0ymJ16s" role="fr08y">
+      <property role="TrG5h" value="itemId" />
+      <node concept="3UfwP1" id="3G6s0ymJ16t" role="2UegB9">
+        <node concept="3UfM66" id="3G6s0ymJ16_" role="3UfBpY" />
+      </node>
+    </node>
   </node>
 </model>
 

@@ -301,5 +301,25 @@
       </node>
     </node>
   </node>
+  <node concept="13h7C7" id="3G6s0ymJ23F">
+    <ref role="13h7C2" to="1o4g:3G6s0ymJ1mp" resolve="SingleQuery" />
+    <node concept="13hLZK" id="3G6s0ymJ23G" role="13h7CW">
+      <node concept="3clFbS" id="3G6s0ymJ23H" role="2VODD2">
+        <node concept="3clFbF" id="3G6s0ymJ23Z" role="3cqZAp">
+          <node concept="37vLTI" id="3G6s0ymJ2Id" role="3clFbG">
+            <node concept="3clFbT" id="3G6s0ymJ2IB" role="37vLTx">
+              <property role="3clFbU" value="true" />
+            </node>
+            <node concept="2OqwBi" id="3G6s0ymJ2db" role="37vLTJ">
+              <node concept="13iPFW" id="3G6s0ymJ23Y" role="2Oq$k0" />
+              <node concept="3TrcHB" id="3G6s0ymJ2rT" role="2OqNvi">
+                <ref role="3TsBF5" to="1o4g:3G6s0ymJ23W" resolve="isSingle" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

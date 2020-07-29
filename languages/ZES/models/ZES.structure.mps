@@ -68,7 +68,6 @@
     <property role="EcuMT" value="5019290096397921850" />
     <property role="TrG5h" value="Command" />
     <property role="R4oN_" value="Command" />
-    <property role="19KtqR" value="true" />
     <property role="3GE5qa" value="Commands" />
     <ref role="1TJDcQ" node="4mC6rZkrMSv" resolve="DomainClass" />
     <node concept="1TJgyi" id="4mC6rZkrMSX" role="1TKVEl">
@@ -112,7 +111,6 @@
   <node concept="1TIwiD" id="7ygHWDS5r0A">
     <property role="EcuMT" value="8687645761423650854" />
     <property role="TrG5h" value="CommandHandler" />
-    <property role="19KtqR" value="true" />
     <property role="3GE5qa" value="Handlers" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="7ygHWDS5r0B" role="1TKVEi">

@@ -30,6 +30,9 @@
         <property id="5019290096397921846" name="project" index="2hLNu9" />
         <child id="8687645761422013928" name="params" index="fr08y" />
       </concept>
+      <concept id="9176588155335990819" name="ZES.structure.Event" flags="ng" index="2ZwxhH">
+        <reference id="9176588155335990825" name="project" index="2ZwxhB" />
+      </concept>
       <concept id="5474742744634047563" name="ZES.structure.Project" flags="ng" index="1ptgRe" />
     </language>
     <language id="d74e25c9-4d91-43b6-bad7-d18af7bf6674" name="CsBaseLanguage">
@@ -142,6 +145,24 @@
   <node concept="0xgbx" id="4JUcokiDcxr">
     <property role="3GE5qa" value="Handlers" />
     <ref role="0xgvH" node="4JUcokiDcnU" resolve="DepositAsset" />
+  </node>
+  <node concept="2ZwxhH" id="7XpM$V0RETV">
+    <property role="TrG5h" value="AccountCreated" />
+    <ref role="2ZwxhB" node="4JUcokiC41T" resolve="Chronos.Accounts" />
+    <node concept="31KZC3" id="7XpM$V0RETW" role="fr08y">
+      <property role="TrG5h" value="name" />
+      <node concept="3UfwP1" id="7XpM$V0RETX" role="2UegB9">
+        <node concept="3UfNVn" id="7XpM$V0REU2" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="7XpM$V0REU7" role="fr08y">
+      <property role="TrG5h" value="type" />
+      <node concept="3UfwP1" id="7XpM$V0REU8" role="2UegB9">
+        <node concept="2N$mWS" id="7XpM$V0REUg" role="3UfBpY">
+          <property role="2N$mWW" value="Account.Type" />
+        </node>
+      </node>
+    </node>
   </node>
 </model>
 

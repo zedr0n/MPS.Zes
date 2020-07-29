@@ -324,5 +324,17 @@
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
+  <node concept="1TIwiD" id="7XpM$V0QXSz">
+    <property role="EcuMT" value="9176588155335990819" />
+    <property role="TrG5h" value="Event" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" node="4mC6rZkrMSv" resolve="DomainClass" />
+    <node concept="1TJgyj" id="7XpM$V0QXSD" role="1TKVEi">
+      <property role="IQ2ns" value="9176588155335990825" />
+      <property role="20kJfa" value="project" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="4JUcokizNLb" resolve="Project" />
+    </node>
+  </node>
 </model>
 

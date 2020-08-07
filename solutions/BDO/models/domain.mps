@@ -27,6 +27,14 @@
         <child id="8687645761423675997" name="methods" index="0xEmn" />
       </concept>
       <concept id="8687645761423904432" name="ZES.structure.CreateCommand" flags="ng" index="0yj_U" />
+      <concept id="3401822714142909892" name="ZES.structure.EventReference" flags="ng" index="eo_pS">
+        <reference id="3401822714142909897" name="event" index="eo_pP" />
+      </concept>
+      <concept id="3401822714142909794" name="ZES.structure.QueryHandler" flags="ng" index="eo_ru">
+        <reference id="3401822714143024826" name="state" index="er1k6" />
+        <reference id="3401822714143015130" name="project" index="er3dA" />
+        <child id="3401822714142992103" name="events" index="er9lr" />
+      </concept>
       <concept id="8687645761421493441" name="ZES.structure.Target" flags="ng" index="fp7cb" />
       <concept id="8687645761421731429" name="ZES.structure.TargetCommand" flags="ng" index="fqd6J" />
       <concept id="5019290096397921850" name="ZES.structure.Command" flags="ng" index="2hLNu5">
@@ -183,6 +191,18 @@
       <node concept="3UfwP1" id="5ES5ZMGaSx_" role="2UegB9">
         <node concept="3UfM66" id="5ES5ZMGaSxK" role="3UfBpY" />
       </node>
+    </node>
+  </node>
+  <node concept="eo_ru" id="2WPGVKxmirA">
+    <property role="3GE5qa" value="Queries" />
+    <property role="TrG5h" value="ItemInfoQueryHandler" />
+    <ref role="er3dA" node="7XpM$V0QXSK" resolve="BDO.Core" />
+    <ref role="er1k6" node="3G6s0ymJ16g" resolve="ItemInfo" />
+    <node concept="eo_pS" id="2WPGVKxmk5Y" role="er9lr">
+      <ref role="eo_pP" node="7XpM$V0TOC3" resolve="ItemAdded" />
+    </node>
+    <node concept="eo_pS" id="2WPGVKxmk60" role="er9lr">
+      <ref role="eo_pP" node="3G6s0ym_UFX" resolve="ItemInfoUpdated" />
     </node>
   </node>
 </model>

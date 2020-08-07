@@ -625,9 +625,9 @@
     <node concept="2G$12M" id="7ygHWDT554Z" role="3989C9">
       <property role="TrG5h" value="ZES" />
       <node concept="1E1JtD" id="7ygHWDT554R" role="2G$12L">
-        <property role="BnDLt" value="true" />
         <property role="TrG5h" value="ZES" />
         <property role="3LESm3" value="abe666e1-1ee1-43fe-93c4-703403beeec8" />
+        <property role="BnDLt" value="true" />
         <node concept="55IIr" id="7ygHWDT554M" role="3LF7KH">
           <node concept="2Ry0Ak" id="7ygHWDT554N" role="iGT6I">
             <property role="2Ry0Am" value="languages" />

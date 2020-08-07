@@ -8,6 +8,7 @@
   <registry>
     <language id="abe666e1-1ee1-43fe-93c4-703403beeec8" name="ZES">
       <concept id="8687645761436632926" name="ZES.structure.QueryResult" flags="ng" index="0iR2k">
+        <property id="4253210080295273512" name="isSingle" index="2G6zgw" />
         <reference id="5474742744634578637" name="project" index="1prmt8" />
       </concept>
       <concept id="8687645761435674892" name="ZES.structure.Query" flags="ng" index="0npV6">
@@ -21,6 +22,7 @@
       </concept>
       <concept id="8687645761423675992" name="ZES.structure.AggregateRoot" flags="ng" index="0xEmi">
         <reference id="5474742744634065533" name="project" index="1ptrfS" />
+        <reference id="4924007833308682048" name="createEvent" index="1FNO19" />
         <child id="8687645761423675995" name="ctor" index="0xEmh" />
         <child id="8687645761423675997" name="methods" index="0xEmn" />
       </concept>
@@ -31,33 +33,25 @@
         <property id="8687645761424090660" name="method" index="0zd7I" />
         <property id="5019290096397921853" name="isCreate" index="2hLNu2" />
         <reference id="8687645761423676009" name="aggregate" index="0xEmz" />
+        <reference id="1124454158806338451" name="method" index="22hxqa" />
         <child id="8687645761425220706" name="target" index="0JheC" />
       </concept>
       <concept id="5019290096397921823" name="ZES.structure.DomainClass" flags="ng" index="2hLNuw">
         <child id="8687645761422013928" name="params" index="fr08y" />
       </concept>
       <concept id="9176588155335990819" name="ZES.structure.Event" flags="ng" index="2ZwxhH">
+        <property id="4924007833308784846" name="isCreate" index="1FMvZ7" />
         <reference id="9176588155335990825" name="project" index="2ZwxhB" />
       </concept>
       <concept id="5474742744634047563" name="ZES.structure.Project" flags="ng" index="1ptgRe" />
+      <concept id="4924007833308682065" name="ZES.structure.AggregateMethod" flags="ng" index="1FNO1o">
+        <reference id="4924007833308682068" name="event" index="1FNO1t" />
+      </concept>
     </language>
     <language id="d74e25c9-4d91-43b6-bad7-d18af7bf6674" name="CsBaseLanguage">
-      <concept id="7486903154347131566" name="CsBaseLanguage.structure.FormalParameterList" flags="ng" index="1ux1I">
-        <child id="7486903154347131567" name="formalParameter" index="1ux1J" />
-      </concept>
-      <concept id="7486903154347131570" name="CsBaseLanguage.structure.Block" flags="ng" index="1ux1M" />
-      <concept id="3766354144459872182" name="CsBaseLanguage.structure.IFunctionHeader" flags="ng" index="2qBh2l">
-        <child id="7575174424947156020" name="formalParameterList" index="1fIg$P" />
-      </concept>
-      <concept id="7232527154588443410" name="CsBaseLanguage.structure.MethodDeclaration" flags="ng" index="31KRCM">
-        <child id="7232527154588443415" name="body" index="31KRCR" />
-      </concept>
+      <concept id="7486903154347131566" name="CsBaseLanguage.structure.FormalParameterList" flags="ng" index="1ux1I" />
       <concept id="7232527154588476195" name="CsBaseLanguage.structure.FormalParameter" flags="ng" index="31KZC3">
         <child id="8700838527816343363" name="type" index="2UegB9" />
-      </concept>
-      <concept id="3129541975290303051" name="CsBaseLanguage.structure.VoidType" flags="ng" index="1pH0Yj" />
-      <concept id="6209812394075305792" name="CsBaseLanguage.structure.IHaveTypeOrVoid" flags="ng" index="3Sw9wS">
-        <child id="6209812394075305793" name="typeOrVoid" index="3Sw9wT" />
       </concept>
       <concept id="6843536562190757247" name="CsBaseLanguage.structure.Type" flags="ng" index="3UfwP1">
         <child id="6843536562190767680" name="nonArrayType" index="3UfBpY" />
@@ -80,6 +74,7 @@
   <node concept="2ZwxhH" id="7XpM$V0TOC3">
     <property role="TrG5h" value="ItemAdded" />
     <property role="3GE5qa" value="Events" />
+    <property role="1FMvZ7" value="true" />
     <ref role="2ZwxhB" node="7XpM$V0QXSK" resolve="BDO.Core" />
     <node concept="31KZC3" id="7XpM$V0TOC4" role="fr08y">
       <property role="TrG5h" value="name" />
@@ -91,20 +86,12 @@
   <node concept="0xEmi" id="7XpM$V0TOCF">
     <property role="TrG5h" value="Item" />
     <ref role="1ptrfS" node="7XpM$V0QXSK" resolve="BDO.Core" />
-    <node concept="1ux1I" id="7XpM$V0TOCG" role="0xEmh" />
-    <node concept="31KRCM" id="3G6s0ymAiZW" role="0xEmn">
+    <ref role="1FNO19" node="7XpM$V0TOC3" resolve="ItemAdded" />
+    <node concept="1FNO1o" id="4hl_K$JB6hQ" role="0xEmn">
       <property role="TrG5h" value="UpdateInfo" />
-      <node concept="1ux1M" id="3G6s0ymAiZX" role="31KRCR" />
-      <node concept="1ux1I" id="3G6s0ymAiZZ" role="1fIg$P">
-        <node concept="31KZC3" id="3G6s0ymAj09" role="1ux1J">
-          <property role="TrG5h" value="id" />
-          <node concept="3UfwP1" id="3G6s0ymAj0a" role="2UegB9">
-            <node concept="3UfM66" id="3G6s0ymAj0k" role="3UfBpY" />
-          </node>
-        </node>
-      </node>
-      <node concept="1pH0Yj" id="3G6s0ymAj06" role="3Sw9wT" />
+      <ref role="1FNO1t" node="3G6s0ym_UFX" resolve="ItemInfoUpdated" />
     </node>
+    <node concept="1ux1I" id="7XpM$V0TOCG" role="0xEmh" />
   </node>
   <node concept="0yj_U" id="3G6s0ym_6UV">
     <property role="2hLNu2" value="true" />
@@ -124,9 +111,15 @@
     <property role="TrG5h" value="ItemInfoUpdated" />
     <ref role="2ZwxhB" node="7XpM$V0QXSK" resolve="BDO.Core" />
     <node concept="31KZC3" id="3G6s0ym_UI6" role="fr08y">
-      <property role="TrG5h" value="id" />
+      <property role="TrG5h" value="itemId" />
       <node concept="3UfwP1" id="3G6s0ym_UI7" role="2UegB9">
         <node concept="3UfM66" id="3G6s0ym_UIf" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="4hl_K$J$_BP" role="fr08y">
+      <property role="TrG5h" value="grade" />
+      <node concept="3UfwP1" id="4hl_K$J$_BQ" role="2UegB9">
+        <node concept="3UfM66" id="4hl_K$J$_BY" role="3UfBpY" />
       </node>
     </node>
   </node>
@@ -135,10 +128,17 @@
     <property role="0zd7I" value="UpdateInfo" />
     <property role="3GE5qa" value="Commands" />
     <ref role="0xEmz" node="7XpM$V0TOCF" resolve="Item" />
+    <ref role="22hxqa" node="4hl_K$JB6hQ" resolve="UpdateInfo" />
     <node concept="31KZC3" id="3G6s0ymD0Sg" role="fr08y">
-      <property role="TrG5h" value="id" />
+      <property role="TrG5h" value="itemId" />
       <node concept="3UfwP1" id="3G6s0ymD0Sh" role="2UegB9">
         <node concept="3UfM66" id="3G6s0ymD0Sm" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="4hl_K$J$_t0" role="fr08y">
+      <property role="TrG5h" value="grade" />
+      <node concept="3UfwP1" id="4hl_K$J$_t1" role="2UegB9">
+        <node concept="3UfM66" id="4hl_K$J$_t9" role="3UfBpY" />
       </node>
     </node>
     <node concept="fp7cb" id="3G6s0ymD0Sf" role="0JheC">
@@ -164,6 +164,7 @@
   <node concept="0iR2k" id="3G6s0ymJ16g">
     <property role="TrG5h" value="ItemInfo" />
     <property role="3GE5qa" value="Queries" />
+    <property role="2G6zgw" value="true" />
     <ref role="1prmt8" node="7XpM$V0QXSK" resolve="BDO.Core" />
     <node concept="31KZC3" id="3G6s0ymJ16h" role="fr08y">
       <property role="TrG5h" value="name" />
@@ -175,6 +176,12 @@
       <property role="TrG5h" value="itemId" />
       <node concept="3UfwP1" id="3G6s0ymJ16t" role="2UegB9">
         <node concept="3UfM66" id="3G6s0ymJ16_" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="5ES5ZMGaSx$" role="fr08y">
+      <property role="TrG5h" value="grade" />
+      <node concept="3UfwP1" id="5ES5ZMGaSx_" role="2UegB9">
+        <node concept="3UfM66" id="5ES5ZMGaSxK" role="3UfBpY" />
       </node>
     </node>
   </node>

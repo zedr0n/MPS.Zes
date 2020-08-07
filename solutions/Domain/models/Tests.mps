@@ -12,7 +12,10 @@
         <reference id="8687645761436342900" name="query" index="0hYQY" />
         <reference id="8058215275075480952" name="projection" index="1tlalx" />
       </concept>
-      <concept id="8687645761436632926" name="ZES.structure.QueryResult" flags="ng" index="0iR2k" />
+      <concept id="8687645761436632926" name="ZES.structure.QueryResult" flags="ng" index="0iR2k">
+        <property id="4253210080295273512" name="isSingle" index="2G6zgw" />
+        <reference id="5474742744634578637" name="project" index="1prmt8" />
+      </concept>
       <concept id="8687645761435674892" name="ZES.structure.Query" flags="ng" index="0npV6">
         <reference id="8687645761436841810" name="result" index="0j$2o" />
       </concept>
@@ -25,6 +28,8 @@
         <reference id="8687645761423650855" name="command" index="0xgvH" />
       </concept>
       <concept id="8687645761423675992" name="ZES.structure.AggregateRoot" flags="ng" index="0xEmi">
+        <reference id="5474742744634065533" name="project" index="1ptrfS" />
+        <reference id="4924007833308682048" name="createEvent" index="1FNO19" />
         <child id="8687645761423675995" name="ctor" index="0xEmh" />
         <child id="8687645761423675997" name="methods" index="0xEmn" />
       </concept>
@@ -35,11 +40,20 @@
         <property id="8687645761424090660" name="method" index="0zd7I" />
         <property id="5019290096397921853" name="isCreate" index="2hLNu2" />
         <reference id="8687645761423676009" name="aggregate" index="0xEmz" />
+        <reference id="1124454158806338451" name="method" index="22hxqa" />
         <child id="8687645761425220706" name="target" index="0JheC" />
       </concept>
       <concept id="5019290096397921823" name="ZES.structure.DomainClass" flags="ng" index="2hLNuw">
         <property id="5019290096397921846" name="project" index="2hLNu9" />
         <child id="8687645761422013928" name="params" index="fr08y" />
+      </concept>
+      <concept id="9176588155335990819" name="ZES.structure.Event" flags="ng" index="2ZwxhH">
+        <property id="4924007833308784846" name="isCreate" index="1FMvZ7" />
+        <reference id="9176588155335990825" name="project" index="2ZwxhB" />
+      </concept>
+      <concept id="5474742744634047563" name="ZES.structure.Project" flags="ng" index="1ptgRe" />
+      <concept id="4924007833308682065" name="ZES.structure.AggregateMethod" flags="ng" index="1FNO1o">
+        <reference id="4924007833308682068" name="event" index="1FNO1t" />
       </concept>
     </language>
     <language id="d74e25c9-4d91-43b6-bad7-d18af7bf6674" name="CsBaseLanguage">
@@ -50,13 +64,15 @@
       <concept id="3766354144459872182" name="CsBaseLanguage.structure.IFunctionHeader" flags="ng" index="2qBh2l">
         <child id="7575174424947156020" name="formalParameterList" index="1fIg$P" />
       </concept>
+      <concept id="1969317145989153978" name="CsBaseLanguage.structure.GenericTypeParameterReferenceString" flags="ng" index="2N$mWS">
+        <property id="1969317145989153982" name="referencedGenericTypeParameter" index="2N$mWW" />
+      </concept>
       <concept id="7232527154588443410" name="CsBaseLanguage.structure.MethodDeclaration" flags="ng" index="31KRCM">
         <child id="7232527154588443415" name="body" index="31KRCR" />
       </concept>
       <concept id="7232527154588476195" name="CsBaseLanguage.structure.FormalParameter" flags="ng" index="31KZC3">
         <child id="8700838527816343363" name="type" index="2UegB9" />
       </concept>
-      <concept id="3129541975290303051" name="CsBaseLanguage.structure.VoidType" flags="ng" index="1pH0Yj" />
       <concept id="6209812394075305792" name="CsBaseLanguage.structure.IHaveTypeOrVoid" flags="ng" index="3Sw9wS">
         <child id="6209812394075305793" name="typeOrVoid" index="3Sw9wT" />
       </concept>
@@ -83,6 +99,7 @@
     <property role="TrG5h" value="AddRecord" />
     <property role="0zd7I" value="Root" />
     <ref role="0xEmz" node="7ygHWDSrPm1" resolve="Record" />
+    <ref role="22hxqa" node="YqRhAdKxl7" resolve="Root" />
     <node concept="fp7cb" id="7ygHWDSbYOQ" role="0JheC">
       <property role="TrG5h" value="target" />
     </node>
@@ -117,49 +134,38 @@
     <property role="2hLNu9" value="ZES.Tests" />
     <property role="3GE5qa" value="Commands" />
     <property role="TrG5h" value="UpdateRoot" />
-    <property role="0zd7I" value="Update" />
+    <property role="0zd7I" value="UpdateRoot" />
     <ref role="0xEmz" node="7ygHWDS5O7J" resolve="Root" />
+    <ref role="22hxqa" node="YqRhAdJHGf" resolve="UpdateRoot" />
     <node concept="fp7cb" id="7ygHWDSK_1x" role="0JheC">
       <property role="TrG5h" value="target" />
     </node>
   </node>
   <node concept="0xEmi" id="7ygHWDSrPm1">
     <property role="TrG5h" value="Record" />
-    <node concept="1ux1I" id="7ygHWDSrPm2" role="0xEmh" />
-    <node concept="31KRCM" id="7ygHWDStp_g" role="0xEmn">
+    <ref role="1ptrfS" node="YqRhAdJGPt" resolve="ZES.Tests.Domain" />
+    <ref role="1FNO19" node="YqRhAdKwGl" resolve="RecordCreated" />
+    <node concept="1FNO1o" id="YqRhAdKxl7" role="0xEmn">
       <property role="TrG5h" value="Root" />
-      <node concept="1ux1M" id="7ygHWDStp_h" role="31KRCR" />
-      <node concept="1ux1I" id="7ygHWDStp_j" role="1fIg$P">
-        <node concept="31KZC3" id="7ygHWDStp_t" role="1ux1J">
-          <property role="TrG5h" value="recordValue" />
-          <node concept="3UfwP1" id="7ygHWDStp_u" role="2UegB9">
-            <node concept="3UfLA0" id="7ygHWDStp_z" role="3UfBpY" />
-          </node>
-        </node>
-        <node concept="31KZC3" id="7ygHWDStp_A" role="1ux1J">
-          <property role="TrG5h" value="timestamp" />
-          <node concept="3UfwP1" id="7ygHWDStp_B" role="2UegB9">
-            <node concept="3UfM64" id="7ygHWDStp_J" role="3UfBpY" />
-          </node>
-        </node>
-      </node>
-      <node concept="1pH0Yj" id="7ygHWDStp_q" role="3Sw9wT" />
+      <ref role="1FNO1t" node="YqRhAdKxlk" resolve="RootRecorded" />
     </node>
+    <node concept="1ux1I" id="7ygHWDSrPm2" role="0xEmh" />
   </node>
   <node concept="0xEmi" id="7ygHWDS5O7J">
     <property role="TrG5h" value="Root" />
-    <node concept="1ux1I" id="7ygHWDS5O7K" role="0xEmh" />
-    <node concept="31KRCM" id="7ygHWDS5O7L" role="0xEmn">
-      <property role="TrG5h" value="Update" />
-      <node concept="1ux1M" id="7ygHWDS5O7M" role="31KRCR" />
-      <node concept="1ux1I" id="7ygHWDS5O7O" role="1fIg$P" />
-      <node concept="1pH0Yj" id="7ygHWDS5O7V" role="3Sw9wT" />
+    <ref role="1ptrfS" node="YqRhAdJGPt" resolve="ZES.Tests.Domain" />
+    <ref role="1FNO19" node="YqRhAdJGPu" resolve="RootCreated" />
+    <node concept="1FNO1o" id="YqRhAdJHGf" role="0xEmn">
+      <property role="TrG5h" value="UpdateRoot" />
+      <ref role="1FNO1t" node="YqRhAdJHwO" resolve="RootUpdated" />
     </node>
+    <node concept="1ux1I" id="7ygHWDS5O7K" role="0xEmh" />
   </node>
   <node concept="0iR2k" id="7ygHWDSRgt1">
     <property role="2hLNu9" value="ZES.Tests" />
     <property role="TrG5h" value="RootInfo" />
     <property role="3GE5qa" value="Queries" />
+    <ref role="1prmt8" node="YqRhAdJGPt" resolve="ZES.Tests.Domain" />
     <node concept="31KZC3" id="7ygHWDSRgt2" role="fr08y">
       <property role="TrG5h" value="id" />
       <node concept="3UfwP1" id="7ygHWDSRgt3" role="2UegB9">
@@ -293,6 +299,99 @@
       <property role="TrG5h" value="id" />
       <node concept="3UfwP1" id="4$v$ZOraU6Q" role="2UegB9">
         <node concept="3UfNVn" id="4$v$ZOraU6V" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="1ptgRe" id="YqRhAdJGPt">
+    <property role="TrG5h" value="ZES.Tests.Domain" />
+  </node>
+  <node concept="2ZwxhH" id="YqRhAdJGPu">
+    <property role="TrG5h" value="RootCreated" />
+    <property role="1FMvZ7" value="true" />
+    <property role="3GE5qa" value="Events" />
+    <ref role="2ZwxhB" node="YqRhAdJGPt" resolve="ZES.Tests.Domain" />
+    <node concept="31KZC3" id="YqRhAdJGPv" role="fr08y">
+      <property role="TrG5h" value="rootId" />
+      <node concept="3UfwP1" id="YqRhAdJGPw" role="2UegB9">
+        <node concept="3UfNVn" id="YqRhAdJGP_" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="YqRhAdJGPC" role="fr08y">
+      <property role="TrG5h" value="type" />
+      <node concept="3UfwP1" id="YqRhAdJGPD" role="2UegB9">
+        <node concept="2N$mWS" id="YqRhAdJGPL" role="3UfBpY">
+          <property role="2N$mWW" value="Root.Type" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="2ZwxhH" id="YqRhAdJHwO">
+    <property role="3GE5qa" value="Events" />
+    <property role="TrG5h" value="RootUpdated" />
+    <ref role="2ZwxhB" node="YqRhAdJGPt" resolve="ZES.Tests.Domain" />
+    <node concept="31KZC3" id="YqRhAdJHwP" role="fr08y">
+      <property role="TrG5h" value="rootId" />
+      <node concept="3UfwP1" id="YqRhAdJHwQ" role="2UegB9">
+        <node concept="3UfNVn" id="YqRhAdJHwV" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="2ZwxhH" id="YqRhAdKwGl">
+    <property role="3GE5qa" value="Events" />
+    <property role="TrG5h" value="RecordCreated" />
+    <property role="1FMvZ7" value="true" />
+    <ref role="2ZwxhB" node="YqRhAdJGPt" resolve="ZES.Tests.Domain" />
+    <node concept="31KZC3" id="YqRhAdKx7i" role="fr08y">
+      <property role="TrG5h" value="rootId" />
+      <node concept="3UfwP1" id="YqRhAdKx7j" role="2UegB9">
+        <node concept="3UfNVn" id="YqRhAdKx7o" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="2ZwxhH" id="YqRhAdKxlk">
+    <property role="3GE5qa" value="Events" />
+    <property role="TrG5h" value="RootRecorded" />
+    <ref role="2ZwxhB" node="YqRhAdJGPt" resolve="ZES.Tests.Domain" />
+    <node concept="31KZC3" id="YqRhAdKxll" role="fr08y">
+      <property role="TrG5h" value="rootId" />
+      <node concept="3UfwP1" id="YqRhAdKxlm" role="2UegB9">
+        <node concept="3UfNVn" id="YqRhAdKxlr" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="YqRhAdKxlu" role="fr08y">
+      <property role="TrG5h" value="recordValue" />
+      <node concept="3UfwP1" id="YqRhAdKxlv" role="2UegB9">
+        <node concept="3UfLA0" id="YqRhAdKxlB" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="0iR2k" id="YqRhAdMHZy">
+    <property role="3GE5qa" value="Queries" />
+    <property role="TrG5h" value="RootInfo2" />
+    <property role="2G6zgw" value="true" />
+    <ref role="1prmt8" node="YqRhAdJGPt" resolve="ZES.Tests.Domain" />
+    <node concept="31KZC3" id="YqRhAdMHZz" role="fr08y">
+      <property role="TrG5h" value="id" />
+      <node concept="3UfwP1" id="YqRhAdMHZ$" role="2UegB9">
+        <node concept="3UfNVn" id="YqRhAdMHZ_" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="YqRhAdMHZA" role="fr08y">
+      <property role="TrG5h" value="createdAt" />
+      <node concept="3UfwP1" id="YqRhAdMHZB" role="2UegB9">
+        <node concept="3UfM64" id="YqRhAdMHZC" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="YqRhAdMHZD" role="fr08y">
+      <property role="TrG5h" value="updatedAt" />
+      <node concept="3UfwP1" id="YqRhAdMHZE" role="2UegB9">
+        <node concept="3UfM64" id="YqRhAdMHZF" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="YqRhAdMHZG" role="fr08y">
+      <property role="TrG5h" value="numberOfUpdates" />
+      <node concept="3UfwP1" id="YqRhAdMHZH" role="2UegB9">
+        <node concept="3UfM66" id="YqRhAdMHZI" role="3UfBpY" />
       </node>
     </node>
   </node>

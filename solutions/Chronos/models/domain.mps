@@ -14,6 +14,7 @@
       </concept>
       <concept id="8687645761423675992" name="ZES.structure.AggregateRoot" flags="ng" index="0xEmi">
         <reference id="5474742744634065533" name="project" index="1ptrfS" />
+        <reference id="4924007833308682048" name="createEvent" index="1FNO19" />
         <child id="8687645761423675995" name="ctor" index="0xEmh" />
         <child id="8687645761423675997" name="methods" index="0xEmn" />
       </concept>
@@ -24,6 +25,7 @@
         <property id="8687645761424090660" name="method" index="0zd7I" />
         <property id="5019290096397921853" name="isCreate" index="2hLNu2" />
         <reference id="8687645761423676009" name="aggregate" index="0xEmz" />
+        <reference id="1124454158806338451" name="method" index="22hxqa" />
         <child id="8687645761425220706" name="target" index="0JheC" />
       </concept>
       <concept id="5019290096397921823" name="ZES.structure.DomainClass" flags="ng" index="2hLNuw">
@@ -34,27 +36,19 @@
         <reference id="9176588155335990825" name="project" index="2ZwxhB" />
       </concept>
       <concept id="5474742744634047563" name="ZES.structure.Project" flags="ng" index="1ptgRe" />
+      <concept id="4924007833308682065" name="ZES.structure.AggregateMethod" flags="ng" index="1FNO1o">
+        <reference id="4924007833308682068" name="event" index="1FNO1t" />
+      </concept>
     </language>
     <language id="d74e25c9-4d91-43b6-bad7-d18af7bf6674" name="CsBaseLanguage">
       <concept id="7486903154347131566" name="CsBaseLanguage.structure.FormalParameterList" flags="ng" index="1ux1I">
         <child id="7486903154347131567" name="formalParameter" index="1ux1J" />
       </concept>
-      <concept id="7486903154347131570" name="CsBaseLanguage.structure.Block" flags="ng" index="1ux1M" />
-      <concept id="3766354144459872182" name="CsBaseLanguage.structure.IFunctionHeader" flags="ng" index="2qBh2l">
-        <child id="7575174424947156020" name="formalParameterList" index="1fIg$P" />
-      </concept>
       <concept id="1969317145989153978" name="CsBaseLanguage.structure.GenericTypeParameterReferenceString" flags="ng" index="2N$mWS">
         <property id="1969317145989153982" name="referencedGenericTypeParameter" index="2N$mWW" />
       </concept>
-      <concept id="7232527154588443410" name="CsBaseLanguage.structure.MethodDeclaration" flags="ng" index="31KRCM">
-        <child id="7232527154588443415" name="body" index="31KRCR" />
-      </concept>
       <concept id="7232527154588476195" name="CsBaseLanguage.structure.FormalParameter" flags="ng" index="31KZC3">
         <child id="8700838527816343363" name="type" index="2UegB9" />
-      </concept>
-      <concept id="3129541975290303051" name="CsBaseLanguage.structure.VoidType" flags="ng" index="1pH0Yj" />
-      <concept id="6209812394075305792" name="CsBaseLanguage.structure.IHaveTypeOrVoid" flags="ng" index="3Sw9wS">
-        <child id="6209812394075305793" name="typeOrVoid" index="3Sw9wT" />
       </concept>
       <concept id="6843536562190757247" name="CsBaseLanguage.structure.Type" flags="ng" index="3UfwP1">
         <child id="6843536562190767680" name="nonArrayType" index="3UfBpY" />
@@ -84,6 +78,11 @@
   <node concept="0xEmi" id="7L999x3pwsZ">
     <property role="TrG5h" value="Account" />
     <ref role="1ptrfS" node="4JUcokiC41T" resolve="Chronos.Accounts" />
+    <ref role="1FNO19" node="7XpM$V0RETV" resolve="AccountCreated" />
+    <node concept="1FNO1o" id="YqRhAdJkdf" role="0xEmn">
+      <property role="TrG5h" value="DepositAsset" />
+      <ref role="1FNO1t" node="YqRhAdJk0F" resolve="AssetDeposited" />
+    </node>
     <node concept="1ux1I" id="7L999x3pwt0" role="0xEmh">
       <node concept="31KZC3" id="7L999x3pwtI" role="1ux1J">
         <property role="TrG5h" value="type" />
@@ -93,25 +92,6 @@
           </node>
         </node>
       </node>
-    </node>
-    <node concept="31KRCM" id="58GOiHnDHV7" role="0xEmn">
-      <property role="TrG5h" value="DepositAsset" />
-      <node concept="1ux1M" id="58GOiHnDHV8" role="31KRCR" />
-      <node concept="1ux1I" id="58GOiHnDHVa" role="1fIg$P">
-        <node concept="31KZC3" id="58GOiHnDHVk" role="1ux1J">
-          <property role="TrG5h" value="assetId" />
-          <node concept="3UfwP1" id="58GOiHnDHVl" role="2UegB9">
-            <node concept="3UfNVn" id="58GOiHnDHVq" role="3UfBpY" />
-          </node>
-        </node>
-        <node concept="31KZC3" id="58GOiHnDHVD" role="1ux1J">
-          <property role="TrG5h" value="quantity" />
-          <node concept="3UfwP1" id="58GOiHnDHVE" role="2UegB9">
-            <node concept="3UfLA0" id="58GOiHnDHVM" role="3UfBpY" />
-          </node>
-        </node>
-      </node>
-      <node concept="1pH0Yj" id="58GOiHnDHVh" role="3Sw9wT" />
     </node>
   </node>
   <node concept="0xgbA" id="7L999x3qh_g">
@@ -126,6 +106,7 @@
     <property role="TrG5h" value="DepositAsset" />
     <property role="0zd7I" value="DepositAsset" />
     <ref role="0xEmz" node="7L999x3pwsZ" resolve="Account" />
+    <ref role="22hxqa" node="YqRhAdJkdf" resolve="DepositAsset" />
     <node concept="31KZC3" id="4JUcokiDctG" role="fr08y">
       <property role="TrG5h" value="assetId" />
       <node concept="3UfwP1" id="4JUcokiDctH" role="2UegB9">
@@ -148,6 +129,7 @@
   </node>
   <node concept="2ZwxhH" id="7XpM$V0RETV">
     <property role="TrG5h" value="AccountCreated" />
+    <property role="3GE5qa" value="Events" />
     <ref role="2ZwxhB" node="4JUcokiC41T" resolve="Chronos.Accounts" />
     <node concept="31KZC3" id="7XpM$V0RETW" role="fr08y">
       <property role="TrG5h" value="name" />
@@ -161,6 +143,23 @@
         <node concept="2N$mWS" id="7XpM$V0REUg" role="3UfBpY">
           <property role="2N$mWW" value="Account.Type" />
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="2ZwxhH" id="YqRhAdJk0F">
+    <property role="3GE5qa" value="Events" />
+    <property role="TrG5h" value="AssetDeposited" />
+    <ref role="2ZwxhB" node="4JUcokiC41T" resolve="Chronos.Accounts" />
+    <node concept="31KZC3" id="YqRhAdJk0G" role="fr08y">
+      <property role="TrG5h" value="assetId" />
+      <node concept="3UfwP1" id="YqRhAdJk0H" role="2UegB9">
+        <node concept="3UfNVn" id="YqRhAdJk0M" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="YqRhAdJk0P" role="fr08y">
+      <property role="TrG5h" value="quantity" />
+      <node concept="3UfwP1" id="YqRhAdJk0Q" role="2UegB9">
+        <node concept="3UfLA0" id="YqRhAdJk0Y" role="3UfBpY" />
       </node>
     </node>
   </node>

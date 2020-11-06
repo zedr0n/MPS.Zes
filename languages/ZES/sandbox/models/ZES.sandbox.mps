@@ -9,7 +9,7 @@
   </imports>
   <registry>
     <language id="abe666e1-1ee1-43fe-93c4-703403beeec8" name="ZES">
-      <concept id="8687645761436342896" name="ZES.structure.QueryHandler" flags="ng" index="0hYQU">
+      <concept id="8687645761436342896" name="ZES.structure.QueryHandler2" flags="ng" index="0hYQU">
         <reference id="8687645761436342900" name="query" index="0hYQY" />
         <reference id="8058215275075480952" name="projection" index="1tlalx" />
       </concept>

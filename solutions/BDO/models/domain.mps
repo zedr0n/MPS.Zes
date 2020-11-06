@@ -205,5 +205,29 @@
       <ref role="eo_pP" node="3G6s0ym_UFX" resolve="ItemInfoUpdated" />
     </node>
   </node>
+  <node concept="2ZwxhH" id="2WPGVKxvxDB">
+    <property role="3GE5qa" value="Events" />
+    <property role="TrG5h" value="WorkerHired" />
+    <property role="1FMvZ7" value="true" />
+    <ref role="2ZwxhB" node="7XpM$V0QXSK" resolve="BDO.Core" />
+    <node concept="31KZC3" id="2WPGVKxvxFq" role="fr08y">
+      <property role="TrG5h" value="grade" />
+      <node concept="3UfwP1" id="2WPGVKxvxFr" role="2UegB9">
+        <node concept="3UfM66" id="2WPGVKxvxFw" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="2WPGVKxvyda" role="fr08y">
+      <property role="TrG5h" value="workerType" />
+      <node concept="3UfwP1" id="2WPGVKxvydb" role="2UegB9">
+        <node concept="3UfM66" id="2WPGVKxvydj" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="0xEmi" id="2WPGVKxvydm">
+    <property role="TrG5h" value="Worker" />
+    <ref role="1ptrfS" node="7XpM$V0QXSK" resolve="BDO.Core" />
+    <ref role="1FNO19" node="2WPGVKxvxDB" resolve="WorkerHired" />
+    <node concept="1ux1I" id="2WPGVKxvydn" role="0xEmh" />
+  </node>
 </model>
 

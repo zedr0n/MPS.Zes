@@ -122,6 +122,56 @@
       </node>
       <node concept="17QB3L" id="4aKwFXkfVac" role="aoRGl" />
     </node>
+    <node concept="ATzpf" id="2WPGVKxuk7e" role="a7sos">
+      <property role="TrG5h" value="toLower" />
+      <node concept="3Tm1VV" id="2WPGVKxuk7f" role="1B3o_S" />
+      <node concept="17QB3L" id="2WPGVKxuk7g" role="3clF45" />
+      <node concept="3clFbS" id="2WPGVKxuk7h" role="3clF47">
+        <node concept="3cpWs8" id="2WPGVKxuk7i" role="3cqZAp">
+          <node concept="3cpWsn" id="2WPGVKxuk7j" role="3cpWs9">
+            <property role="TrG5h" value="s" />
+            <node concept="17QB3L" id="2WPGVKxuk7k" role="1tU5fm" />
+            <node concept="2OqwBi" id="2WPGVKxuk7l" role="33vP2m">
+              <node concept="2OqwBi" id="2WPGVKxuk7m" role="2Oq$k0">
+                <node concept="liA8E" id="2WPGVKxuk7n" role="2OqNvi">
+                  <ref role="37wK5l" to="wyt6:~String.substring(int,int)" resolve="substring" />
+                  <node concept="3cmrfG" id="2WPGVKxuk7o" role="37wK5m">
+                    <property role="3cmrfH" value="0" />
+                  </node>
+                  <node concept="3cmrfG" id="2WPGVKxuk7p" role="37wK5m">
+                    <property role="3cmrfH" value="1" />
+                  </node>
+                </node>
+                <node concept="2V_BSl" id="2WPGVKxuk7q" role="2Oq$k0" />
+              </node>
+              <node concept="liA8E" id="2WPGVKxukvm" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~String.toLowerCase()" resolve="toLowerCase" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs6" id="2WPGVKxuk7s" role="3cqZAp">
+          <node concept="2OqwBi" id="2WPGVKxuk7t" role="3cqZAk">
+            <node concept="37vLTw" id="2WPGVKxuk7u" role="2Oq$k0">
+              <ref role="3cqZAo" node="2WPGVKxuk7j" resolve="s" />
+            </node>
+            <node concept="liA8E" id="2WPGVKxuk7v" role="2OqNvi">
+              <ref role="37wK5l" to="wyt6:~String.concat(java.lang.String)" resolve="concat" />
+              <node concept="2OqwBi" id="2WPGVKxuk7w" role="37wK5m">
+                <node concept="2V_BSl" id="2WPGVKxuk7x" role="2Oq$k0" />
+                <node concept="liA8E" id="2WPGVKxuk7y" role="2OqNvi">
+                  <ref role="37wK5l" to="wyt6:~String.substring(int)" resolve="substring" />
+                  <node concept="3cmrfG" id="2WPGVKxuk7z" role="37wK5m">
+                    <property role="3cmrfH" value="1" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="17QB3L" id="2WPGVKxuk7$" role="aoRGl" />
+    </node>
     <node concept="3Tm1VV" id="4aKwFXkfV9v" role="1B3o_S" />
   </node>
 </model>

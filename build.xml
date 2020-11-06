@@ -197,7 +197,7 @@
     </echoxml>
     <jar destfile="${build.layout}/plugins/ZES/languages/ZES/ZES.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/ZES" />
-      <fileset dir="${basedir}/languages/ZES/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${mps_home}/ZES/languages/ZES/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/ZES.jar" />
     </jar>
     <mkdir dir="${build.tmp}/default/ZES-generator.jar" />
@@ -244,23 +244,29 @@
     </echoxml>
     <jar destfile="${build.layout}/plugins/ZES/languages/ZES/ZES-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/ZES#01" />
-      <fileset dir="${basedir}/languages/ZES/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${mps_home}/ZES/languages/ZES/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/ZES-generator.jar" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-ZES-models">
       <fileset dir="${basedir}/languages/ZES/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/ZES-languages-ZES-models">
+      <fileset dir="${mps_home}/ZES/languages/ZES/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-ZES-generator-templates">
       <fileset dir="${basedir}/languages/ZES/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/ZES-languages-ZES-generator-templates">
+      <fileset dir="${mps_home}/ZES/languages/ZES/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
     <jar destfile="${build.layout}/plugins/ZES/languages/ZES/ZES-src.jar" duplicate="preserve">
-      <fileset dir="${basedir}/languages/ZES/generator/source_gen">
+      <fileset dir="${mps_home}/ZES/languages/ZES/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
-      <fileset dir="${basedir}/languages/ZES/source_gen">
+      <fileset dir="${mps_home}/ZES/languages/ZES/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
@@ -268,7 +274,9 @@
       </fileset>
       <zipfileset file="${basedir}/languages/ZES/ZES.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-ZES-models" prefix="module/models" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/ZES-languages-ZES-models" prefix="module/models" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-ZES-generator-templates" prefix="module/generator/templates" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/ZES-languages-ZES-generator-templates" prefix="module/generator/templates" />
     </jar>
     <mkdir dir="${build.tmp}/default/ZES.sandbox.jar" />
     <mkdir dir="${build.tmp}/default/ZES.sandbox.jar/META-INF" />
@@ -288,14 +296,17 @@
     </echoxml>
     <jar destfile="${build.layout}/plugins/ZES/languages/ZES/ZES.sandbox.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/ZES.sandbox" />
-      <fileset dir="${basedir}/languages/ZES/sandbox/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${mps_home}/ZES/languages/ZES/sandbox/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/ZES.sandbox.jar" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-ZES-sandbox-models">
       <fileset dir="${basedir}/languages/ZES/sandbox/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/ZES-languages-ZES-sandbox-models">
+      <fileset dir="${mps_home}/ZES/languages/ZES/sandbox/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
     <jar destfile="${build.layout}/plugins/ZES/languages/ZES/ZES.sandbox-src.jar" duplicate="preserve">
-      <fileset dir="${basedir}/languages/ZES/sandbox/source_gen">
+      <fileset dir="${mps_home}/ZES/languages/ZES/sandbox/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
@@ -303,6 +314,7 @@
       </fileset>
       <zipfileset file="${basedir}/languages/ZES/sandbox/ZES.sandbox.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-ZES-sandbox-models" prefix="module/models" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/ZES-languages-ZES-sandbox-models" prefix="module/models" />
     </jar>
     <echo file="${build.layout}/build.number">build.number=${build.number}${line.separator}date=${date}${line.separator}version=1.0</echo>
     <echo file="${build.layout}/build.properties">ZES.date=${date}${line.separator}ZES.build.number=${build.number}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps.mps.build.counter=${mps.mps.build.counter}</echo>
@@ -472,12 +484,12 @@
   <target name="makeDependents" />
   
   <target name="java.compile.ZES" depends="fetchDependencies">
-    <mkdir dir="${basedir}/languages/ZES/source_gen" />
+    <mkdir dir="${mps_home}/ZES/languages/ZES/source_gen" />
     <mkdir dir="${build.tmp}/java/out/ZES" />
     <javac destdir="${build.tmp}/java/out/ZES" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${basedir}/languages/ZES/source_gen" />
+        <path location="${mps_home}/ZES/languages/ZES/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mpsStandalone}/lib/mps-core.jar" />
@@ -524,12 +536,12 @@
   </target>
   
   <target name="java.compile.ZES#01" depends="java.compile.ZES, fetchDependencies">
-    <mkdir dir="${basedir}/languages/ZES/generator/source_gen" />
+    <mkdir dir="${mps_home}/ZES/languages/ZES/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/ZES#01" />
     <javac destdir="${build.tmp}/java/out/ZES#01" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${basedir}/languages/ZES/generator/source_gen" />
+        <path location="${mps_home}/ZES/languages/ZES/generator/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mpsStandalone}/lib/mps-core.jar" />
@@ -575,12 +587,12 @@
   </target>
   
   <target name="java.compile.ZES.sandbox" depends="java.compile.ZES, fetchDependencies">
-    <mkdir dir="${basedir}/languages/ZES/sandbox/source_gen" />
+    <mkdir dir="${mps_home}/ZES/languages/ZES/sandbox/source_gen" />
     <mkdir dir="${build.tmp}/java/out/ZES.sandbox" />
     <javac destdir="${build.tmp}/java/out/ZES.sandbox" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${basedir}/languages/ZES/sandbox/source_gen" />
+        <path location="${mps_home}/ZES/languages/ZES/sandbox/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mpsStandalone}/lib/mps-core.jar" />
@@ -623,9 +635,9 @@
   </target>
   
   <target name="cleanSources">
-    <delete dir="${basedir}/languages/ZES/source_gen" />
-    <delete dir="${basedir}/languages/ZES/generator/source_gen" />
-    <delete dir="${basedir}/languages/ZES/sandbox/source_gen" />
+    <delete dir="${mps_home}/ZES/languages/ZES/source_gen" />
+    <delete dir="${mps_home}/ZES/languages/ZES/generator/source_gen" />
+    <delete dir="${mps_home}/ZES/languages/ZES/sandbox/source_gen" />
   </target>
   
   <target name="collect-tips-mps-tips">

@@ -8,7 +8,7 @@
   <imports />
   <registry>
     <language id="abe666e1-1ee1-43fe-93c4-703403beeec8" name="ZES">
-      <concept id="8687645761436342896" name="ZES.structure.QueryHandler" flags="ng" index="0hYQU">
+      <concept id="8687645761436342896" name="ZES.structure.QueryHandler2" flags="ng" index="0hYQU">
         <reference id="8687645761436342900" name="query" index="0hYQY" />
         <reference id="8058215275075480952" name="projection" index="1tlalx" />
       </concept>
@@ -158,6 +158,10 @@
     <node concept="1FNO1o" id="YqRhAdJHGf" role="0xEmn">
       <property role="TrG5h" value="UpdateRoot" />
       <ref role="1FNO1t" node="YqRhAdJHwO" resolve="RootUpdated" />
+    </node>
+    <node concept="1FNO1o" id="13mf65jLLuT" role="0xEmn">
+      <property role="TrG5h" value="AddDetails" />
+      <ref role="1FNO1t" node="13mf65jLL96" resolve="RootDetailsAdded" />
     </node>
     <node concept="1ux1I" id="7ygHWDS5O7K" role="0xEmh" />
   </node>
@@ -393,6 +397,40 @@
       <node concept="3UfwP1" id="YqRhAdMHZH" role="2UegB9">
         <node concept="3UfM66" id="YqRhAdMHZI" role="3UfBpY" />
       </node>
+    </node>
+  </node>
+  <node concept="2ZwxhH" id="13mf65jLL96">
+    <property role="3GE5qa" value="Events" />
+    <property role="TrG5h" value="RootDetailsAdded" />
+    <ref role="2ZwxhB" node="YqRhAdJGPt" resolve="ZES.Tests.Domain" />
+    <node concept="31KZC3" id="13mf65jLL97" role="fr08y">
+      <property role="TrG5h" value="details" />
+      <node concept="3UfwP1" id="13mf65jLL98" role="2UegB9">
+        <node concept="2N$mWS" id="13mf65jLL9d" role="3UfBpY">
+          <property role="2N$mWW" value="string[]" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="0xgbx" id="13mf65jLLPJ">
+    <property role="3GE5qa" value="Commands" />
+    <ref role="0xgvH" node="13mf65jLLPK" resolve="AddRootDetails" />
+  </node>
+  <node concept="fqd6J" id="13mf65jLLPK">
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="AddRootDetails" />
+    <ref role="0xEmz" node="7ygHWDS5O7J" resolve="Root" />
+    <ref role="22hxqa" node="13mf65jLLuT" resolve="AddDetails" />
+    <node concept="31KZC3" id="13mf65jLMJy" role="fr08y">
+      <property role="TrG5h" value="details" />
+      <node concept="3UfwP1" id="13mf65jLMJz" role="2UegB9">
+        <node concept="2N$mWS" id="13mf65jLMJC" role="3UfBpY">
+          <property role="2N$mWW" value="string[]" />
+        </node>
+      </node>
+    </node>
+    <node concept="fp7cb" id="13mf65jLLPL" role="0JheC">
+      <property role="TrG5h" value="target" />
     </node>
   </node>
 </model>

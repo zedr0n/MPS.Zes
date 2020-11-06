@@ -197,7 +197,6 @@
   <node concept="1TIwiD" id="7ygHWDSPPDK">
     <property role="EcuMT" value="8687645761436342896" />
     <property role="TrG5h" value="QueryHandler2" />
-    <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="7ygHWDSPPDO" role="1TKVEi">
       <property role="IQ2ns" value="8687645761436342900" />
@@ -361,9 +360,11 @@
   <node concept="1TIwiD" id="4hl_K$JAHth">
     <property role="EcuMT" value="4924007833308682065" />
     <property role="TrG5h" value="AggregateMethod" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="4hl_K$JAHti" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    <ref role="1TJDcQ" node="4mC6rZkrMSv" resolve="DomainClass" />
+    <node concept="1TJgyi" id="3GxebAuSSI9" role="1TKVEl">
+      <property role="IQ2nx" value="4260749092355017609" />
+      <property role="TrG5h" value="empty" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
     <node concept="1TJgyj" id="4hl_K$JAHtk" role="1TKVEi">
       <property role="IQ2ns" value="4924007833308682068" />
@@ -405,7 +406,6 @@
     <property role="EcuMT" value="3401822714142909892" />
     <property role="3GE5qa" value="Events" />
     <property role="TrG5h" value="EventReference" />
-    <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="2WPGVKxlYn9" role="1TKVEi">
       <property role="IQ2ns" value="3401822714142909897" />

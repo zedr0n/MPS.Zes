@@ -22,7 +22,6 @@
       <concept id="8687645761421493441" name="ZES.structure.Target" flags="ng" index="fp7cb" />
       <concept id="8687645761421731429" name="ZES.structure.TargetCommand" flags="ng" index="fqd6J" />
       <concept id="5019290096397921850" name="ZES.structure.Command" flags="ng" index="2hLNu5">
-        <property id="8687645761424090660" name="method" index="0zd7I" />
         <property id="5019290096397921853" name="isCreate" index="2hLNu2" />
         <reference id="8687645761423676009" name="aggregate" index="0xEmz" />
         <reference id="1124454158806338451" name="method" index="22hxqa" />
@@ -101,32 +100,6 @@
   <node concept="1ptgRe" id="4JUcokiC41T">
     <property role="TrG5h" value="Chronos.Accounts" />
   </node>
-  <node concept="fqd6J" id="4JUcokiDcnU">
-    <property role="3GE5qa" value="Commands" />
-    <property role="TrG5h" value="DepositAsset" />
-    <property role="0zd7I" value="DepositAsset" />
-    <ref role="0xEmz" node="7L999x3pwsZ" resolve="Account" />
-    <ref role="22hxqa" node="YqRhAdJkdf" resolve="DepositAsset" />
-    <node concept="31KZC3" id="4JUcokiDctG" role="fr08y">
-      <property role="TrG5h" value="assetId" />
-      <node concept="3UfwP1" id="4JUcokiDctH" role="2UegB9">
-        <node concept="3UfNVn" id="4JUcokiDctM" role="3UfBpY" />
-      </node>
-    </node>
-    <node concept="31KZC3" id="4JUcokiDctP" role="fr08y">
-      <property role="TrG5h" value="quantity" />
-      <node concept="3UfwP1" id="4JUcokiDctQ" role="2UegB9">
-        <node concept="3UfLA0" id="4JUcokiDctY" role="3UfBpY" />
-      </node>
-    </node>
-    <node concept="fp7cb" id="4JUcokiDcnV" role="0JheC">
-      <property role="TrG5h" value="target" />
-    </node>
-  </node>
-  <node concept="0xgbx" id="4JUcokiDcxr">
-    <property role="3GE5qa" value="Handlers" />
-    <ref role="0xgvH" node="4JUcokiDcnU" resolve="DepositAsset" />
-  </node>
   <node concept="2ZwxhH" id="7XpM$V0RETV">
     <property role="TrG5h" value="AccountCreated" />
     <property role="3GE5qa" value="Events" />
@@ -162,6 +135,28 @@
         <node concept="3UfLA0" id="YqRhAdJk0Y" role="3UfBpY" />
       </node>
     </node>
+  </node>
+  <node concept="fqd6J" id="7ambIhh4P__">
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="DepositAsset" />
+    <ref role="0xEmz" node="7L999x3pwsZ" resolve="Account" />
+    <ref role="22hxqa" node="YqRhAdJkdf" resolve="DepositAsset" />
+    <node concept="31KZC3" id="7ambIhh4P_A" role="fr08y">
+      <property role="TrG5h" value="assetId" />
+      <node concept="3UfwP1" id="7ambIhh4P_B" role="2UegB9">
+        <node concept="3UfNVn" id="7ambIhh4P_C" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="7ambIhh4P_D" role="fr08y">
+      <property role="TrG5h" value="quantity" />
+      <node concept="3UfwP1" id="7ambIhh4P_E" role="2UegB9">
+        <node concept="3UfLA0" id="7ambIhh4P_F" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="0xgbx" id="6eyFpoqF6Gy">
+    <property role="3GE5qa" value="Handlers" />
+    <ref role="0xgvH" node="7ambIhh4P__" resolve="DepositAsset" />
   </node>
 </model>
 

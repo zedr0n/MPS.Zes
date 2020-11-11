@@ -46,6 +46,7 @@
         <child id="8687645761422013928" name="params" index="fr08y" />
       </concept>
       <concept id="5474742744634047563" name="ZES.structure.Project" flags="ng" index="1ptgRe" />
+      <concept id="4924007833308682065" name="ZES.structure.AggregateMethod" flags="ng" index="1FNO1o" />
     </language>
     <language id="d74e25c9-4d91-43b6-bad7-d18af7bf6674" name="CsBaseLanguage">
       <concept id="7486903154347131566" name="CsBaseLanguage.structure.FormalParameterList" flags="ng" index="1ux1I">
@@ -215,21 +216,9 @@
   </node>
   <node concept="0xEmi" id="7ygHWDSLzTQ">
     <property role="TrG5h" value="Contract" />
-    <ref role="1ptrfS" node="4JUcoki$B8T" resolve="ZES.Tests.Domain" />
-    <node concept="31KRCM" id="7ygHWDSMUWF" role="0xEmn">
+    <ref role="1ptrfS" node="4JUcoki$B8V" resolve="Chronos.Hashflare" />
+    <node concept="1FNO1o" id="6eyFpor97FX" role="0xEmn">
       <property role="TrG5h" value="AddAmountMined" />
-      <node concept="1ux1M" id="7ygHWDSMUWG" role="31KRCR">
-        <node concept="31KRCQ" id="7ygHWDSMUWH" role="1ux1N" />
-      </node>
-      <node concept="1ux1I" id="7ygHWDSMUWI" role="1fIg$P">
-        <node concept="31KZC3" id="7ygHWDSMUWS" role="1ux1J">
-          <property role="TrG5h" value="quantity" />
-          <node concept="3UfwP1" id="7ygHWDSMUWT" role="2UegB9">
-            <node concept="3UfLA0" id="7ygHWDSMUWY" role="3UfBpY" />
-          </node>
-        </node>
-      </node>
-      <node concept="1pH0Yj" id="7ygHWDSMUWP" role="3Sw9wT" />
     </node>
     <node concept="1ux1I" id="7ygHWDSLzTR" role="0xEmh">
       <node concept="31KZC3" id="7ygHWDSLzU1" role="1ux1J">

@@ -32,6 +32,9 @@
         <child id="8687645761422013928" name="params" index="fr08y" />
       </concept>
       <concept id="9176588155335990819" name="ZES.structure.Event" flags="ng" index="2ZwxhH">
+        <property id="4924007833308784846" name="isCreate" index="1FMvZ7" />
+        <property id="7179491616198076306" name="includeFieldInAggregate" index="1SKKC4" />
+        <property id="7179491616198278194" name="idOverride" index="1SLx6$" />
         <reference id="9176588155335990825" name="project" index="2ZwxhB" />
       </concept>
       <concept id="5474742744634047563" name="ZES.structure.Project" flags="ng" index="1ptgRe" />
@@ -53,6 +56,7 @@
         <child id="6843536562190767680" name="nonArrayType" index="3UfBpY" />
       </concept>
       <concept id="6843536562190694846" name="CsBaseLanguage.structure.DoubleType" flags="ng" index="3UfLA0" />
+      <concept id="6843536562190680504" name="CsBaseLanguage.structure.IntType" flags="ng" index="3UfM66" />
       <concept id="6843536562190687977" name="CsBaseLanguage.structure.StringType" flags="ng" index="3UfNVn" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -157,6 +161,176 @@
   <node concept="0xgbx" id="6eyFpoqF6Gy">
     <property role="3GE5qa" value="Handlers" />
     <ref role="0xgvH" node="7ambIhh4P__" resolve="DepositAsset" />
+  </node>
+  <node concept="2ZwxhH" id="6eyFpornGVF">
+    <property role="3GE5qa" value="Events" />
+    <property role="TrG5h" value="HashflareRegistered" />
+    <property role="1FMvZ7" value="true" />
+    <property role="1SLx6$" value="Hashflare" />
+    <property role="1SKKC4" value="true" />
+    <ref role="2ZwxhB" node="6eyFpornGVH" resolve="Chronos.Hashflare" />
+    <node concept="31KZC3" id="6eyFpornGVI" role="fr08y">
+      <property role="TrG5h" value="username" />
+      <node concept="3UfwP1" id="6eyFpornGVJ" role="2UegB9">
+        <node concept="3UfNVn" id="6eyFpornGVO" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="1ptgRe" id="6eyFpornGVH">
+    <property role="TrG5h" value="Chronos.Hashflare" />
+  </node>
+  <node concept="0xEmi" id="6eyFpornH7C">
+    <property role="TrG5h" value="Hashflare" />
+    <ref role="1ptrfS" node="6eyFpornGVH" resolve="Chronos.Hashflare" />
+    <ref role="1FNO19" node="6eyFpornGVF" resolve="HashflareRegistered" />
+    <node concept="1FNO1o" id="6eyFpornNd4" role="0xEmn">
+      <property role="TrG5h" value="AddAmountMined" />
+      <ref role="1FNO1t" node="6eyFpornMSN" resolve="CoinMined" />
+    </node>
+    <node concept="1ux1I" id="6eyFpornH7D" role="0xEmh" />
+  </node>
+  <node concept="0yj_U" id="6eyFpornHXt">
+    <property role="2hLNu2" value="true" />
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="RegisterHashflare" />
+    <ref role="0xEmz" node="6eyFpornH7C" resolve="Hashflare" />
+  </node>
+  <node concept="2ZwxhH" id="6eyFpornMlv">
+    <property role="3GE5qa" value="Events" />
+    <property role="TrG5h" value="ContractCreated" />
+    <property role="1FMvZ7" value="true" />
+    <ref role="2ZwxhB" node="6eyFpornGVH" resolve="Chronos.Hashflare" />
+    <node concept="31KZC3" id="6eyFpornMlw" role="fr08y">
+      <property role="TrG5h" value="contractId" />
+      <node concept="3UfwP1" id="6eyFpornMlx" role="2UegB9">
+        <node concept="3UfNVn" id="6eyFpornMlA" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="6eyFpornMlD" role="fr08y">
+      <property role="TrG5h" value="type" />
+      <node concept="3UfwP1" id="6eyFpornMlE" role="2UegB9">
+        <node concept="3UfNVn" id="6eyFpornMlM" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="6eyFpornMlP" role="fr08y">
+      <property role="TrG5h" value="quantity" />
+      <node concept="3UfwP1" id="6eyFpornMlQ" role="2UegB9">
+        <node concept="3UfM66" id="6eyFpornMm1" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="6eyFpornMm6" role="fr08y">
+      <property role="TrG5h" value="total" />
+      <node concept="3UfwP1" id="6eyFpornMm7" role="2UegB9">
+        <node concept="3UfM66" id="6eyFpornMml" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="0xEmi" id="6eyFpornM__">
+    <property role="TrG5h" value="Contract" />
+    <ref role="1ptrfS" node="6eyFpornGVH" resolve="Chronos.Hashflare" />
+    <ref role="1FNO19" node="6eyFpornMlv" resolve="ContractCreated" />
+    <node concept="1FNO1o" id="6eyFpornNTo" role="0xEmn">
+      <property role="TrG5h" value="Expire" />
+      <ref role="1FNO1t" node="6eyFpornNz4" resolve="ContractExpired" />
+    </node>
+    <node concept="1FNO1o" id="6eyFporojVi" role="0xEmn">
+      <property role="TrG5h" value="AddAmountMined" />
+      <ref role="1FNO1t" node="6eyFpornOga" resolve="CoinMinedByContract" />
+    </node>
+    <node concept="1ux1I" id="6eyFpornM_A" role="0xEmh" />
+  </node>
+  <node concept="2ZwxhH" id="6eyFpornMSN">
+    <property role="3GE5qa" value="Events" />
+    <property role="TrG5h" value="CoinMined" />
+    <ref role="2ZwxhB" node="6eyFpornGVH" resolve="Chronos.Hashflare" />
+    <node concept="31KZC3" id="6eyFpornMSO" role="fr08y">
+      <property role="TrG5h" value="type" />
+      <node concept="3UfwP1" id="6eyFpornMSP" role="2UegB9">
+        <node concept="3UfNVn" id="6eyFpornMSU" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="6eyFpornMSX" role="fr08y">
+      <property role="TrG5h" value="quantity" />
+      <node concept="3UfwP1" id="6eyFpornMSY" role="2UegB9">
+        <node concept="3UfLA0" id="6eyFpornMT6" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="2ZwxhH" id="6eyFpornNz4">
+    <property role="3GE5qa" value="Events" />
+    <property role="TrG5h" value="ContractExpired" />
+    <ref role="2ZwxhB" node="6eyFpornGVH" resolve="Chronos.Hashflare" />
+    <node concept="31KZC3" id="6eyFporxBOn" role="fr08y">
+      <property role="TrG5h" value="contractId" />
+      <node concept="3UfwP1" id="6eyFporxBOo" role="2UegB9">
+        <node concept="3UfNVn" id="6eyFporxBOt" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="2ZwxhH" id="6eyFpornOga">
+    <property role="3GE5qa" value="Events" />
+    <property role="TrG5h" value="CoinMinedByContract" />
+    <ref role="2ZwxhB" node="6eyFpornGVH" resolve="Chronos.Hashflare" />
+    <node concept="31KZC3" id="6eyFpornOgb" role="fr08y">
+      <property role="TrG5h" value="type" />
+      <node concept="3UfwP1" id="6eyFpornOgc" role="2UegB9">
+        <node concept="3UfNVn" id="6eyFpornOgh" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="6eyFpornOgk" role="fr08y">
+      <property role="TrG5h" value="quantity" />
+      <node concept="3UfwP1" id="6eyFpornOgl" role="2UegB9">
+        <node concept="3UfLA0" id="6eyFpornOgt" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="0xgbA" id="6eyFporoe6A">
+    <property role="3GE5qa" value="Handlers" />
+    <ref role="0xgvH" node="6eyFpornHXt" resolve="RegisterHashflare" />
+  </node>
+  <node concept="0yj_U" id="6eyFporoeuS">
+    <property role="2hLNu2" value="true" />
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="CreateContract" />
+    <ref role="0xEmz" node="6eyFpornM__" resolve="Contract" />
+  </node>
+  <node concept="0xgbA" id="6eyFporoeTf">
+    <property role="3GE5qa" value="Handlers" />
+    <ref role="0xgvH" node="7L999x3pwsW" resolve="CreateAccount" />
+  </node>
+  <node concept="fqd6J" id="6eyFporofkF">
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="ExpireContract" />
+    <ref role="0xEmz" node="6eyFpornM__" resolve="Contract" />
+    <ref role="22hxqa" node="6eyFpornNTo" resolve="Expire" />
+  </node>
+  <node concept="0xgbx" id="6eyFporofKU">
+    <property role="3GE5qa" value="Handlers" />
+    <ref role="0xgvH" node="6eyFporofkF" resolve="ExpireContract" />
+  </node>
+  <node concept="fqd6J" id="6eyFporogdR">
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="AddMinedCoinToHashflare" />
+    <ref role="0xEmz" node="6eyFpornH7C" resolve="Hashflare" />
+    <ref role="22hxqa" node="6eyFpornNd4" resolve="AddAmountMined" />
+  </node>
+  <node concept="0xgbx" id="6eyFporogGs">
+    <property role="3GE5qa" value="Handlers" />
+    <ref role="0xgvH" node="6eyFporogdR" resolve="AddMinedCoinToHashflare" />
+  </node>
+  <node concept="fqd6J" id="6eyFporohcf">
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="AddMinedCoinToContract" />
+    <ref role="0xEmz" node="6eyFpornM__" resolve="Contract" />
+    <ref role="22hxqa" node="6eyFpornNd4" resolve="AddAmountMined" />
+  </node>
+  <node concept="0xgbx" id="6eyFporohHE">
+    <property role="3GE5qa" value="Handlers" />
+    <ref role="0xgvH" node="6eyFporohcf" resolve="AddMinedCoinToContract" />
+  </node>
+  <node concept="0xgbA" id="6eyFporoiMT">
+    <property role="3GE5qa" value="Handlers" />
+    <ref role="0xgvH" node="6eyFporoeuS" resolve="CreateContract" />
   </node>
 </model>
 

@@ -69,9 +69,6 @@
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
-      <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT">
-        <property id="1068580123138" name="value" index="3clFbU" />
-      </concept>
       <concept id="1081516740877" name="jetbrains.mps.baseLanguage.structure.NotExpression" flags="nn" index="3fqX7Q">
         <child id="1081516765348" name="expression" index="3fr31v" />
       </concept>
@@ -175,9 +172,14 @@
         <property role="3F0ifm" value="params:" />
         <node concept="pkWqt" id="3qd7CUnWQnL" role="pqm2j">
           <node concept="3clFbS" id="3qd7CUnWQnM" role="2VODD2">
-            <node concept="3clFbF" id="3GxebAv67wY" role="3cqZAp">
-              <node concept="3clFbT" id="3GxebAv67wX" role="3clFbG">
-                <property role="3clFbU" value="true" />
+            <node concept="3clFbF" id="6eyFpornkI8" role="3cqZAp">
+              <node concept="3fqX7Q" id="6eyFpornkI6" role="3clFbG">
+                <node concept="2OqwBi" id="6eyFpornkX5" role="3fr31v">
+                  <node concept="pncrf" id="6eyFpornkIN" role="2Oq$k0" />
+                  <node concept="3TrcHB" id="6eyFpornldm" role="2OqNvi">
+                    <ref role="3TsBF5" to="1o4g:4mC6rZkrMSX" resolve="isCreate" />
+                  </node>
+                </node>
               </node>
             </node>
           </node>
@@ -195,8 +197,13 @@
         <node concept="pkWqt" id="3qd7CUnWQXN" role="pqm2j">
           <node concept="3clFbS" id="3qd7CUnWQXO" role="2VODD2">
             <node concept="3clFbF" id="3GxebAv62rX" role="3cqZAp">
-              <node concept="3clFbT" id="3GxebAv62rW" role="3clFbG">
-                <property role="3clFbU" value="true" />
+              <node concept="3fqX7Q" id="6eyFpornIfl" role="3clFbG">
+                <node concept="2OqwBi" id="6eyFpornIxR" role="3fr31v">
+                  <node concept="pncrf" id="6eyFpornIj_" role="2Oq$k0" />
+                  <node concept="3TrcHB" id="6eyFpornIM8" role="2OqNvi">
+                    <ref role="3TsBF5" to="1o4g:4mC6rZkrMSX" resolve="isCreate" />
+                  </node>
+                </node>
               </node>
             </node>
           </node>

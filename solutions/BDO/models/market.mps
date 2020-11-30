@@ -112,6 +112,7 @@
   </node>
   <node concept="0xgbA" id="6pNLoxnKmfF">
     <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="RegisterMarketHandler" />
     <ref role="0xgvH" node="6pNLoxnKm79" resolve="RegisterMarket" />
   </node>
   <node concept="fqd6J" id="6pNLoxnKmjQ">
@@ -131,6 +132,7 @@
   </node>
   <node concept="0xgbx" id="6pNLoxnKm_d">
     <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="SetCookieHandler" />
     <ref role="0xgvH" node="6pNLoxnKmjQ" resolve="SetCookie" />
   </node>
   <node concept="2ZwxhH" id="13mf65jJpxo">
@@ -219,6 +221,7 @@
   </node>
   <node concept="0xgbA" id="13mf65jLTGX">
     <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="AddMarketItemHandler" />
     <ref role="0xgvH" node="13mf65jLTjx" resolve="AddMarketItem" />
   </node>
   <node concept="fqd6J" id="13mf65jLTUS">
@@ -273,6 +276,7 @@
   </node>
   <node concept="0xgbx" id="13mf65jLU9v">
     <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="UpdateMarketItemInfoHandler" />
     <ref role="0xgvH" node="13mf65jLTUS" resolve="UpdateMarketItemInfo" />
   </node>
 </model>

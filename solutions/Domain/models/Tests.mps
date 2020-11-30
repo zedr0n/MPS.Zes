@@ -253,14 +253,17 @@
   </node>
   <node concept="0xgbx" id="7ygHWDSqWp5">
     <property role="3GE5qa" value="Handlers" />
+    <property role="TrG5h" value="AddRecordHandler" />
     <ref role="0xgvH" node="7ygHWDSbYOP" resolve="AddRecord" />
   </node>
   <node concept="0xgbA" id="7ygHWDSKOR8">
     <property role="3GE5qa" value="Handlers" />
+    <property role="TrG5h" value="CreateRecordHandler" />
     <ref role="0xgvH" node="7ygHWDSKOfp" resolve="CreateRecord" />
   </node>
   <node concept="0xgbA" id="7ygHWDS5O6R">
     <property role="3GE5qa" value="Handlers" />
+    <property role="TrG5h" value="CreateRootHandler" />
     <ref role="0xgvH" node="7ygHWDSbYOM" resolve="CreateRoot" />
   </node>
   <node concept="0hYQU" id="7ygHWDSQgFO">
@@ -271,6 +274,7 @@
   </node>
   <node concept="0xgbx" id="7ygHWDSKNbv">
     <property role="3GE5qa" value="Handlers" />
+    <property role="TrG5h" value="UpdateRootHandler" />
     <ref role="0xgvH" node="7ygHWDSK_1w" resolve="UpdateRoot" />
   </node>
   <node concept="0iR2k" id="4$v$ZOraTC_">
@@ -404,6 +408,7 @@
   </node>
   <node concept="0xgbx" id="13mf65jLLPJ">
     <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="AddRootDetailsHandler" />
     <ref role="0xgvH" node="13mf65jLLPK" resolve="AddRootDetails" />
   </node>
   <node concept="fqd6J" id="13mf65jLLPK">

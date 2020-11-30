@@ -161,6 +161,7 @@
   </node>
   <node concept="0xgbA" id="3GxebAuAbV_">
     <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="StartEnhancementHandler" />
     <ref role="0xgvH" node="3GxebAuAbVA" resolve="StartEnhancement" />
   </node>
   <node concept="0yj_U" id="3GxebAuAbVA">
@@ -201,6 +202,7 @@
   </node>
   <node concept="0xgbx" id="3GxebAuBAUB">
     <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="FailEnhancementHandler" />
     <ref role="0xgvH" node="3GxebAuB_QD" resolve="FailEnhancement" />
   </node>
   <node concept="fqd6J" id="3GxebAuVVgU">
@@ -214,6 +216,7 @@
   </node>
   <node concept="0xgbx" id="3GxebAuVV$g">
     <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="CraeteEnhancementHandler" />
     <ref role="0xgvH" node="3GxebAuVVgU" resolve="CreateEnhancement" />
   </node>
   <node concept="2ZwxhH" id="3GxebAv3_fE">
@@ -480,10 +483,12 @@
   </node>
   <node concept="0xgbA" id="3GxebAv5Y8A">
     <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="CreateEnhancementTestHandler" />
     <ref role="0xgvH" node="3GxebAv5X2f" resolve="CreateEnhancementTest" />
   </node>
   <node concept="0xgbx" id="3GxebAv7C5h">
     <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="CompleteEnhancementTestHandler" />
     <ref role="0xgvH" node="3GxebAv7C5i" resolve="CompleteEnhancementTest" />
   </node>
   <node concept="fqd6J" id="3GxebAv7C5i">
@@ -518,6 +523,7 @@
   </node>
   <node concept="0xgbx" id="3GxebAvbWKQ">
     <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="SucceedEnhancementHandler" />
     <ref role="0xgvH" node="3GxebAvbWbW" resolve="SucceedEnhancement" />
   </node>
 </model>

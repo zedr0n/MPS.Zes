@@ -112,6 +112,7 @@
   </node>
   <node concept="0xgbA" id="3G6s0ym_6WR">
     <property role="3GE5qa" value="Handlers" />
+    <property role="TrG5h" value="AddItemHandler" />
     <ref role="0xgvH" node="3G6s0ym_6UV" resolve="AddItem" />
   </node>
   <node concept="2ZwxhH" id="3G6s0ym_UFX">
@@ -155,6 +156,7 @@
   </node>
   <node concept="0xgbx" id="3G6s0ymGnin">
     <property role="3GE5qa" value="Handlers" />
+    <property role="TrG5h" value="UpdateItemInfoHandler" />
     <ref role="0xgvH" node="3G6s0ymD0Se" resolve="UpdateItemInfo" />
   </node>
   <node concept="0npV6" id="3G6s0ymJ16f">

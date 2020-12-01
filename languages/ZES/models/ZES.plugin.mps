@@ -136,6 +136,9 @@
       <concept id="1079359253375" name="jetbrains.mps.baseLanguage.structure.ParenthesizedExpression" flags="nn" index="1eOMI4">
         <child id="1079359253376" name="expression" index="1eOMHV" />
       </concept>
+      <concept id="1081516740877" name="jetbrains.mps.baseLanguage.structure.NotExpression" flags="nn" index="3fqX7Q">
+        <child id="1081516765348" name="expression" index="3fr31v" />
+      </concept>
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
@@ -1229,6 +1232,30 @@
                                                 <ref role="2Gs0qQ" node="4O5Dv60RHrP" resolve="f" />
                                               </node>
                                             </node>
+                                          </node>
+                                        </node>
+                                      </node>
+                                    </node>
+                                    <node concept="3clFbJ" id="2X2Y$BTPpkY" role="3cqZAp">
+                                      <node concept="3clFbS" id="2X2Y$BTPpl0" role="3clFbx">
+                                        <node concept="3clFbF" id="2X2Y$BTPmfU" role="3cqZAp">
+                                          <node concept="2OqwBi" id="2X2Y$BTPmHi" role="3clFbG">
+                                            <node concept="37vLTw" id="2X2Y$BTPmfS" role="2Oq$k0">
+                                              <ref role="3cqZAo" node="4O5Dv60RHQB" resolve="outDir" />
+                                            </node>
+                                            <node concept="liA8E" id="2X2Y$BTPmNo" role="2OqNvi">
+                                              <ref role="37wK5l" to="3ju5:~IFile.mkdirs()" resolve="mkdirs" />
+                                            </node>
+                                          </node>
+                                        </node>
+                                      </node>
+                                      <node concept="3fqX7Q" id="2X2Y$BTPqiP" role="3clFbw">
+                                        <node concept="2OqwBi" id="2X2Y$BTPqiR" role="3fr31v">
+                                          <node concept="37vLTw" id="2X2Y$BTPqiS" role="2Oq$k0">
+                                            <ref role="3cqZAo" node="4O5Dv60RHQB" resolve="outDir" />
+                                          </node>
+                                          <node concept="liA8E" id="2X2Y$BTPqiT" role="2OqNvi">
+                                            <ref role="37wK5l" to="3ju5:~IFile.exists()" resolve="exists" />
                                           </node>
                                         </node>
                                       </node>

@@ -8,7 +8,12 @@
   <registry>
     <language id="abe666e1-1ee1-43fe-93c4-703403beeec8" name="ZES">
       <concept id="8687645761436632926" name="ZES.structure.QueryResult" flags="ng" index="0iR2k">
+        <property id="4253210080295273512" name="isSingle" index="2G6zgw" />
         <reference id="5474742744634578637" name="project" index="1prmt8" />
+      </concept>
+      <concept id="8687645761435674892" name="ZES.structure.Query" flags="ng" index="0npV6">
+        <property id="4253210080288973052" name="isSingle" index="2HI_3O" />
+        <reference id="8687645761436841810" name="result" index="0j$2o" />
       </concept>
       <concept id="8687645761423652139" name="ZES.structure.ActCommandHandler" flags="ng" index="0xgbx" />
       <concept id="8687645761423652140" name="ZES.structure.CreateCommandHandler" flags="ng" index="0xgbA" />
@@ -393,6 +398,14 @@
         <node concept="3UfM66" id="6eyFpor$Ijy" role="3UfBpY" />
       </node>
     </node>
+    <node concept="31KZC3" id="2X2Y$BTPFUn" role="fr08y">
+      <property role="TrG5h" value="contracts" />
+      <node concept="3UfwP1" id="2X2Y$BTPFUo" role="2UegB9">
+        <node concept="2N$mWS" id="2X2Y$BTPFUA" role="3UfBpY">
+          <property role="2N$mWW" value="List&lt;string&gt;" />
+        </node>
+      </node>
+    </node>
   </node>
   <node concept="2ZwxhH" id="6eyFpor_0gY">
     <property role="3GE5qa" value="Events" />
@@ -456,6 +469,54 @@
     <property role="3GE5qa" value="Handlers" />
     <property role="TrG5h" value="WithdrawAssetHandler" />
     <ref role="0xgvH" node="6eyFpor_3lI" resolve="WithdrawAsset" />
+  </node>
+  <node concept="0iR2k" id="2X2Y$BTPGAw">
+    <property role="3GE5qa" value="Queries" />
+    <property role="TrG5h" value="ContractStats" />
+    <property role="2G6zgw" value="true" />
+    <ref role="1prmt8" node="6eyFpornGVH" resolve="Chronos.Hashflare" />
+    <node concept="31KZC3" id="2X2Y$BTPGAx" role="fr08y">
+      <property role="TrG5h" value="contractId" />
+      <node concept="3UfwP1" id="2X2Y$BTPGAy" role="2UegB9">
+        <node concept="3UfNVn" id="2X2Y$BTPGAB" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="2X2Y$BTPILs" role="fr08y">
+      <property role="TrG5h" value="type" />
+      <node concept="3UfwP1" id="2X2Y$BTPILt" role="2UegB9">
+        <node concept="3UfNVn" id="2X2Y$BTPILC" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="2X2Y$BTPNm7" role="fr08y">
+      <property role="TrG5h" value="mined" />
+      <node concept="3UfwP1" id="2X2Y$BTPNm8" role="2UegB9">
+        <node concept="3UfLA0" id="2X2Y$BTPNmp" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="0npV6" id="2X2Y$BTPHju">
+    <property role="3GE5qa" value="Queries" />
+    <property role="TrG5h" value="ContractStatsQuery" />
+    <property role="2HI_3O" value="true" />
+    <ref role="0j$2o" node="2X2Y$BTPGAw" resolve="ContractStats" />
+    <node concept="31KZC3" id="2X2Y$BTPHjx" role="fr08y">
+      <property role="TrG5h" value="contractId" />
+      <node concept="3UfwP1" id="2X2Y$BTPHjy" role="2UegB9">
+        <node concept="3UfNVn" id="2X2Y$BTPHjB" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="eo_ru" id="2X2Y$BTPHjv">
+    <property role="3GE5qa" value="Queries" />
+    <property role="TrG5h" value="ContractStatsQueryHandler" />
+    <ref role="er3dA" node="6eyFpornGVH" resolve="Chronos.Hashflare" />
+    <ref role="er1k6" node="2X2Y$BTPGAw" resolve="ContractStats" />
+    <node concept="eo_pS" id="2X2Y$BTPHjw" role="er9lr">
+      <ref role="eo_pP" node="6eyFpornMlv" resolve="ContractCreated" />
+    </node>
+    <node concept="eo_pS" id="2X2Y$BTPO7c" role="er9lr">
+      <ref role="eo_pP" node="6eyFpornOga" resolve="CoinMinedByContract" />
+    </node>
   </node>
 </model>
 

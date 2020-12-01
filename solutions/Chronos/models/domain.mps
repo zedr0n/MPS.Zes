@@ -366,7 +366,7 @@
   </node>
   <node concept="eo_ru" id="6eyFpor$HhQ">
     <property role="3GE5qa" value="Queries" />
-    <property role="TrG5h" value="HashflareStatsQueryHandler" />
+    <property role="TrG5h" value="HashflareStatsHandler" />
     <ref role="er3dA" node="6eyFpornGVH" resolve="Chronos.Hashflare" />
     <ref role="er1k6" node="6eyFpor$HhT" resolve="HashflareStats" />
     <node concept="eo_pS" id="6eyFpor$HhR" role="er9lr">
@@ -374,6 +374,9 @@
     </node>
     <node concept="eo_pS" id="6eyFpor$JrH" role="er9lr">
       <ref role="eo_pP" node="6eyFpornNz4" resolve="ContractExpired" />
+    </node>
+    <node concept="eo_pS" id="2X2Y$BTR4fS" role="er9lr">
+      <ref role="eo_pP" node="6eyFpornGVF" resolve="HashflareRegistered" />
     </node>
   </node>
   <node concept="0iR2k" id="6eyFpor$HhT">
@@ -508,7 +511,7 @@
   </node>
   <node concept="eo_ru" id="2X2Y$BTPHjv">
     <property role="3GE5qa" value="Queries" />
-    <property role="TrG5h" value="ContractStatsQueryHandler" />
+    <property role="TrG5h" value="ContractStatsHandler" />
     <ref role="er3dA" node="6eyFpornGVH" resolve="Chronos.Hashflare" />
     <ref role="er1k6" node="2X2Y$BTPGAw" resolve="ContractStats" />
     <node concept="eo_pS" id="2X2Y$BTPHjw" role="er9lr">

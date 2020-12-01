@@ -62,6 +62,7 @@
         <child id="6843536562190767680" name="nonArrayType" index="3UfBpY" />
       </concept>
       <concept id="6843536562190694846" name="CsBaseLanguage.structure.DoubleType" flags="ng" index="3UfLA0" />
+      <concept id="6843536562190680504" name="CsBaseLanguage.structure.IntType" flags="ng" index="3UfM66" />
       <concept id="6843536562190687977" name="CsBaseLanguage.structure.StringType" flags="ng" index="3UfNVn" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -138,7 +139,7 @@
   </node>
   <node concept="eo_ru" id="6eyFpor_1zj">
     <property role="3GE5qa" value="Queries" />
-    <property role="TrG5h" value="CoinInfoQueryHandler" />
+    <property role="TrG5h" value="CoinInfoHandler" />
     <ref role="er3dA" node="6eyFpor_0T6" resolve="Chronos.Coins" />
     <ref role="er1k6" node="6eyFpor_1jt" resolve="CoinInfo" />
     <node concept="eo_pS" id="6eyFpor_1zk" role="er9lr">
@@ -296,7 +297,7 @@
   </node>
   <node concept="eo_ru" id="6eyFpor_ilr">
     <property role="3GE5qa" value="Queries" />
-    <property role="TrG5h" value="WalletInfoQueryHandler" />
+    <property role="TrG5h" value="WalletInfoHandler" />
     <ref role="er3dA" node="6eyFpor_0T6" resolve="Chronos.Coins" />
     <ref role="er1k6" node="6eyFpor_gOW" resolve="WalletInfo" />
     <node concept="eo_pS" id="6eyFpor_jWd" role="er9lr">
@@ -304,6 +305,31 @@
     </node>
     <node concept="eo_pS" id="6eyFpor_ils" role="er9lr">
       <ref role="eo_pP" node="6eyFpor_eoX" resolve="WalletBalanceChanged" />
+    </node>
+  </node>
+  <node concept="0iR2k" id="2X2Y$BTR80s">
+    <property role="3GE5qa" value="Queries" />
+    <property role="TrG5h" value="Stats" />
+    <ref role="1prmt8" node="6eyFpor_0T6" resolve="Chronos.Coins" />
+    <node concept="31KZC3" id="2X2Y$BTR80t" role="fr08y">
+      <property role="TrG5h" value="numberOfCoins" />
+      <node concept="3UfwP1" id="2X2Y$BTR80u" role="2UegB9">
+        <node concept="3UfM66" id="2X2Y$BTR80z" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="0npV6" id="2X2Y$BTR8s9">
+    <property role="3GE5qa" value="Queries" />
+    <property role="TrG5h" value="StatsQuery" />
+    <ref role="0j$2o" node="2X2Y$BTR80s" resolve="Stats" />
+  </node>
+  <node concept="eo_ru" id="2X2Y$BTR8RS">
+    <property role="3GE5qa" value="Queries" />
+    <property role="TrG5h" value="StatsHandler" />
+    <ref role="er3dA" node="6eyFpor_0T6" resolve="Chronos.Coins" />
+    <ref role="er1k6" node="2X2Y$BTR80s" resolve="Stats" />
+    <node concept="eo_pS" id="2X2Y$BTR8RT" role="er9lr">
+      <ref role="eo_pP" node="6eyFpor_0T7" resolve="CoinCreated" />
     </node>
   </node>
 </model>

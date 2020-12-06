@@ -258,6 +258,7 @@
       <concept id="3766354144460199615" name="CsBaseLanguage.structure.Private" flags="ng" index="2qAx6s" />
       <concept id="3766354144460199614" name="CsBaseLanguage.structure.Public" flags="ng" index="2qAx6t" />
       <concept id="3766354144460199617" name="CsBaseLanguage.structure.Protected" flags="ng" index="2qAx7y" />
+      <concept id="3766354144460261383" name="CsBaseLanguage.structure.Sealed" flags="ng" index="2qAKW$" />
       <concept id="3766354144459872182" name="CsBaseLanguage.structure.IFunctionHeader" flags="ng" index="2qBh2l">
         <child id="7575174424947156020" name="formalParameterList" index="1fIg$P" />
       </concept>
@@ -6783,12 +6784,10 @@
           </node>
         </node>
         <node concept="2N$mWS" id="4hl_K$J_P$a" role="3U7fkm">
-          <property role="2N$mWW" value="ZES.Infrastructure.Domain.EventSourced" />
-        </node>
-        <node concept="2N$mWS" id="4hl_K$J_Qpn" role="3U7fkm">
-          <property role="2N$mWW" value="ZES.Interfaces.Domain.IAggregate" />
+          <property role="2N$mWW" value="ZES.Infrastructure.Domain.AggregateRoot" />
         </node>
         <node concept="2qAx6t" id="4hl_K$J_P$b" role="3SE3Wx" />
+        <node concept="2qAKW$" id="zCkYVcMGYs" role="3SE3Wx" />
       </node>
       <node concept="17Uvod" id="4hl_K$J_P$c" role="lGtFl">
         <property role="2qtEX9" value="name" />
@@ -7406,80 +7405,31 @@
             </node>
           </node>
         </node>
-        <node concept="2N$mWS" id="2WPGVKxmI_E" role="3U7fkm">
-          <property role="2N$mWW" value="IProjectionHandler&lt;State,Event&gt;" />
-          <node concept="1ps_y7" id="2WPGVKxmLRb" role="lGtFl">
-            <node concept="1ps_xZ" id="2WPGVKxmLRc" role="1ps_xO">
-              <property role="TrG5h" value="state" />
-              <node concept="2jfdEK" id="2WPGVKxmLRd" role="1ps_xN">
-                <node concept="3clFbS" id="2WPGVKxmLRe" role="2VODD2">
-                  <node concept="3clFbF" id="2WPGVKxmM9z" role="3cqZAp">
-                    <node concept="2OqwBi" id="2WPGVKxmMiS" role="3clFbG">
-                      <node concept="30H73N" id="2WPGVKxmM9x" role="2Oq$k0" />
-                      <node concept="3TrEf2" id="2WPGVKxmMrJ" role="2OqNvi">
-                        <ref role="3Tt5mk" to="1o4g:2WPGVKxmqqU" resolve="state" />
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="1WS0z7" id="2WPGVKxmICE" role="lGtFl">
-            <node concept="3JmXsc" id="2WPGVKxmICH" role="3Jn$fo">
-              <node concept="3clFbS" id="2WPGVKxmICI" role="2VODD2">
-                <node concept="3clFbF" id="2WPGVKxmICO" role="3cqZAp">
-                  <node concept="2OqwBi" id="2WPGVKxmICJ" role="3clFbG">
-                    <node concept="3Tsc0h" id="2WPGVKxmICM" role="2OqNvi">
-                      <ref role="3TtcxE" to="1o4g:2WPGVKxmirB" resolve="events" />
-                    </node>
-                    <node concept="30H73N" id="2WPGVKxmICN" role="2Oq$k0" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="17Uvod" id="2WPGVKxmINX" role="lGtFl">
+        <node concept="2N$mWS" id="18YSGC5OfrR" role="3U7fkm">
+          <property role="2N$mWW" value="IProjectionHandler&lt;State&gt;" />
+          <node concept="17Uvod" id="18YSGC5OfHf" role="lGtFl">
             <property role="2qtEX9" value="referencedGenericTypeParameter" />
             <property role="P4ACc" value="d74e25c9-4d91-43b6-bad7-d18af7bf6674/1969317145989153978/1969317145989153982" />
-            <node concept="3zFVjK" id="2WPGVKxmINY" role="3zH0cK">
-              <node concept="3clFbS" id="2WPGVKxmINZ" role="2VODD2">
-                <node concept="3clFbF" id="2WPGVKxmIYK" role="3cqZAp">
-                  <node concept="3cpWs3" id="2WPGVKxmRLi" role="3clFbG">
-                    <node concept="Xl_RD" id="2WPGVKxmRLo" role="3uHU7w">
+            <node concept="3zFVjK" id="18YSGC5OfHg" role="3zH0cK">
+              <node concept="3clFbS" id="18YSGC5OfHh" role="2VODD2">
+                <node concept="3clFbF" id="18YSGC5OfHC" role="3cqZAp">
+                  <node concept="3cpWs3" id="18YSGC5Ohul" role="3clFbG">
+                    <node concept="Xl_RD" id="18YSGC5OhuI" role="3uHU7w">
                       <property role="Xl_RC" value="&gt;" />
                     </node>
-                    <node concept="3cpWs3" id="2WPGVKxmPxd" role="3uHU7B">
-                      <node concept="3cpWs3" id="2WPGVKxmP6T" role="3uHU7B">
-                        <node concept="3cpWs3" id="2WPGVKxmLsc" role="3uHU7B">
-                          <node concept="Xl_RD" id="2WPGVKxmKKb" role="3uHU7B">
-                            <property role="Xl_RC" value="ZES.Interfaces.Domain.IProjectionHandler&lt;" />
-                          </node>
-                          <node concept="2OqwBi" id="2WPGVKxmOvi" role="3uHU7w">
-                            <node concept="2OqwBi" id="2WPGVKxmMPW" role="2Oq$k0">
-                              <node concept="1iwH7S" id="2WPGVKxmMx_" role="2Oq$k0" />
-                              <node concept="1psM6Z" id="2WPGVKxmMVX" role="2OqNvi">
-                                <ref role="1psM6Y" node="2WPGVKxmLRc" resolve="state" />
-                              </node>
-                            </node>
-                            <node concept="3TrcHB" id="2WPGVKxsLn9" role="2OqNvi">
-                              <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-                            </node>
-                          </node>
-                        </node>
-                        <node concept="Xl_RD" id="2WPGVKxmPtd" role="3uHU7w">
-                          <property role="Xl_RC" value="," />
-                        </node>
+                    <node concept="3cpWs3" id="18YSGC5Ogj8" role="3uHU7B">
+                      <node concept="Xl_RD" id="2WPGVKxmKKb" role="3uHU7B">
+                        <property role="Xl_RC" value="ZES.Interfaces.Domain.IProjectionHandler&lt;" />
                       </node>
-                      <node concept="2OqwBi" id="2WPGVKxo82v" role="3uHU7w">
-                        <node concept="2OqwBi" id="2WPGVKxmQeE" role="2Oq$k0">
-                          <node concept="30H73N" id="2WPGVKxmPVi" role="2Oq$k0" />
-                          <node concept="3TrEf2" id="2WPGVKxmQBg" role="2OqNvi">
-                            <ref role="3Tt5mk" to="1o4g:2WPGVKxlYn9" resolve="event" />
+                      <node concept="2OqwBi" id="18YSGC5OgUL" role="3uHU7w">
+                        <node concept="2OqwBi" id="18YSGC5Og$l" role="2Oq$k0">
+                          <node concept="30H73N" id="18YSGC5OgjG" role="2Oq$k0" />
+                          <node concept="3TrEf2" id="18YSGC5OgLt" role="2OqNvi">
+                            <ref role="3Tt5mk" to="1o4g:2WPGVKxmqqU" resolve="state" />
                           </node>
                         </node>
-                        <node concept="2qgKlT" id="2WPGVKxo8_n" role="2OqNvi">
-                          <ref role="37wK5l" to="hdjd:YqRhAdXZGX" resolve="fullName" />
+                        <node concept="3TrcHB" id="18YSGC5Oh8Q" role="2OqNvi">
+                          <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
                         </node>
                       </node>
                     </node>

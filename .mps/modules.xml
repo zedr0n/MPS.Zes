@@ -7,7 +7,6 @@
       <modulePath path="$PROJECT_DIR$/solutions/Chronos/Chronos.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/Domain/Domain.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/Eve/Eve.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/ZES.build/ZES.build.msd" folder="" />
     </projectModules>
   </component>
 </project>

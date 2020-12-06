@@ -172,6 +172,10 @@
       <property role="TrG5h" value="ApplyDelta" />
       <ref role="1FNO1t" node="6eyFpor_eoX" resolve="WalletBalanceChanged" />
     </node>
+    <node concept="1FNO1o" id="18YSGC5Mi3Q" role="0xEmn">
+      <property role="TrG5h" value="MineCoin" />
+      <ref role="1FNO1t" node="18YSGC5Mh9v" resolve="CoinMined" />
+    </node>
     <node concept="1ux1I" id="6eyFpor_4TX" role="0xEmh" />
   </node>
   <node concept="2ZwxhH" id="6eyFpor_6ra">
@@ -282,6 +286,12 @@
         <node concept="3UfLA0" id="6eyFpor_hcH" role="3UfBpY" />
       </node>
     </node>
+    <node concept="31KZC3" id="18YSGC5Mn2T" role="fr08y">
+      <property role="TrG5h" value="mineQuantity" />
+      <node concept="3UfwP1" id="18YSGC5Mn2U" role="2UegB9">
+        <node concept="3UfLA0" id="18YSGC5Mn35" role="3UfBpY" />
+      </node>
+    </node>
   </node>
   <node concept="0npV6" id="6eyFpor_h$E">
     <property role="3GE5qa" value="Queries" />
@@ -305,6 +315,9 @@
     </node>
     <node concept="eo_pS" id="6eyFpor_ils" role="er9lr">
       <ref role="eo_pP" node="6eyFpor_eoX" resolve="WalletBalanceChanged" />
+    </node>
+    <node concept="eo_pS" id="18YSGC5Mn3a" role="er9lr">
+      <ref role="eo_pP" node="18YSGC5Mh9v" resolve="CoinMined" />
     </node>
   </node>
   <node concept="0iR2k" id="2X2Y$BTR80s">
@@ -331,6 +344,28 @@
     <node concept="eo_pS" id="2X2Y$BTR8RT" role="er9lr">
       <ref role="eo_pP" node="6eyFpor_0T7" resolve="CoinCreated" />
     </node>
+  </node>
+  <node concept="2ZwxhH" id="18YSGC5Mh9v">
+    <property role="3GE5qa" value="Events" />
+    <property role="TrG5h" value="CoinMined" />
+    <ref role="2ZwxhB" node="6eyFpor_0T6" resolve="Chronos.Coins" />
+    <node concept="31KZC3" id="18YSGC5Mh9w" role="fr08y">
+      <property role="TrG5h" value="mineQuantity" />
+      <node concept="3UfwP1" id="18YSGC5Mh9x" role="2UegB9">
+        <node concept="3UfLA0" id="18YSGC5Mh9A" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="fqd6J" id="18YSGC5Miy6">
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="MineCoin" />
+    <ref role="0xEmz" node="6eyFpor_4TW" resolve="Wallet" />
+    <ref role="22hxqa" node="18YSGC5Mi3Q" resolve="MineCoin" />
+  </node>
+  <node concept="0xgbx" id="18YSGC5Mj1A">
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="MineCoinHandler" />
+    <ref role="0xgvH" node="18YSGC5Miy6" resolve="MineCoin" />
   </node>
 </model>
 

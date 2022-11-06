@@ -3,7 +3,6 @@
   <persistence version="9" />
   <languages>
     <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="9" />
-    <use id="d74e25c9-4d91-43b6-bad7-d18af7bf6674" name="CsBaseLanguage" version="0" />
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
@@ -70,6 +69,13 @@
     <property role="R4oN_" value="Command" />
     <property role="3GE5qa" value="Commands" />
     <ref role="1TJDcQ" node="4mC6rZkrMSv" resolve="DomainClass" />
+    <node concept="1TJgyj" id="5$BdA6PuKI6" role="1TKVEi">
+      <property role="IQ2ns" value="6424163186751769478" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="props" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" to="80bi:6hv6i2_Becz" resolve="FormalParameter" />
+    </node>
     <node concept="1TJgyi" id="4mC6rZkrMSX" role="1TKVEl">
       <property role="IQ2nx" value="5019290096397921853" />
       <property role="TrG5h" value="isCreate" />

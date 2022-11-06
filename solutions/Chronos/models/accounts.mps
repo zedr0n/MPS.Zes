@@ -8,9 +8,11 @@
   <registry>
     <language id="abe666e1-1ee1-43fe-93c4-703403beeec8" name="ZES">
       <concept id="8687645761436632926" name="ZES.structure.QueryResult" flags="ng" index="0iR2k">
+        <property id="4253210080295273512" name="isSingle" index="2G6zgw" />
         <reference id="5474742744634578637" name="project" index="1prmt8" />
       </concept>
       <concept id="8687645761435674892" name="ZES.structure.Query" flags="ng" index="0npV6">
+        <property id="4253210080288973052" name="isSingle" index="2HI_3O" />
         <reference id="8687645761436841810" name="result" index="0j$2o" />
       </concept>
       <concept id="8687645761423652139" name="ZES.structure.ActCommandHandler" flags="ng" index="0xgbx" />
@@ -63,7 +65,6 @@
       <concept id="6843536562190757247" name="CsBaseLanguage.structure.Type" flags="ng" index="3UfwP1">
         <child id="6843536562190767680" name="nonArrayType" index="3UfBpY" />
       </concept>
-      <concept id="6843536562190694846" name="CsBaseLanguage.structure.DoubleType" flags="ng" index="3UfLA0" />
       <concept id="6843536562190680504" name="CsBaseLanguage.structure.IntType" flags="ng" index="3UfM66" />
       <concept id="6843536562190687977" name="CsBaseLanguage.structure.StringType" flags="ng" index="3UfNVn" />
     </language>
@@ -108,6 +109,10 @@
       <property role="TrG5h" value="DepositAsset" />
       <ref role="1FNO1t" node="zCkYVcOLze" resolve="AssetDeposited" />
     </node>
+    <node concept="1FNO1o" id="4VRm5RooYVP" role="0xEmn">
+      <property role="TrG5h" value="AddTransaction" />
+      <ref role="1FNO1t" node="4VRm5RooYIR" resolve="TransactionAdded" />
+    </node>
     <node concept="1ux1I" id="zCkYVcOLs8" role="0xEmh" />
   </node>
   <node concept="2ZwxhH" id="zCkYVcOLze">
@@ -115,15 +120,11 @@
     <property role="TrG5h" value="AssetDeposited" />
     <ref role="2ZwxhB" node="zCkYVcOLr0" resolve="Chronos.Accounts" />
     <node concept="31KZC3" id="zCkYVcOLzf" role="fr08y">
-      <property role="TrG5h" value="assetId" />
-      <node concept="3UfwP1" id="zCkYVcOLzg" role="2UegB9">
-        <node concept="3UfNVn" id="zCkYVcOLzl" role="3UfBpY" />
-      </node>
-    </node>
-    <node concept="31KZC3" id="zCkYVcOLzK" role="fr08y">
       <property role="TrG5h" value="quantity" />
-      <node concept="3UfwP1" id="zCkYVcOLzL" role="2UegB9">
-        <node concept="3UfLA0" id="zCkYVcOLzT" role="3UfBpY" />
+      <node concept="3UfwP1" id="zCkYVcOLzg" role="2UegB9">
+        <node concept="2N$mWS" id="4VRm5Rok7zz" role="3UfBpY">
+          <property role="2N$mWW" value="Chronos.Core.Quantity" />
+        </node>
       </node>
     </node>
   </node>
@@ -150,7 +151,7 @@
     <ref role="0xgvH" node="zCkYVcOM4C" resolve="DepositAsset" />
   </node>
   <node concept="0iR2k" id="zCkYVcOMEe">
-    <property role="TrG5h" value="AccountStats" />
+    <property role="TrG5h" value="Stats" />
     <property role="3GE5qa" value="Queries" />
     <ref role="1prmt8" node="zCkYVcOLr0" resolve="Chronos.Accounts" />
     <node concept="31KZC3" id="zCkYVcOMEf" role="fr08y">
@@ -162,17 +163,189 @@
   </node>
   <node concept="0npV6" id="zCkYVcOMP8">
     <property role="3GE5qa" value="Queries" />
-    <property role="TrG5h" value="AccountStatsQuery" />
-    <ref role="0j$2o" node="zCkYVcOMEe" resolve="AccountStats" />
+    <property role="TrG5h" value="StatsQuery" />
+    <ref role="0j$2o" node="zCkYVcOMEe" resolve="Stats" />
   </node>
   <node concept="eo_ru" id="zCkYVcON04">
     <property role="3GE5qa" value="Queries" />
-    <property role="TrG5h" value="AccountStatsHandler" />
+    <property role="TrG5h" value="StatsHandler" />
     <ref role="er3dA" node="zCkYVcOLr0" resolve="Chronos.Accounts" />
-    <ref role="er1k6" node="zCkYVcOMEe" resolve="AccountStats" />
+    <ref role="er1k6" node="zCkYVcOMEe" resolve="Stats" />
     <node concept="eo_pS" id="zCkYVcON05" role="er9lr">
       <ref role="eo_pP" node="zCkYVcOLqZ" resolve="AccountCreated" />
     </node>
+  </node>
+  <node concept="0iR2k" id="4VRm5Rok8nn">
+    <property role="3GE5qa" value="Queries" />
+    <property role="TrG5h" value="AccountStats" />
+    <property role="2G6zgw" value="true" />
+    <ref role="1prmt8" node="zCkYVcOLr0" resolve="Chronos.Accounts" />
+    <node concept="31KZC3" id="4VRm5Rok8GW" role="fr08y">
+      <property role="TrG5h" value="balance" />
+      <node concept="3UfwP1" id="4VRm5Rok8GX" role="2UegB9">
+        <node concept="2N$mWS" id="4VRm5Rok8H2" role="3UfBpY">
+          <property role="2N$mWW" value="Chronos.Core.Quantity" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="0npV6" id="4VRm5Rok8RV">
+    <property role="3GE5qa" value="Queries" />
+    <property role="TrG5h" value="AccountStatsQuery" />
+    <property role="2HI_3O" value="true" />
+    <ref role="0j$2o" node="4VRm5Rok8nn" resolve="AccountStats" />
+    <node concept="31KZC3" id="4VRm5Rok937" role="fr08y">
+      <property role="TrG5h" value="name" />
+      <node concept="3UfwP1" id="4VRm5Rok938" role="2UegB9">
+        <node concept="3UfNVn" id="4VRm5Rok93d" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="4VRm5Rok9Z7" role="fr08y">
+      <property role="TrG5h" value="denominator" />
+      <node concept="3UfwP1" id="4VRm5Rok9Z8" role="2UegB9">
+        <node concept="2N$mWS" id="4VRm5Rok9Zg" role="3UfBpY">
+          <property role="2N$mWW" value="Chronos.Core.Asset" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="eo_ru" id="4VRm5Rok9eE">
+    <property role="3GE5qa" value="Queries" />
+    <property role="TrG5h" value="AccountStatsHandler" />
+    <ref role="er3dA" node="zCkYVcOLr0" resolve="Chronos.Accounts" />
+    <ref role="er1k6" node="4VRm5Rok8nn" resolve="AccountStats" />
+    <node concept="eo_pS" id="4VRm5Rok9eF" role="er9lr">
+      <ref role="eo_pP" node="zCkYVcOLze" resolve="AssetDeposited" />
+    </node>
+    <node concept="eo_pS" id="4VRm5RooZSi" role="er9lr">
+      <ref role="eo_pP" node="4VRm5RooYIR" resolve="TransactionAdded" />
+    </node>
+  </node>
+  <node concept="2ZwxhH" id="4VRm5RooYIR">
+    <property role="3GE5qa" value="Events" />
+    <property role="TrG5h" value="TransactionAdded" />
+    <ref role="2ZwxhB" node="zCkYVcOLr0" resolve="Chronos.Accounts" />
+    <node concept="31KZC3" id="4VRm5RooYIS" role="fr08y">
+      <property role="TrG5h" value="txId" />
+      <node concept="3UfwP1" id="4VRm5RooYIT" role="2UegB9">
+        <node concept="3UfNVn" id="4VRm5RooYIY" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="fqd6J" id="4VRm5RooZ9x">
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="AddTransaction" />
+    <ref role="0xEmz" node="zCkYVcOLs7" resolve="Account" />
+    <ref role="22hxqa" node="4VRm5RooYVP" resolve="AddTransaction" />
+  </node>
+  <node concept="0xgbx" id="4VRm5RooZot">
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="AddTransactionHandler" />
+    <ref role="0xgvH" node="4VRm5RooZ9x" resolve="AddTransaction" />
+  </node>
+  <node concept="0iR2k" id="4VRm5Rop7hP">
+    <property role="3GE5qa" value="Queries" />
+    <property role="TrG5h" value="TransactionList" />
+    <property role="2G6zgw" value="true" />
+    <ref role="1prmt8" node="zCkYVcOLr0" resolve="Chronos.Accounts" />
+    <node concept="31KZC3" id="4VRm5Rop7hQ" role="fr08y">
+      <property role="TrG5h" value="txId" />
+      <node concept="3UfwP1" id="4VRm5Rop7hR" role="2UegB9">
+        <node concept="2N$mWS" id="4VRm5Rop7hW" role="3UfBpY">
+          <property role="2N$mWW" value="string[]" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="0npV6" id="4VRm5Rop7hZ">
+    <property role="3GE5qa" value="Queries" />
+    <property role="TrG5h" value="TransactionListQuery" />
+    <property role="2HI_3O" value="true" />
+    <ref role="0j$2o" node="4VRm5Rop7hP" resolve="TransactionList" />
+    <node concept="31KZC3" id="4VRm5Rop7i0" role="fr08y">
+      <property role="TrG5h" value="name" />
+      <node concept="3UfwP1" id="4VRm5Rop7i1" role="2UegB9">
+        <node concept="3UfNVn" id="4VRm5Rop7i6" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="eo_ru" id="4VRm5Rop7zw">
+    <property role="3GE5qa" value="Queries" />
+    <property role="TrG5h" value="TransactionListHandler" />
+    <ref role="er3dA" node="zCkYVcOLr0" resolve="Chronos.Accounts" />
+    <ref role="er1k6" node="4VRm5Rop7hP" resolve="TransactionList" />
+    <node concept="eo_pS" id="4VRm5Rop7zx" role="er9lr">
+      <ref role="eo_pP" node="4VRm5RooYIR" resolve="TransactionAdded" />
+    </node>
+  </node>
+  <node concept="2ZwxhH" id="4VRm5RoplGf">
+    <property role="3GE5qa" value="Events" />
+    <property role="TrG5h" value="TransferStarted" />
+    <property role="1FMvZ7" value="true" />
+    <ref role="2ZwxhB" node="zCkYVcOLr0" resolve="Chronos.Accounts" />
+    <node concept="31KZC3" id="4VRm5RopoXD" role="fr08y">
+      <property role="TrG5h" value="txId" />
+      <node concept="3UfwP1" id="4VRm5RopoXE" role="2UegB9">
+        <node concept="3UfNVn" id="4VRm5RopoXS" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="4VRm5RopoiD" role="fr08y">
+      <property role="TrG5h" value="fromAccount" />
+      <node concept="3UfwP1" id="4VRm5RopoiE" role="2UegB9">
+        <node concept="3UfNVn" id="4VRm5RopoiJ" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="4VRm5RopoiM" role="fr08y">
+      <property role="TrG5h" value="toAccount" />
+      <node concept="3UfwP1" id="4VRm5RopoiN" role="2UegB9">
+        <node concept="3UfNVn" id="4VRm5RopoiV" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="4VRm5RopoiY" role="fr08y">
+      <property role="TrG5h" value="amount" />
+      <node concept="3UfwP1" id="4VRm5RopoiZ" role="2UegB9">
+        <node concept="2N$mWS" id="4VRm5Ropoja" role="3UfBpY">
+          <property role="2N$mWW" value="Core.Quantity" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="0xEmi" id="4VRm5RoplGg">
+    <property role="TrG5h" value="Transfer" />
+    <ref role="1ptrfS" node="zCkYVcOLr0" resolve="Chronos.Accounts" />
+    <ref role="1FNO19" node="4VRm5RoplGf" resolve="TransferStarted" />
+    <node concept="1ux1I" id="4VRm5RoplGh" role="0xEmh" />
+    <node concept="1FNO1o" id="4VRm5Ropsln" role="0xEmn">
+      <property role="TrG5h" value="Complete" />
+      <ref role="1FNO1t" node="4VRm5Ropry2" resolve="TransferCompleted" />
+    </node>
+  </node>
+  <node concept="0yj_U" id="4VRm5RoppZa">
+    <property role="2hLNu2" value="true" />
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="StartTransfer" />
+    <ref role="0xEmz" node="4VRm5RoplGg" resolve="Transfer" />
+  </node>
+  <node concept="0xgbA" id="4VRm5RopqJ3">
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="StartTransferHandler" />
+    <ref role="0xgvH" node="4VRm5RoppZa" resolve="StartTransfer" />
+  </node>
+  <node concept="2ZwxhH" id="4VRm5Ropry2">
+    <property role="3GE5qa" value="Events" />
+    <property role="TrG5h" value="TransferCompleted" />
+    <ref role="2ZwxhB" node="zCkYVcOLr0" resolve="Chronos.Accounts" />
+  </node>
+  <node concept="fqd6J" id="4VRm5Ropslm">
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="CompleteTransfer" />
+    <ref role="0xEmz" node="4VRm5RoplGg" resolve="Transfer" />
+    <ref role="22hxqa" node="4VRm5Ropsln" resolve="Complete" />
+  </node>
+  <node concept="0xgbx" id="4VRm5Roptbt">
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="CompleteTransferHandler" />
+    <ref role="0xgvH" node="4VRm5Ropslm" resolve="CompleteTransfer" />
   </node>
 </model>
 

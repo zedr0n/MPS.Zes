@@ -38,14 +38,17 @@
       <concept id="8687645761421731429" name="ZES.structure.TargetCommand" flags="ng" index="fqd6J" />
       <concept id="5019290096397921850" name="ZES.structure.Command" flags="ng" index="2hLNu5">
         <property id="5019290096397921853" name="isCreate" index="2hLNu2" />
+        <property id="6424163186752207346" name="isPure" index="3GDCYj" />
         <reference id="8687645761423676009" name="aggregate" index="0xEmz" />
         <reference id="1124454158806338451" name="method" index="22hxqa" />
+        <child id="6424163186751769478" name="props" index="3Gn3RB" />
       </concept>
       <concept id="5019290096397921823" name="ZES.structure.DomainClass" flags="ng" index="2hLNuw">
         <child id="8687645761422013928" name="params" index="fr08y" />
       </concept>
       <concept id="9176588155335990819" name="ZES.structure.Event" flags="ng" index="2ZwxhH">
         <property id="4924007833308784846" name="isCreate" index="1FMvZ7" />
+        <property id="7179491616198076306" name="includeFieldInAggregate" index="1SKKC4" />
         <reference id="9176588155335990825" name="project" index="2ZwxhB" />
       </concept>
       <concept id="5474742744634047563" name="ZES.structure.Project" flags="ng" index="1ptgRe" />
@@ -55,6 +58,9 @@
     </language>
     <language id="d74e25c9-4d91-43b6-bad7-d18af7bf6674" name="CsBaseLanguage">
       <concept id="7486903154347131566" name="CsBaseLanguage.structure.FormalParameterList" flags="ng" index="1ux1I" />
+      <concept id="1969317145989153978" name="CsBaseLanguage.structure.GenericTypeParameterReferenceString" flags="ng" index="2N$mWS">
+        <property id="1969317145989153982" name="referencedGenericTypeParameter" index="2N$mWW" />
+      </concept>
       <concept id="7232527154588476195" name="CsBaseLanguage.structure.FormalParameter" flags="ng" index="31KZC3">
         <child id="8700838527816343363" name="type" index="2UegB9" />
       </concept>
@@ -62,6 +68,7 @@
         <child id="6843536562190767680" name="nonArrayType" index="3UfBpY" />
       </concept>
       <concept id="6843536562190694846" name="CsBaseLanguage.structure.DoubleType" flags="ng" index="3UfLA0" />
+      <concept id="6843536562190694844" name="CsBaseLanguage.structure.BoolType" flags="ng" index="3UfLA2" />
       <concept id="6843536562190680504" name="CsBaseLanguage.structure.IntType" flags="ng" index="3UfM66" />
       <concept id="6843536562190687977" name="CsBaseLanguage.structure.StringType" flags="ng" index="3UfNVn" />
     </language>
@@ -87,6 +94,7 @@
     <property role="TrG5h" value="CoinCreated" />
     <property role="1FMvZ7" value="true" />
     <property role="3GE5qa" value="Events" />
+    <property role="1SKKC4" value="true" />
     <ref role="2ZwxhB" node="6eyFpor_0T6" resolve="Chronos.Coins" />
     <node concept="31KZC3" id="6eyFpor_0T8" role="fr08y">
       <property role="TrG5h" value="name" />
@@ -136,6 +144,14 @@
         <node concept="3UfNVn" id="6eyFpor_1jK" role="3UfBpY" />
       </node>
     </node>
+    <node concept="31KZC3" id="4VRm5RopwCt" role="fr08y">
+      <property role="TrG5h" value="asset" />
+      <node concept="3UfwP1" id="4VRm5RopwCu" role="2UegB9">
+        <node concept="2N$mWS" id="4VRm5RopwCD" role="3UfBpY">
+          <property role="2N$mWW" value="Core.Asset" />
+        </node>
+      </node>
+    </node>
   </node>
   <node concept="eo_ru" id="6eyFpor_1zj">
     <property role="3GE5qa" value="Queries" />
@@ -155,6 +171,12 @@
       <property role="TrG5h" value="address" />
       <node concept="3UfwP1" id="6eyFpor_4M_" role="2UegB9">
         <node concept="3UfNVn" id="6eyFpor_4ME" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="4VRm5RopuuC" role="fr08y">
+      <property role="TrG5h" value="coin" />
+      <node concept="3UfwP1" id="4VRm5RopuuD" role="2UegB9">
+        <node concept="3UfNVn" id="4VRm5RopuuL" role="3UfBpY" />
       </node>
     </node>
   </node>
@@ -204,18 +226,22 @@
     <node concept="31KZC3" id="6eyFpor_cPH" role="fr08y">
       <property role="TrG5h" value="quantity" />
       <node concept="3UfwP1" id="6eyFpor_cPI" role="2UegB9">
-        <node concept="3UfLA0" id="6eyFpor_cPW" role="3UfBpY" />
+        <node concept="2N$mWS" id="4VRm5Ropzmp" role="3UfBpY">
+          <property role="2N$mWW" value="Core.Quantity" />
+        </node>
       </node>
     </node>
     <node concept="31KZC3" id="6eyFpor_cPZ" role="fr08y">
       <property role="TrG5h" value="fee" />
       <node concept="3UfwP1" id="6eyFpor_cQ0" role="2UegB9">
-        <node concept="3UfLA0" id="6eyFpor_cQh" role="3UfBpY" />
+        <node concept="2N$mWS" id="4VRm5Ropzmu" role="3UfBpY">
+          <property role="2N$mWW" value="Core.Quantity" />
+        </node>
       </node>
     </node>
   </node>
   <node concept="0xEmi" id="6eyFpor_7dV">
-    <property role="TrG5h" value="Transaction" />
+    <property role="TrG5h" value="Transfer" />
     <ref role="1ptrfS" node="6eyFpor_0T6" resolve="Chronos.Coins" />
     <ref role="1FNO19" node="6eyFpor_6ra" resolve="CoinsTransferred" />
     <node concept="1ux1I" id="6eyFpor_7dW" role="0xEmh" />
@@ -239,7 +265,7 @@
     <property role="2hLNu2" value="true" />
     <property role="3GE5qa" value="Commands" />
     <property role="TrG5h" value="TransferCoins" />
-    <ref role="0xEmz" node="6eyFpor_7dV" resolve="Transaction" />
+    <ref role="0xEmz" node="6eyFpor_7dV" resolve="Transfer" />
   </node>
   <node concept="2ZwxhH" id="6eyFpor_eoX">
     <property role="3GE5qa" value="Events" />
@@ -248,7 +274,9 @@
     <node concept="31KZC3" id="6eyFpor_eoY" role="fr08y">
       <property role="TrG5h" value="delta" />
       <node concept="3UfwP1" id="6eyFpor_eoZ" role="2UegB9">
-        <node concept="3UfLA0" id="6eyFpor_ep4" role="3UfBpY" />
+        <node concept="2N$mWS" id="4VRm5RopxI8" role="3UfBpY">
+          <property role="2N$mWW" value="double" />
+        </node>
       </node>
     </node>
     <node concept="31KZC3" id="6eyFpor_Gj5" role="fr08y">
@@ -278,6 +306,14 @@
       <property role="TrG5h" value="address" />
       <node concept="3UfwP1" id="6eyFpor_hcs" role="2UegB9">
         <node concept="3UfNVn" id="6eyFpor_hcx" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="4VRm5Ropvzj" role="fr08y">
+      <property role="TrG5h" value="asset" />
+      <node concept="3UfwP1" id="4VRm5Ropvzk" role="2UegB9">
+        <node concept="2N$mWS" id="4VRm5Ropvzy" role="3UfBpY">
+          <property role="2N$mWW" value="Core.Asset" />
+        </node>
       </node>
     </node>
     <node concept="31KZC3" id="6eyFpor_hc$" role="fr08y">
@@ -352,7 +388,15 @@
     <node concept="31KZC3" id="18YSGC5Mh9w" role="fr08y">
       <property role="TrG5h" value="mineQuantity" />
       <node concept="3UfwP1" id="18YSGC5Mh9x" role="2UegB9">
-        <node concept="3UfLA0" id="18YSGC5Mh9A" role="3UfBpY" />
+        <node concept="2N$mWS" id="4VRm5RopyNB" role="3UfBpY">
+          <property role="2N$mWW" value="Core.Quantity" />
+        </node>
+      </node>
+    </node>
+    <node concept="31KZC3" id="4VRm5Rop$DK" role="fr08y">
+      <property role="TrG5h" value="blockHash" />
+      <node concept="3UfwP1" id="4VRm5Rop$DL" role="2UegB9">
+        <node concept="3UfNVn" id="6ItHPIcMpZy" role="3UfBpY" />
       </node>
     </node>
   </node>
@@ -363,9 +407,79 @@
     <ref role="22hxqa" node="18YSGC5Mi3Q" resolve="MineCoin" />
   </node>
   <node concept="0xgbx" id="18YSGC5Mj1A">
-    <property role="3GE5qa" value="Commands" />
+    <property role="3GE5qa" value="Handler" />
     <property role="TrG5h" value="MineCoinHandler" />
     <ref role="0xgvH" node="18YSGC5Miy6" resolve="MineCoin" />
+  </node>
+  <node concept="fqd6J" id="6ItHPIcM0I1">
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="UpdateDailyOutflow" />
+    <property role="3GDCYj" value="true" />
+    <ref role="0xEmz" node="6eyFpor_4TW" resolve="Wallet" />
+    <node concept="31KZC3" id="5$BdA6PwqY7" role="3Gn3RB">
+      <property role="TrG5h" value="useRemote" />
+      <node concept="3UfwP1" id="5$BdA6PwqY8" role="2UegB9">
+        <node concept="3UfLA2" id="5$BdA6PwqY9" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="5$BdA6PwqYa" role="3Gn3RB">
+      <property role="TrG5h" value="useV2" />
+      <node concept="3UfwP1" id="5$BdA6PwqYb" role="2UegB9">
+        <node concept="3UfLA2" id="5$BdA6PwqYc" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="5$BdA6PwqYd" role="3Gn3RB">
+      <property role="TrG5h" value="Count" />
+      <node concept="3UfwP1" id="5$BdA6PwqYe" role="2UegB9">
+        <node concept="3UfM66" id="5$BdA6PwqYf" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="6ItHPIcM7YY" role="fr08y">
+      <property role="TrG5h" value="index" />
+      <node concept="3UfwP1" id="6ItHPIcM7YZ" role="2UegB9">
+        <node concept="3UfM66" id="6ItHPIcM7Z4" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="0xgbx" id="6ItHPIcM5Ad">
+    <property role="3GE5qa" value="Handler" />
+    <property role="TrG5h" value="UpdateDailyOutflowHandler" />
+    <ref role="0xgvH" node="6ItHPIcM0I1" resolve="UpdateDailyOutflow" />
+  </node>
+  <node concept="fqd6J" id="6ItHPIcMnvv">
+    <property role="3GE5qa" value="Commands" />
+    <property role="TrG5h" value="UpdateDailyMining" />
+    <property role="3GDCYj" value="true" />
+    <ref role="0xEmz" node="6eyFpor_4TW" resolve="Wallet" />
+    <node concept="31KZC3" id="5$BdA6PwpG1" role="3Gn3RB">
+      <property role="TrG5h" value="useRemote" />
+      <node concept="3UfwP1" id="5$BdA6PwpG2" role="2UegB9">
+        <node concept="3UfLA2" id="5$BdA6PwpG7" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="5$BdA6PwqkL" role="3Gn3RB">
+      <property role="TrG5h" value="useV2" />
+      <node concept="3UfwP1" id="5$BdA6PwqkM" role="2UegB9">
+        <node concept="3UfLA2" id="5$BdA6PwqkU" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="5$BdA6PwqkX" role="3Gn3RB">
+      <property role="TrG5h" value="Count" />
+      <node concept="3UfwP1" id="5$BdA6PwqkY" role="2UegB9">
+        <node concept="3UfM66" id="5$BdA6Pwql9" role="3UfBpY" />
+      </node>
+    </node>
+    <node concept="31KZC3" id="6ItHPIcMnvw" role="fr08y">
+      <property role="TrG5h" value="index" />
+      <node concept="3UfwP1" id="6ItHPIcMnvx" role="2UegB9">
+        <node concept="3UfM66" id="6ItHPIcMnvA" role="3UfBpY" />
+      </node>
+    </node>
+  </node>
+  <node concept="0xgbx" id="6ItHPIcMoI_">
+    <property role="TrG5h" value="UpdateDailyMiningHandler" />
+    <property role="3GE5qa" value="Handler" />
+    <ref role="0xgvH" node="6ItHPIcMnvv" resolve="UpdateDailyMining" />
   </node>
 </model>
 
